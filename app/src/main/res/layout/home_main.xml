@@ -26,17 +26,12 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:src="@drawable/map_icon"/>
-
             <Button
                 android:id="@+id/map_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:drawableLeft="@drawable/map_icon"
                 android:textSize="30dp"
                 android:text="지도보기"/>
 
@@ -49,17 +44,12 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:src="@drawable/shopping_icon"/>
-
             <Button
                 android:id="@+id/shop_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:drawableLeft="@drawable/shopping_icon"
                 android:textSize="30dp"
                 android:text="쇼핑하기"/>
 
@@ -72,19 +62,15 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:src="@drawable/login_icon"/>
-
             <Button
                 android:id="@+id/login_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:drawableLeft="@drawable/login_icon"
                 android:textSize="30dp"
                 android:text="로그인"/>
+
         </LinearLayout>
 
     </LinearLayout>
