@@ -21,6 +21,9 @@
         </activity>
         <activity android:name=".Login">
         </activity>
+        <activity android:name=".My_page"/>
+        <activity android:name=".Order_search"/>
+        <activity android:name=".Infor_modify"/>
+        <activity android:name=".Home_login"/>
     </application>
-
 </manifest>

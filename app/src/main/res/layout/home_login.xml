@@ -76,15 +76,15 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/login_icon"/>
+                android:src="@drawable/mypage_icon"/>
 
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/mypage_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="30dp"
-                android:text="로그인"/>
+                android:text="마이페이지"/>
         </LinearLayout>
 
     </LinearLayout>
