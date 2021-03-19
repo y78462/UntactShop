@@ -32,7 +32,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/map_icon"
-                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font"
+                android:textStyle="bold"
+                android:textSize="40dp"
                 android:text="지도보기"/>
 
         </LinearLayout>
@@ -50,7 +53,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/shopping_icon"
-                android:textSize="30dp"
+                android:textSize="40dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font"
+                android:textStyle="bold"
                 android:text="쇼핑하기"/>
 
         </LinearLayout>
@@ -68,7 +74,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/login_icon"
-                android:textSize="30dp"
+                android:textSize="40dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font"
+                android:textStyle="bold"
                 android:text="로그인"/>
 
         </LinearLayout>

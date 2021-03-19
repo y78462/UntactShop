@@ -4,26 +4,26 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/main_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.UntactShop">
-        <activity android:name=".Home_main">
+        <activity android:name=".Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Map_search">
+        <activity android:name=".Home_main">
         </activity>
-        <activity android:name=".Shopping">
-        </activity>
-        <activity android:name=".Login">
-        </activity>
+        <activity android:name=".Map_search"/>
+        <activity android:name=".Shopping"/>
+        <activity android:name=".Login"/>
         <activity android:name=".My_page"/>
         <activity android:name=".Order_search"/>
         <activity android:name=".Infor_modify"/>
-        <activity android:name=".Home_login"/>
+        <activity android:name=".Home_login">
+        </activity>
     </application>
 </manifest>
