@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/back_color">
 
     <ImageView
         android:id="@+id/logo"
@@ -24,7 +25,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_margin="5dp">
 
             <Button
                 android:id="@+id/map_button"
@@ -35,8 +37,9 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/font"
                 android:textStyle="bold"
-                android:textSize="40dp"
-                android:text="지도보기"/>
+                android:textSize="35dp"
+                android:text="지도보기"
+                android:background="@drawable/round_corner"/>
 
         </LinearLayout>
 
@@ -45,7 +48,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_margin="5dp">
 
             <Button
                 android:id="@+id/shop_button"
@@ -53,11 +57,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/shopping_icon"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/font"
                 android:textStyle="bold"
-                android:text="쇼핑하기"/>
+                android:text="쇼핑하기"
+                android:background="@drawable/round_corner"/>
 
         </LinearLayout>
 
@@ -66,7 +71,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_margin="5dp">
 
             <Button
                 android:id="@+id/login_button"
@@ -74,14 +80,20 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/login_icon"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/font"
                 android:textStyle="bold"
-                android:text="로그인"/>
+                android:text="로그인"
+                android:background="@drawable/round_corner"/>
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 </LinearLayout>
