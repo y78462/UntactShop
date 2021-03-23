@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class map extends AppCompatActivity {
+public class Map extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
