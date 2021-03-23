@@ -9,7 +9,6 @@ import com.example.untactshop.R;
 
 public class Map extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
