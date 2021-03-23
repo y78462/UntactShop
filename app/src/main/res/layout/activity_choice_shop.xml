@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -43,7 +42,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
                 android:layout_weight="5"
-                android:background="@drawable/foredit"
+                android:background="@drawable/shop_search"
                 />
         </LinearLayout>
 
@@ -58,7 +57,7 @@
                 android:layout_height="120dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/station"
+                android:background="@drawable/choice_station"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="명동권" />
@@ -70,7 +69,7 @@
                 android:layout_marginRight="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/명동권"
-                android:background="@drawable/station"
+                android:background="@drawable/choice_station"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="을지로권" />
@@ -82,7 +81,7 @@
                 android:layout_below="@id/명동권"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/station"
+                android:background="@drawable/choice_station"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="종로권" />
@@ -93,7 +92,7 @@
                 android:layout_marginRight="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/종로권"
-                android:background="@drawable/station"
+                android:background="@drawable/choice_station"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="강남권" />
@@ -104,7 +103,7 @@
                 android:layout_below="@id/종로권"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/station"
+                android:background="@drawable/choice_station"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="터미널권" />
@@ -115,7 +114,7 @@
                 android:layout_marginRight="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/터미널권"
-                android:background="@drawable/station"
+                android:background="@drawable/choice_station"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="영등포권" />

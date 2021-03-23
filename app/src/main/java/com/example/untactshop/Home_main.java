@@ -18,7 +18,7 @@ public class Home_main extends AppCompatActivity { //시작 홈화면(로그인 
         map_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent map_intent = new Intent(Home_main.this, Map_search.class);
+                Intent map_intent = new Intent(getApplicationContext(), Choice_shop.class);
                 startActivity(map_intent);
             }
         });

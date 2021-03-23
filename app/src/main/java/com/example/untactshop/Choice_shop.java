@@ -63,7 +63,7 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
-                    Intent intent = new Intent(Choice_shop.this, com.example.test.map.class);
+                    Intent intent = new Intent(Choice_shop.this, Map.class);
                     intent.putExtra("name",selectedText);
                     startActivity(intent);
                     }
@@ -84,7 +84,7 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
-                        Intent intent = new Intent(Choice_shop.this, com.example.test.map.class);
+                        Intent intent = new Intent(Choice_shop.this, Map.class);
                         intent.putExtra("name",selectedText);
                         startActivity(intent);
                     }
@@ -108,7 +108,7 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
-                        Intent intent = new Intent(Choice_shop.this, com.example.test.map.class);
+                        Intent intent = new Intent(Choice_shop.this, Map.class);
                         intent.putExtra("name",selectedText);
                         startActivity(intent);
                     }
@@ -127,7 +127,7 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
-                        Intent intent = new Intent(Choice_shop.this, com.example.test.map.class);
+                        Intent intent = new Intent(Choice_shop.this, Map.class);
                         intent.putExtra("name",selectedText);
                         startActivity(intent);
                     }
@@ -144,7 +144,7 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
-                        Intent intent = new Intent(Choice_shop.this, com.example.test.map.class);
+                        Intent intent = new Intent(Choice_shop.this, Map.class);
                         intent.putExtra("name",selectedText);
                         startActivity(intent);
                     }
@@ -163,7 +163,7 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
-                        Intent intent = new Intent(Choice_shop.this, com.example.test.map.class);
+                        Intent intent = new Intent(Choice_shop.this, Map.class);
                         intent.putExtra("name",selectedText);
                         startActivity(intent);
                     }

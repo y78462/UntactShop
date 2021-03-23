@@ -23,6 +23,8 @@
         <activity android:name=".My_page"/>
         <activity android:name=".Order_search"/>
         <activity android:name=".Infor_modify"/>
+        <activity android:name=".Choice_shop"/>
+        <activity android:name=".Map"/>
         <activity android:name=".Home_login">
         </activity>
     </application>
