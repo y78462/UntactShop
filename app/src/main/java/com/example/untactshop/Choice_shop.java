@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.untactshop.R;
@@ -183,6 +184,21 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
         g.setOnClickListener(this);
         t.setOnClickListener(this);
         y.setOnClickListener(this);
+    }
+
+
+    public void search_btn(View view) {
+        String search_text;
+
+        EditText editText = (EditText) findViewById(R.id.shop_search_text);
+        search_text = "" + editText.getText(); //SpannableString -> String : Type conversion
+//        Log.i("검색데이터", String.valueOf(search_text));
+
+        Intent intent = new Intent(getApplicationContext(), ShopSearchActivity.class);
+        intent.putExtra("검색데이터", search_text);
+        startActivity(intent);
+
+
     }
 
 }

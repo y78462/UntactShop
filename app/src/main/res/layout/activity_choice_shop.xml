@@ -32,6 +32,7 @@
 
 
             <EditText
+                android:id="@+id/shop_search_text"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:hint="매장 검색"
@@ -43,9 +44,18 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
                 android:fontFamily="@font/font"
-                android:layout_weight="5"
+                android:layout_weight="4"
                 android:background="@drawable/shop_search"
                 />
+
+            <Button
+                android:id="@+id/shop_search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:onClick="search_btn"
+                android:backgroundTint="#dee2e6"
+                android:text="검색"></Button>
         </LinearLayout>
 
         <RelativeLayout

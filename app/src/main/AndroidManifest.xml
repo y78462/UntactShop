@@ -24,6 +24,10 @@
         <activity android:name=".Infor_modify"/>
         <activity android:name=".Choice_shop"/>
         <activity android:name=".Map"/>
+        <activity android:name=".ShopSearchActivity"/>
+        <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".LocationInfoActivity"/>
+        <activity android:name=".ShopInfoActivity"/>
         <activity android:name=".Home_login">
         </activity>
     </application>
