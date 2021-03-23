@@ -1,9 +1,11 @@
-package com.example.test;
+package com.example.untactshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.untactshop.R;
 
 public class map extends AppCompatActivity {
 
