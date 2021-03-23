@@ -17,7 +17,7 @@ public class Home_login extends AppCompatActivity {
         map_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent map_intent = new Intent(Home_login.this, Map_search.class);
+                Intent map_intent = new Intent(Home_login.this, Choice_shop.class);
                 startActivity(map_intent);
             }
         });
