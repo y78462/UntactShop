@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#FF3F51B5"
+        android:background="#FFCDBDF3"
         android:gravity="center"
         android:text="회원정보 수정"
         android:textColor="@color/white"
@@ -132,7 +132,6 @@
         android:text="수정 완료"
         android:fontFamily="@font/title"
         android:textSize="25dp"
-        android:textStyle="bold"
-        android:background="#FF3F51B5"/>
+        android:textStyle="bold"/>
 
 </LinearLayout>
