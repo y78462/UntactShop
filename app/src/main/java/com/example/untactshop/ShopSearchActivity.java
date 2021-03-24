@@ -40,7 +40,7 @@ public class ShopSearchActivity extends AppCompatActivity {
         Log.i("실행흐름", "readExcel 함수 실행");
 
         try {
-            InputStream is = getBaseContext().getResources().getAssets().open("test_data.xls");
+            InputStream is = getBaseContext().getResources().getAssets().open("shop_data.xls");
             Workbook wb = Workbook.getWorkbook(is);
             Log.i("실행흐름", "try문");
 
@@ -69,7 +69,7 @@ public class ShopSearchActivity extends AppCompatActivity {
                                 TextView textView = new TextView(this);
                                 textView.setText(String.valueOf(content));
                                 textView.setGravity(Gravity.CENTER);
-                                textView.setTextSize(18);
+                                textView.setTextSize(13);
                                 tableRow.addView(textView); //tableRow에 view 추가
                             }
 

@@ -15,49 +15,43 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:gravity="center"
             android:layout_weight="0.1"
-            android:text="지하상가 선택"
+            android:background="#CDBDF3"
             android:fontFamily="@font/title"
-            android:textSize="30dp"
+            android:gravity="center"
+            android:text="지하상가 선택"
             android:textColor="@color/white"
-            android:background="#CDBDF3" />
+            android:textSize="30dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
+            android:layout_margin="50dp"
             android:layout_weight="0.1"
-            android:layout_margin="50dp">
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/shop_search_text"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="5"
+                android:background="@drawable/round_corner"
+                android:fontFamily="@font/font"
+                android:gravity="center"
                 android:hint="매장 검색"
-                android:textColorHint="@color/black"
-                android:textSize="20dp"
                 android:inputType="text"
                 android:selectAllOnFocus="true"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/font"
-                android:textStyle="bold"
-                android:layout_weight="4"
-                android:gravity="center"
-                android:background="@drawable/round_corner" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/shop_search_btn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ffffff"
                 android:onClick="search_btn"
-                android:backgroundTint="#dee2e6"
-                android:text="검색"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20dp"></Button>
-
+                android:src="@drawable/search" />
         </LinearLayout>
 
         <RelativeLayout
@@ -71,25 +65,25 @@
                 android:layout_height="120dp"
                 android:layout_marginLeft="50dp"
                 android:background="@drawable/choice_station"
+                android:fontFamily="@font/font"
+                android:text="명동권"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:fontFamily="@font/font"
-                android:textStyle="bold"
-                android:text="명동권" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/을지로권"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="50dp"
-                android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/명동권"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
                 android:background="@drawable/choice_station"
+                android:fontFamily="@font/font"
+                android:text="을지로권"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/font"
-                android:text="을지로권" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/종로권"
@@ -99,24 +93,26 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/choice_station"
+                android:fontFamily="@font/font"
+                android:text="종로권"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/font"
-                android:text="종로권" />
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/강남권"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="50dp"
-                android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/종로권"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
                 android:background="@drawable/choice_station"
+                android:fontFamily="@font/font"
+                android:text="강남권"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/font"
-                android:text="강남권" />
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/터미널권"
                 android:layout_width="120dp"
@@ -125,24 +121,25 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/choice_station"
+                android:fontFamily="@font/font"
+                android:text="터미널권"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/font"
-                android:text="터미널권" />
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/영등포권"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="50dp"
-                android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/터미널권"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
                 android:background="@drawable/choice_station"
+                android:fontFamily="@font/font"
+                android:text="영등포권"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/font"
-                android:text="영등포권" />
+                android:textStyle="bold" />
 
 
         </RelativeLayout>
