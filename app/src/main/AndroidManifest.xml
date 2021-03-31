@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.untactshop">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/main_logo"
@@ -18,7 +18,7 @@
         <activity android:name=".Home_main">
         </activity>
         <activity android:name=".Shopping"/>
-        <activity android:name=".Login"/>
+        <activity android:name=".LoginActivity"/>
         <activity android:name=".My_page"/>
         <activity android:name=".Order_search"/>
         <activity android:name=".Infor_modify"/>
@@ -27,8 +27,11 @@
         <activity android:name=".ShopSearchActivity"/>
         <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".LocationInfoActivity"/>
+        <activity android:name=".PasswordResetActivity"/>
         <activity android:name=".ShopInfoActivity"/>
-        <activity android:name=".Home_login">
+        <activity android:name=".MemberInitActivity"/>
+        <activity android:name=".Home_login"/>
+        <activity android:name=".SignUpActivity">
         </activity>
     </application>
 </manifest>
