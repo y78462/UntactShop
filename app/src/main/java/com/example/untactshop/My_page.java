@@ -1,17 +1,37 @@
 package com.example.untactshop;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class My_page extends AppCompatActivity {
+
+
+    private static final String TAG = "Mypage";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_page);
+
+
+        //데이터 가져와서 이름,폰번,생년월일,주소 넣기
+        set_user_info();
+
+
+
+
 
         Button order_search = (Button)findViewById(R.id.order_search); //주문조회 버튼
         order_search.setOnClickListener(new View.OnClickListener() {
@@ -39,5 +59,38 @@ public class My_page extends AppCompatActivity {
                 startActivity(logout_intent);
             }
         });
+    }
+
+    private void set_user_info()
+    {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        DocumentReference docRef = db.collection("users").document(user.getUid());
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                MemberInfo memberInfo = documentSnapshot.toObject(MemberInfo.class);
+                startToast(memberInfo.getName());
+                if (memberInfo != null)
+                {
+                    TextView name = (TextView) findViewById(R.id.nameTextView);
+                    TextView phone = (TextView) findViewById(R.id.phoneNumberTextView);
+                    TextView bday = (TextView) findViewById(R.id.birthDayTextView);
+                    TextView address = (TextView) findViewById(R.id.addressTextView);
+
+                    name.setText(memberInfo.getName());
+                    phone.setText(memberInfo.getPhone());
+                    bday.setText(memberInfo.getBday());
+                    address.setText(memberInfo.getAddress());
+
+                }
+
+            }
+        });
+
+    }
+    private void startToast(String msg)
+    {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

@@ -14,6 +14,10 @@ public class MemberInfo {
         this.bday = bday;
         this.address = address;
     }
+    public MemberInfo()
+    {
+
+    }
 
     public void setName(String name) {
         this.name = name;
