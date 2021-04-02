@@ -51,6 +51,7 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
             case R.id.명동권:
                 ListItems = new ArrayList<>();
                 ListItems.add("명동");
+                ListItems.add("명동역");
                 ListItems.add("소공");
                 ListItems.add("회현");
                 ListItems.add("남대문");
@@ -93,7 +94,6 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 ListItems = new ArrayList<>();
                 ListItems.add("종각");
                 ListItems.add("종로4가");
-                ListItems.add("종오");
                 ListItems.add("청계5가");
                 ListItems.add("청계6가");
                 ListItems.add("마전교");
