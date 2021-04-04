@@ -51,14 +51,7 @@ public class My_page extends AppCompatActivity {
             }
         });
 
-        Button logout = (Button)findViewById(R.id.logout); //로그아웃 버튼
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent logout_intent = new Intent(My_page.this, Home_main.class);
-                startActivity(logout_intent);
-            }
-        });
+
     }
 
     private void set_user_info()
@@ -70,7 +63,7 @@ public class My_page extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 MemberInfo memberInfo = documentSnapshot.toObject(MemberInfo.class);
-                startToast(memberInfo.getName());
+                //startToast(memberInfo.getName());
                 if (memberInfo != null)
                 {
                     TextView name = (TextView) findViewById(R.id.nameTextView);

@@ -1,5 +1,6 @@
 package com.example.untactshop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,12 +31,16 @@ public class Infor_modify extends AppCompatActivity {
         //데이터 가져와서 이름,폰번,생년월일,주소 넣기
         set_user_info();
 
-        Button infor_modify = (Button)findViewById(R.id.infor_modify); //개인정보수정 버튼
-        infor_modify.setOnClickListener(new View.OnClickListener() {
+        Button modify_button = findViewById(R.id.modify_button); //개인정보수정 버튼
+        modify_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                // 업데이트 함수 호출
                 update_user_info();
+                Intent intent = new Intent(Infor_modify.this, My_page.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                startActivity(intent);
             }
         });
     }
@@ -48,7 +53,7 @@ public class Infor_modify extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 MemberInfo memberInfo = documentSnapshot.toObject(MemberInfo.class);
-                startToast(memberInfo.getName());
+                //startToast(memberInfo.getName());
                 if (memberInfo != null)
                 {
                     TextView name = (TextView) findViewById(R.id.input_name);

@@ -25,64 +25,144 @@
         android:padding="10dp"
         android:src="@drawable/member" />
 
-    <TextView
-        android:id="@+id/nameTextView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="@drawable/round_corner"
-        android:fontFamily="@font/font"
-        android:gravity="center"
-        android:text="이름"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/phoneNumberTextView"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="이름      "
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="이름"
+            android:textSize="20dp"
+            android:textStyle="bold"
+             />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="@drawable/round_corner"
-        android:fontFamily="@font/font"
-        android:gravity="center"
-        android:text="핸드폰"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/birthDayTextView"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="left|center"
+            android:text="핸드폰   "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/phoneNumberTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="핸드폰"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="@drawable/round_corner"
-        android:fontFamily="@font/font"
-        android:gravity="center"
-        android:text="생년월일"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/addressTextView"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="left|center"
+            android:text="생년월일 "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/birthDayTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="생년월일"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="@drawable/round_corner"
-        android:fontFamily="@font/font"
-        android:gravity="center"
-        android:text="주소"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="left|center"
+            android:text="주소      "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="주소"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="30dp"
-        android:layout_weight="5"
+        android:layout_weight="3"
         android:background="@drawable/menu_corner"
         android:orientation="vertical"
         android:paddingTop="20dp"
@@ -131,26 +211,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#00ff0000"
-                android:drawableLeft="@drawable/bar"
-                android:fontFamily="@font/font"
-                android:text="로그아웃"
-                android:textColor="@color/black"
-                android:textSize="30dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

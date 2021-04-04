@@ -68,7 +68,9 @@ public class Home_login extends AppCompatActivity {
                                 //원하는 클릭 이벤트를 넣으시면 됩니다.
                                 FirebaseAuth.getInstance().signOut();
                                 Intent main_intent = new Intent(Home_login.this, Home_main.class);
+                                main_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(main_intent);
+                                finish();
                             }
                         })
                         .setNegativeButton("아니요", new DialogInterface.OnClickListener(){
