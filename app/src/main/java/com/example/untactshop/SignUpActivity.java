@@ -52,24 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-////        if(currentUser != null){
-////            //reload();
-////        }
-//    }
 
-    //뒤로안가고 무조건 꺼지는 코드
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        moveTaskToBack(true);
-//        android.os.Process.killProcess(android.os.Process.myPid());
-//        System.exit(1);
-//    }
 
 
     private void signUp() {

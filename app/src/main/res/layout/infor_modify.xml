@@ -80,6 +80,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner">
+
+            <TextView
+                android:id="@+id/bday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="생년월일"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/input_bday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_weight="6"
+                android:inputType="date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/round_corner"
             android:layout_margin="10dp">
@@ -115,7 +142,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/edittext_corner"
-            android:inputType="textMultiLine"
+            android:inputType="textPostalAddress"
             android:lines="3"
             android:layout_marginBottom="20dp"/>
         </LinearLayout>
