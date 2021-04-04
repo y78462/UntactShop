@@ -17,6 +17,9 @@ public class shopInfo extends RealmObject {
     private double y1;
     private double y2;
 
+    public shopInfo() {
+    }
+
     public shopInfo(String station_name, String shop_name, String room_name, String category) {
         this.station_name = station_name;
         this.shop_name = shop_name;

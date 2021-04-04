@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -98,7 +97,6 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 ListItems.add("청계6가");
                 ListItems.add("마전교");
                 ListItems.add("동대문");
-                ListItems.add("청량리");
                 items = ListItems.toArray(new String[ListItems.size()]);
 
                 builder = new AlertDialog.Builder(this);
