@@ -3,6 +3,9 @@ package com.example.untactshop;
 import io.realm.RealmObject;
 
 public class shopInfo extends RealmObject {
+    public shopInfo() {
+    }
+
     private String station_name; //역이름
     private String shop_name; //가게이름
     private String room_name; //호수

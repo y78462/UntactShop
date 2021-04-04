@@ -15,8 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        <activity android:name=".Home_main">-->
-        <activity android:name=".test_class">
+        <activity android:name=".Home_main">
         </activity>
         <activity android:name=".Shopping"/>
         <activity android:name=".LoginActivity"/>
