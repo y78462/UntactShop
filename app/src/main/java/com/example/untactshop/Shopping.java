@@ -32,7 +32,7 @@ public class Shopping extends AppCompatActivity {
         //transaction
         realm = Realm.getDefaultInstance();
         addData();
-        realm.commitTransaction();
+//        realm.commitTransaction();
 
         //select
         shopInfo shop = realm.where(shopInfo.class).equalTo("category", "쇼핑미용").findFirst(); //특정 id가진 데이터불러오기
