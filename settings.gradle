@@ -1,2 +1,4 @@
+include ':library'
+include ':SubsamplingScaleImageView'
 include ':app'
 rootProject.name = "UntactShop"
