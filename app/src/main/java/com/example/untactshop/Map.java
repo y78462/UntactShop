@@ -1,7 +1,5 @@
 package com.example.untactshop;
 
-<<<<<<< Updated upstream
-=======
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
@@ -117,7 +115,7 @@ public class Map extends AppCompatActivity {
 
         // db 닫기
         mDbHelper.close();
-=======
+
         Cursor c = null;
         MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
         try {
@@ -182,8 +180,5 @@ public class Map extends AppCompatActivity {
 //            }
 //        });
 
-
-
->>>>>>> Stashed changes
     }
 }
