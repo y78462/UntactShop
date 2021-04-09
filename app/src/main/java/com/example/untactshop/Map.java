@@ -22,7 +22,7 @@ import java.io.IOException;
 
 public class Map extends AppCompatActivity {
 
-//    Cursor c = null;
+    Cursor c = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class Map extends AppCompatActivity {
 
         name.setText(getIntent().getStringExtra("name"));
 
-        Cursor c = null;
+//        Cursor c = null;
         MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
         try {
             myDbHelper.createDataBase();
@@ -72,33 +72,33 @@ public class Map extends AppCompatActivity {
         Log.i("DB", result);
 
 
-//        final SubsamplingScaleImageView imageView = (SubsamplingScaleImageView) findViewById(R.id.Myeongdong); // 명동 이미지뷰
-//        //ImageView imageView = this.findViewById(R.id.Myeongdong);
-//        //Refer to ID value.
-//        final GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
-//            @Override
-//            public boolean onSingleTapUp(MotionEvent ev) {
-//                if (imageView.isReady()) {
-//                    PointF sCoord = imageView.viewToSourceCoord(ev.getX(), ev.getY());
-//                    int x_cor = (int) sCoord.x;
-//                    int y_cor = (int) sCoord.y;
-//
-//                    // Loop for finding the station.
-//                    if (c.moveToFirst()) {
-//                        do {
-//
-//                            if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
-//                                String targetStation = c.getString(1); // 유저가 클릭한 지하철역
-//                            } // send Station Name (column 1)
-//                        } while (c.moveToNext());
-//                    }
-//
-//                    /////////////////////////////////////////////////////////////////////////////
-//
-//                }
-//                return super.onSingleTapUp(ev);
-//            }
-//        });
+        final SubsamplingScaleImageView imageView = (SubsamplingScaleImageView) findViewById(R.id.Myeongdong); // 명동 이미지뷰
+        //ImageView imageView = this.findViewById(R.id.Myeongdong);
+        //Refer to ID value.
+        final GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
+            @Override
+            public boolean onSingleTapUp(MotionEvent ev) {
+                if (imageView.isReady()) {
+                    PointF sCoord = imageView.viewToSourceCoord(ev.getX(), ev.getY());
+                    int x_cor = (int) sCoord.x;
+                    int y_cor = (int) sCoord.y;
+
+                    // Loop for finding the station.
+                    if (c.moveToFirst()) {
+                        do {
+
+                            if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
+                                String targetStation = c.getString(1); // 유저가 클릭한 지하철역
+                            } // send Station Name (column 1)
+                        } while (c.moveToNext());
+                    }
+
+                    /////////////////////////////////////////////////////////////////////////////
+
+                }
+                return super.onSingleTapUp(ev);
+            }
+        });
 
 
 
@@ -111,7 +111,7 @@ public class Map extends AppCompatActivity {
         mDbHelper.open();
 
         // db에 있는 값들을 model을 적용해서 넣는다.
-        shopList = mDbHelper.getTableData();
+//        shopList = mDbHelper.getTableData();
 
         // db 닫기
         mDbHelper.close();
@@ -128,57 +128,5 @@ public class Map extends AppCompatActivity {
         } catch (SQLException sqle) {
             throw sqle;
         }
-        c = myDbHelper.query("Myeongdong", null, null, null, null, null, null); // SQLDataRead
-
-
-//        DB 쿼리 확인
-        String result = "";
-        while (c.moveToNext()) {
-            result += c.getString(0)
-                    + " | "
-                    + c.getString(1)
-                    + " | "
-                    + c.getInt(2)
-                    + "| "
-                    + c.getInt(3)
-                    + "| "
-                    + c.getInt(4)
-                    + "| "
-                    + c.getInt(5)
-                    + "| "
-                    + c.getString(6)
-                    + "\n";
-        }
-        Log.i("DB", result);
-
-
-//        final SubsamplingScaleImageView imageView = (SubsamplingScaleImageView) findViewById(R.id.Myeongdong); // 명동 이미지뷰
-//        //ImageView imageView = this.findViewById(R.id.Myeongdong);
-//        //Refer to ID value.
-//        final GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
-//            @Override
-//            public boolean onSingleTapUp(MotionEvent ev) {
-//                if (imageView.isReady()) {
-//                    PointF sCoord = imageView.viewToSourceCoord(ev.getX(), ev.getY());
-//                    int x_cor = (int) sCoord.x;
-//                    int y_cor = (int) sCoord.y;
-//
-//                    // Loop for finding the station.
-//                    if (c.moveToFirst()) {
-//                        do {
-//
-//                            if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
-//                                String targetStation = c.getString(1); // 유저가 클릭한 지하철역
-//                            } // send Station Name (column 1)
-//                        } while (c.moveToNext());
-//                    }
-//
-//                    /////////////////////////////////////////////////////////////////////////////
-//
-//                }
-//                return super.onSingleTapUp(ev);
-//            }
-//        });
-
     }
 }
