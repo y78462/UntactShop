@@ -1,10 +1,5 @@
 package com.example.untactshop;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.database.Cursor;
-import android.database.SQLException;
-import android.graphics.PointF;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.graphics.PointF;
@@ -12,10 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 
 import java.io.IOException;
@@ -29,12 +24,12 @@ public class Map extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        TextView name = this.findViewById(R.id.textView);
-        TextView name1 = this.findViewById(R.id.textView1);
-        TextView name2 = this.findViewById(R.id.textView2);
-        TextView name3 = this.findViewById(R.id.textView3);
-
-        name.setText(getIntent().getStringExtra("name"));
+//        TextView name = this.findViewById(R.id.textView);
+//        TextView name1 = this.findViewById(R.id.textView1);
+//        TextView name2 = this.findViewById(R.id.textView2);
+//        TextView name3 = this.findViewById(R.id.textView3);
+//
+//        name.setText(getIntent().getStringExtra("name"));
 
 //        Cursor c = null;
         MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
@@ -72,7 +67,10 @@ public class Map extends AppCompatActivity {
         Log.i("DB", result);
 
 
-        final SubsamplingScaleImageView imageView = (SubsamplingScaleImageView) findViewById(R.id.Myeongdong); // 명동 이미지뷰
+        SubsamplingScaleImageView imageView = (SubsamplingScaleImageView)findViewById(R.id.imageView);
+        imageView.setImage(ImageSource.resource(R.drawable.myeongdong));
+
+        //final SubsamplingScaleImageView imageView = (SubsamplingScaleImageView) findViewById(R.id.Myeongdong); // 명동 이미지뷰
         //ImageView imageView = this.findViewById(R.id.Myeongdong);
         //Refer to ID value.
         final GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
