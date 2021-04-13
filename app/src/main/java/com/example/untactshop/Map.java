@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -25,7 +26,7 @@ public class Map extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        
+
         MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
         try {
             myDbHelper.createDataBase();
@@ -73,22 +74,18 @@ public class Map extends AppCompatActivity {
 
                     float x = sCoord.x;
                     float y = sCoord.y;
-                    float scale = imageView.getScale();
-                    int x_cor;
-                    int y_cor;
 
-                    if(scale>1){
-                        x_cor = (int)(x/scale);
-                        y_cor = (int)(y/scale);
-                    }
+                    /*density 구하기*/
+                    DisplayMetrics dm = new DisplayMetrics();
+                    getWindowManager().getDefaultDisplay().getMetrics(dm);
+                    float density = dm.density;
 
-                    else{
-                        x_cor = (int)x;
-                        y_cor = (int)y;
-                    }
+                    /*비율에 맞는 px 구하기*/
+                    int x_cor = (int)(x/density);
+                    int y_cor = (int)(y/density);
 
                     Log.d("좌표", "new x" + x_cor);
-                    Log.d("좌표", "new y" + y_cor);
+                    Log.d("좌표", "new y" + y_cor + "denstisty" + density);
 
                     // Loop for finding the station.
                     if (c.moveToFirst()) {
@@ -96,7 +93,8 @@ public class Map extends AppCompatActivity {
                         do {
                             if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
                                 String target = c.getString(1); // 유저가 클릭한 가게
-                                Log.i("가게 이름", target);
+                                String num = c.getString(0);
+                                Log.d("확인","가게번호"+num+"가게 이름"+target);
                             } // send Station Name (column 1)
 
                         } while (c.moveToNext());
@@ -114,6 +112,19 @@ public class Map extends AppCompatActivity {
             }
         });
 }
+
+
+//    /**
+//     * Pixel을 DP로 변경해주는 메서드
+//     * @param dp
+//     * @return
+//     */
+//    public static int getPxFromDp(float dp) {
+//        int px = 0;
+//        Context appContext = WLBApplication.getApplication();
+//        px = (int) (dp * appContext.getResources().getDisplayMetrics().density);
+//        return px;
+//    }
 
     private void initLoadDB() {
 

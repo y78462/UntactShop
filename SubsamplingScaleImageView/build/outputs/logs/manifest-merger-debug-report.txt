@@ -1,224 +1,224 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:1-28:12
-MERGED from [:library] /Users/yoonalee/UntactShop/library/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8bcda76bfbdf79d679b3df9c26e6d4c6/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/3c9beaf233c142aeafba2d16e881bff9/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a9a9f1db320c0fb07115d38447c9b535/exifinterface-1.3.2/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.media:media:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/b42e5ce26117253eb5f2af0c8378fc84/media-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/7d20ebf19d8a913848ee6b64cc9882e1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/352c0f72abc25e62f5d27116bcb68197/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/3716d6b1e067c20109c0ce3673effcc3/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/feb39dd612d42e10dbc0a8511e0b280e/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/9ee144dc3ea758da5950d4b730c60c2d/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/ef62b45a63dcf15007e763c8d01f6319/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/4a46ffb07b0865120cbe066be6b0f430/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/1cee082cc3baa6d321ca5500abbfc921/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/81b36ad4779a05ae68a190efb560c14f/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a7e01ede09ff1d061aa6816578e2a3fb/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/7bf4d41eab158ed8ab72c4630c0afe5f/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/07d00a757e07b2a82c6255a04f9671fc/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/0cc52464d1c58a6bb13b7a003306174b/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/05cda127d712a3bb10a5b7592f60e776/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/1e423ebc32d2d0c58c45454ad6484426/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.3.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8c95e4bee40e4b31a4eda44008f4ca65/core-1.3.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/663ae6a20ad0456b3d98d97740a216bf/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/e51f61c0764e3c7d7bb53767a6541bb9/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/d49e4c24f9a408c5fabed61993d9274f/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/4a78567c4d9dcb909486b59baff8b670/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a49094d092e4ca041d3a1d27919cf18d/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/239d2cbc8e209867e32ae4c646bcebd5/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8858864e290bf5005ce3524ad3a54ad1/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/dfc938b352386651a77b14facf5a0169/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/269eeec1e73f717974fbe3d8b1ac201a/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/ad8ea90e3ae3ba8fe38b051c9b47cf1d/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/88b86e4245c33bb422fbda1c986d2cd8/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/51b832d5bcd8c92d243a5471267bb1ff/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:1-28:12
+MERGED from [:library] C:\Users\dpdms\UntactShop\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8bcda76bfbdf79d679b3df9c26e6d4c6\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\3c9beaf233c142aeafba2d16e881bff9\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a9a9f1db320c0fb07115d38447c9b535\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\b42e5ce26117253eb5f2af0c8378fc84\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\7d20ebf19d8a913848ee6b64cc9882e1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\352c0f72abc25e62f5d27116bcb68197\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\3716d6b1e067c20109c0ce3673effcc3\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\feb39dd612d42e10dbc0a8511e0b280e\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\9ee144dc3ea758da5950d4b730c60c2d\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\ef62b45a63dcf15007e763c8d01f6319\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\4a46ffb07b0865120cbe066be6b0f430\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\1cee082cc3baa6d321ca5500abbfc921\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\81b36ad4779a05ae68a190efb560c14f\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a7e01ede09ff1d061aa6816578e2a3fb\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\7bf4d41eab158ed8ab72c4630c0afe5f\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\07d00a757e07b2a82c6255a04f9671fc\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\0cc52464d1c58a6bb13b7a003306174b\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\05cda127d712a3bb10a5b7592f60e776\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\1e423ebc32d2d0c58c45454ad6484426\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8c95e4bee40e4b31a4eda44008f4ca65\core-1.3.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\663ae6a20ad0456b3d98d97740a216bf\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\e51f61c0764e3c7d7bb53767a6541bb9\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\d49e4c24f9a408c5fabed61993d9274f\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\4a78567c4d9dcb909486b59baff8b670\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a49094d092e4ca041d3a1d27919cf18d\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\239d2cbc8e209867e32ae4c646bcebd5\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8858864e290bf5005ce3524ad3a54ad1\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\dfc938b352386651a77b14facf5a0169\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\269eeec1e73f717974fbe3d8b1ac201a\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\ad8ea90e3ae3ba8fe38b051c9b47cf1d\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\88b86e4245c33bb422fbda1c986d2cd8\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\51b832d5bcd8c92d243a5471267bb1ff\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:4:11-61
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:4:11-61
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:6:11-38
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:6:11-38
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:3:11-57
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:3:11-57
 	android:hardwareAccelerated
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:7:11-45
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:7:11-45
 	xmlns:android
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:5:11-34
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:5:11-34
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:9:5-94
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:9:5-94
 	tools:node
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:9:73-92
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:9:73-92
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:9:22-72
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:9:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:10:1-95
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:10:1-95
 	tools:node
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:10:74-93
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:10:74-93
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:10:18-73
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:10:18-73
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:11:1-96
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:11:1-96
 	tools:node
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:11:75-94
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:11:75-94
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:11:18-74
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:11:18-74
 application
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:12:1-27:15
-MERGED from [androidx.core:core:1.3.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8c95e4bee40e4b31a4eda44008f4ca65/core-1.3.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.3.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8c95e4bee40e4b31a4eda44008f4ca65/core-1.3.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/239d2cbc8e209867e32ae4c646bcebd5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/239d2cbc8e209867e32ae4c646bcebd5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:1-27:15
+MERGED from [androidx.core:core:1.3.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8c95e4bee40e4b31a4eda44008f4ca65\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8c95e4bee40e4b31a4eda44008f4ca65\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\239d2cbc8e209867e32ae4c646bcebd5\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\239d2cbc8e209867e32ae4c646bcebd5\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.3.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8c95e4bee40e4b31a4eda44008f4ca65/core-1.3.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.3.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8c95e4bee40e4b31a4eda44008f4ca65\core-1.3.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:12:14-46
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:14-46
 	tools:ignore
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:12:145-184
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:145-184
 	android:icon
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:12:82-116
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:82-116
 	android:allowBackup
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:12:117-144
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:117-144
 	android:theme
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:12:47-81
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:47-81
 activity#com.davemorrissey.labs.subscaleview.test.MainActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:13:5-18:16
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:13:5-18:16
 	android:label
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:13:44-76
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:13:44-76
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:13:15-43
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:13:15-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:14:9-17:25
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:14:9-17:25
 action#android.intent.action.MAIN
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:15:13-64
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:15:13-64
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:15:21-62
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:15:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:16:13-72
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:16:13-72
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:16:23-70
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:16:23-70
 activity#com.davemorrissey.labs.subscaleview.test.basicfeatures.BasicFeaturesActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:19:5-68
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:19:5-68
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:19:15-66
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:19:15-66
 activity#com.davemorrissey.labs.subscaleview.test.imagedisplay.ImageDisplayActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:20:5-66
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:20:15-64
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:20:15-64
 activity#com.davemorrissey.labs.subscaleview.test.eventhandling.EventHandlingActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:21:5-68
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:21:5-68
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:21:15-66
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:21:15-66
 activity#com.davemorrissey.labs.subscaleview.test.eventhandlingadvanced.AdvancedEventHandlingActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:22:5-84
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:22:5-84
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:22:15-82
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:22:15-82
 activity#com.davemorrissey.labs.subscaleview.test.viewpager.ViewPagerActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:23:5-60
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:23:5-60
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:23:15-58
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:23:15-58
 activity#com.davemorrissey.labs.subscaleview.test.animation.AnimationActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:24:5-60
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:24:5-60
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:24:15-58
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:24:15-58
 activity#com.davemorrissey.labs.subscaleview.test.extension.ExtensionActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:25:5-60
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:25:5-60
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:25:15-58
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:25:15-58
 activity#com.davemorrissey.labs.subscaleview.test.configuration.ConfigurationActivity
-ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:26:5-68
+ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:26:5-68
 	android:name
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml:26:15-66
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:26:15-66
 uses-sdk
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-MERGED from [:library] /Users/yoonalee/UntactShop/library/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:library] /Users/yoonalee/UntactShop/library/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8bcda76bfbdf79d679b3df9c26e6d4c6/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8bcda76bfbdf79d679b3df9c26e6d4c6/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/3c9beaf233c142aeafba2d16e881bff9/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/3c9beaf233c142aeafba2d16e881bff9/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a9a9f1db320c0fb07115d38447c9b535/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a9a9f1db320c0fb07115d38447c9b535/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.media:media:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/b42e5ce26117253eb5f2af0c8378fc84/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/b42e5ce26117253eb5f2af0c8378fc84/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/7d20ebf19d8a913848ee6b64cc9882e1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/7d20ebf19d8a913848ee6b64cc9882e1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/352c0f72abc25e62f5d27116bcb68197/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/352c0f72abc25e62f5d27116bcb68197/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/3716d6b1e067c20109c0ce3673effcc3/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/3716d6b1e067c20109c0ce3673effcc3/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/feb39dd612d42e10dbc0a8511e0b280e/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/feb39dd612d42e10dbc0a8511e0b280e/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/9ee144dc3ea758da5950d4b730c60c2d/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/9ee144dc3ea758da5950d4b730c60c2d/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/ef62b45a63dcf15007e763c8d01f6319/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/ef62b45a63dcf15007e763c8d01f6319/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/4a46ffb07b0865120cbe066be6b0f430/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/4a46ffb07b0865120cbe066be6b0f430/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/1cee082cc3baa6d321ca5500abbfc921/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/1cee082cc3baa6d321ca5500abbfc921/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/81b36ad4779a05ae68a190efb560c14f/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/81b36ad4779a05ae68a190efb560c14f/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a7e01ede09ff1d061aa6816578e2a3fb/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a7e01ede09ff1d061aa6816578e2a3fb/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/7bf4d41eab158ed8ab72c4630c0afe5f/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/7bf4d41eab158ed8ab72c4630c0afe5f/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/07d00a757e07b2a82c6255a04f9671fc/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/07d00a757e07b2a82c6255a04f9671fc/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/0cc52464d1c58a6bb13b7a003306174b/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/0cc52464d1c58a6bb13b7a003306174b/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/05cda127d712a3bb10a5b7592f60e776/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/05cda127d712a3bb10a5b7592f60e776/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/1e423ebc32d2d0c58c45454ad6484426/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/1e423ebc32d2d0c58c45454ad6484426/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8c95e4bee40e4b31a4eda44008f4ca65/core-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8c95e4bee40e4b31a4eda44008f4ca65/core-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/663ae6a20ad0456b3d98d97740a216bf/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/663ae6a20ad0456b3d98d97740a216bf/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/e51f61c0764e3c7d7bb53767a6541bb9/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/e51f61c0764e3c7d7bb53767a6541bb9/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/d49e4c24f9a408c5fabed61993d9274f/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/d49e4c24f9a408c5fabed61993d9274f/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/4a78567c4d9dcb909486b59baff8b670/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/4a78567c4d9dcb909486b59baff8b670/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a49094d092e4ca041d3a1d27919cf18d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/a49094d092e4ca041d3a1d27919cf18d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/239d2cbc8e209867e32ae4c646bcebd5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/239d2cbc8e209867e32ae4c646bcebd5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8858864e290bf5005ce3524ad3a54ad1/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/8858864e290bf5005ce3524ad3a54ad1/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/dfc938b352386651a77b14facf5a0169/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/dfc938b352386651a77b14facf5a0169/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/269eeec1e73f717974fbe3d8b1ac201a/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/269eeec1e73f717974fbe3d8b1ac201a/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/ad8ea90e3ae3ba8fe38b051c9b47cf1d/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/ad8ea90e3ae3ba8fe38b051c9b47cf1d/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/88b86e4245c33bb422fbda1c986d2cd8/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/88b86e4245c33bb422fbda1c986d2cd8/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/51b832d5bcd8c92d243a5471267bb1ff/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yoonalee/.gradle/caches/transforms-2/files-2.1/51b832d5bcd8c92d243a5471267bb1ff/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+MERGED from [:library] C:\Users\dpdms\UntactShop\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:library] C:\Users\dpdms\UntactShop\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8bcda76bfbdf79d679b3df9c26e6d4c6\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8bcda76bfbdf79d679b3df9c26e6d4c6\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\3c9beaf233c142aeafba2d16e881bff9\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\3c9beaf233c142aeafba2d16e881bff9\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a9a9f1db320c0fb07115d38447c9b535\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a9a9f1db320c0fb07115d38447c9b535\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\b42e5ce26117253eb5f2af0c8378fc84\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\b42e5ce26117253eb5f2af0c8378fc84\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\7d20ebf19d8a913848ee6b64cc9882e1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\7d20ebf19d8a913848ee6b64cc9882e1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\352c0f72abc25e62f5d27116bcb68197\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\352c0f72abc25e62f5d27116bcb68197\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\3716d6b1e067c20109c0ce3673effcc3\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\3716d6b1e067c20109c0ce3673effcc3\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\feb39dd612d42e10dbc0a8511e0b280e\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\feb39dd612d42e10dbc0a8511e0b280e\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\9ee144dc3ea758da5950d4b730c60c2d\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\9ee144dc3ea758da5950d4b730c60c2d\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\ef62b45a63dcf15007e763c8d01f6319\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\ef62b45a63dcf15007e763c8d01f6319\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\4a46ffb07b0865120cbe066be6b0f430\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\4a46ffb07b0865120cbe066be6b0f430\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\1cee082cc3baa6d321ca5500abbfc921\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\1cee082cc3baa6d321ca5500abbfc921\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\81b36ad4779a05ae68a190efb560c14f\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\81b36ad4779a05ae68a190efb560c14f\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a7e01ede09ff1d061aa6816578e2a3fb\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a7e01ede09ff1d061aa6816578e2a3fb\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\7bf4d41eab158ed8ab72c4630c0afe5f\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\7bf4d41eab158ed8ab72c4630c0afe5f\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\07d00a757e07b2a82c6255a04f9671fc\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\07d00a757e07b2a82c6255a04f9671fc\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\0cc52464d1c58a6bb13b7a003306174b\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\0cc52464d1c58a6bb13b7a003306174b\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\05cda127d712a3bb10a5b7592f60e776\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\05cda127d712a3bb10a5b7592f60e776\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\1e423ebc32d2d0c58c45454ad6484426\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\1e423ebc32d2d0c58c45454ad6484426\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8c95e4bee40e4b31a4eda44008f4ca65\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8c95e4bee40e4b31a4eda44008f4ca65\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\663ae6a20ad0456b3d98d97740a216bf\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\663ae6a20ad0456b3d98d97740a216bf\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\e51f61c0764e3c7d7bb53767a6541bb9\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\e51f61c0764e3c7d7bb53767a6541bb9\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\d49e4c24f9a408c5fabed61993d9274f\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\d49e4c24f9a408c5fabed61993d9274f\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\4a78567c4d9dcb909486b59baff8b670\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\4a78567c4d9dcb909486b59baff8b670\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a49094d092e4ca041d3a1d27919cf18d\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\a49094d092e4ca041d3a1d27919cf18d\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\239d2cbc8e209867e32ae4c646bcebd5\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\239d2cbc8e209867e32ae4c646bcebd5\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8858864e290bf5005ce3524ad3a54ad1\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8858864e290bf5005ce3524ad3a54ad1\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\dfc938b352386651a77b14facf5a0169\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\dfc938b352386651a77b14facf5a0169\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\269eeec1e73f717974fbe3d8b1ac201a\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\269eeec1e73f717974fbe3d8b1ac201a\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\ad8ea90e3ae3ba8fe38b051c9b47cf1d\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\ad8ea90e3ae3ba8fe38b051c9b47cf1d\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\88b86e4245c33bb422fbda1c986d2cd8\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\88b86e4245c33bb422fbda1c986d2cd8\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\51b832d5bcd8c92d243a5471267bb1ff\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\51b832d5bcd8c92d243a5471267bb1ff\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/SubsamplingScaleImageView/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+		ADDED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml

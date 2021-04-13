@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/yoonalee/UntactShop/SubsamplingScaleImageView/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "outputFile": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "/Users/yoonalee/.gradle/caches/transforms-2/files-2.1/3c9beaf233c142aeafba2d16e881bff9/appcompat-1.2.0/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\dpdms\\.gradle\\caches\\transforms-2\\files-2.1\\3c9beaf233c142aeafba2d16e881bff9\\appcompat-1.2.0\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
