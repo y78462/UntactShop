@@ -25,15 +25,7 @@ public class Map extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-
-//        TextView name = this.findViewById(R.id.textView);
-//        TextView name1 = this.findViewById(R.id.textView1);
-//        TextView name2 = this.findViewById(R.id.textView2);
-//        TextView name3 = this.findViewById(R.id.textView3);
-//
-//        name.setText(getIntent().getStringExtra("name"));
-
-//        Cursor c = null;
+        
         MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
         try {
             myDbHelper.createDataBase();
