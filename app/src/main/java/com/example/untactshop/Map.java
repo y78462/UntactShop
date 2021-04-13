@@ -88,13 +88,25 @@ public class Map extends AppCompatActivity {
                     PointF xCoord = imageView.viewToSourceCoord(imageView.getScaleX(), imageView.getScaleY());
                     PointF yCoord = imageView.viewToSourceCoord(imageView.getX(), imageView.getY());
 
-                    int x_cor = (int) (sCoord.x);
-                    int y_cor = (int) (sCoord.y);
-                    int width = imageView.getWidth();
-                    int height = imageView.getHeight();
-                    int scale =  (int)imageView.getScale();
+                    float x = sCoord.x;
+                    float y = sCoord.y;
+//                    int width = imageView.getWidth();
+//                    int height = imageView.getHeight();
+                    float scale = imageView.getScale();
                     int xscale = (int) imageView.getScaleX();
                     int yscale = (int) imageView.getScaleY();
+                    int x_cor;
+                    int y_cor;
+
+                    if(scale>1){
+                        x_cor = (int)(x/scale);
+                        y_cor = (int)(y/scale);
+                    }
+
+                    else{
+                        x_cor = (int)x;
+                        y_cor = (int)y;
+                    }
 
                     //int x = x_cor/scale;
                     //int y = y_cor/scale;
@@ -102,11 +114,11 @@ public class Map extends AppCompatActivity {
                     Log.d("좌표", "new x" + x_cor);
                     Log.d("좌표", "new y" + y_cor);
 
-                    Log.d("크기", "width" + width);
-                    Log.d("크기", "height"+height);
-
-                    Log.d("크기", "x" + (int)(xCoord.x));
-                    Log.d("크기", "y"+(int)(xCoord.y));
+//                    Log.d("크기", "width" + width);
+//                    Log.d("크기", "height"+height);
+//
+//                    Log.d("크기", "x" + (int)(xCoord.x));
+//                    Log.d("크기", "y"+(int)(xCoord.y));
 
                     Log.d("scale","s"+scale+"x"+xscale+"y"+yscale);
 
