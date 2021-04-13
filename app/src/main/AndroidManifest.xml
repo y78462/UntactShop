@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UntactShop">
         <activity android:name=".Intro">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <activity android:name=".Home_main">
@@ -24,7 +24,12 @@
         <activity android:name=".Order_search"/>
         <activity android:name=".Infor_modify"/>
         <activity android:name=".Choice_shop"/>
-        <activity android:name=".Map"/>
+        <activity android:name=".Map" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ShopSearchActivity"/>
         <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".LocationInfoActivity"/>

@@ -5,8 +5,10 @@ import android.database.SQLException;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +20,7 @@ import java.io.IOException;
 public class Map extends AppCompatActivity {
 
     Cursor c = null;
+    GestureDetector gestureDetector = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,39 +70,79 @@ public class Map extends AppCompatActivity {
         Log.i("DB", result);
 
 
-        SubsamplingScaleImageView imageView = (SubsamplingScaleImageView)findViewById(R.id.imageView);
+        SubsamplingScaleImageView imageView = findViewById(R.id.imageView);
         imageView.setImage(ImageSource.resource(R.drawable.myeongdong));
+
+        Log.d("뷰", "성공");
 
         //final SubsamplingScaleImageView imageView = (SubsamplingScaleImageView) findViewById(R.id.Myeongdong); // 명동 이미지뷰
         //ImageView imageView = this.findViewById(R.id.Myeongdong);
         //Refer to ID value.
-        final GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
+        gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
             @Override
             public boolean onSingleTapUp(MotionEvent ev) {
+
+                Log.d("함수", "호출성공");
                 if (imageView.isReady()) {
                     PointF sCoord = imageView.viewToSourceCoord(ev.getX(), ev.getY());
-                    int x_cor = (int) sCoord.x;
-                    int y_cor = (int) sCoord.y;
+                    PointF xCoord = imageView.viewToSourceCoord(imageView.getScaleX(), imageView.getScaleY());
+                    PointF yCoord = imageView.viewToSourceCoord(imageView.getX(), imageView.getY());
+
+                    int x_cor = (int) (sCoord.x);
+                    int y_cor = (int) (sCoord.y);
+                    int width = imageView.getWidth();
+                    int height = imageView.getHeight();
+                    int scale =  (int)imageView.getScale();
+                    int xscale = (int) imageView.getScaleX();
+                    int yscale = (int) imageView.getScaleY();
+
+                    //int x = x_cor/scale;
+                    //int y = y_cor/scale;
+
+                    Log.d("좌표", "new x" + x_cor);
+                    Log.d("좌표", "new y" + y_cor);
+
+                    Log.d("크기", "width" + width);
+                    Log.d("크기", "height"+height);
+
+                    Log.d("크기", "x" + (int)(xCoord.x));
+                    Log.d("크기", "y"+(int)(xCoord.y));
+
+                    Log.d("scale","s"+scale+"x"+xscale+"y"+yscale);
+
 
                     // Loop for finding the station.
                     if (c.moveToFirst()) {
-                        do {
 
+                        do {
+                            //Log.d("뷰", "성공");
                             if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
-                                String targetStation = c.getString(1); // 유저가 클릭한 지하철역
+                                String target = c.getString(1); // 유저가 클릭한 가게
+                                Log.i("가게 이름", target);
                             } // send Station Name (column 1)
+
                         } while (c.moveToNext());
                     }
-
-                    /////////////////////////////////////////////////////////////////////////////
-
                 }
                 return super.onSingleTapUp(ev);
             }
         });
 
+        imageView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                gestureDetector.onTouchEvent(motionEvent);
+                return false;
+            }
+        });
+}
 
 
+    public int dpTopx (int sizeInDP){
+        int pxval = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, sizeInDP, getResources().getDisplayMetrics()
+        );
+        return pxval;
     }
 
     private void initLoadDB() {
@@ -128,3 +171,4 @@ public class Map extends AppCompatActivity {
         }
     }
 }
+
