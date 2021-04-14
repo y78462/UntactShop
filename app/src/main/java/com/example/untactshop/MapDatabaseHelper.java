@@ -18,7 +18,7 @@ import java.io.OutputStream;
 public class MapDatabaseHelper extends SQLiteOpenHelper {
 
     String DB_PATH = null;
-    private static String DB_NAME = "underground_shopping_area.db"; // SQLLite 파일명 이름
+    private static String DB_NAME = "map_shop.db"; // SQLLite 파일명 이름
     private SQLiteDatabase myDataBase;
     private final Context myContext;
 

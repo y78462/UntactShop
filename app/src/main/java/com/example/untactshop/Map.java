@@ -94,7 +94,7 @@ public class Map extends AppCompatActivity {
                             if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
                                 String target = c.getString(1); // 유저가 클릭한 가게
                                 String num = c.getString(0);
-                                Log.d("확인","가게번호"+num+"가게 이름"+target);
+                                Log.d("확인","가게번호 "+num+"가게 이름 "+target);
                             } // send Station Name (column 1)
 
                         } while (c.moveToNext());
