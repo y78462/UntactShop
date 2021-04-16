@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dpdms\\.gradle\\caches\\transforms-2\\files-2.1\\3c9beaf233c142aeafba2d16e881bff9\\appcompat-1.2.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\Hwangjaehwan\\.gradle\\caches\\transforms-2\\files-2.1\\3c9beaf233c142aeafba2d16e881bff9\\appcompat-1.2.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

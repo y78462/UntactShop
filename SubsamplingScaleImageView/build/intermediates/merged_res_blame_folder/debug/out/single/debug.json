@@ -1,118 +1,118 @@
 [
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_transparent.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\transparent.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_play.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\play.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_button_standout_inactive.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\button_standout_inactive.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_extension_circle_fragment.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\extension_circle_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_imagedisplay_region_fragment.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\imagedisplay_region_fragment.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\main.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_reset.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\reset.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_button_transparent_pressed.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\button_transparent_pressed.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_pushpin_blue.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\pushpin_blue.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_extension_freehand_fragment.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\extension_freehand_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_fragments_activity.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\fragments_activity.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_pages_activity.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\pages_activity.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_fragments_activity.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\fragments_activity.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_button_standout_pressed.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\button_standout_pressed.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_previous.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\previous.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_buttonstate_standout.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\buttonstate_standout.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_extension_circle_fragment.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\extension_circle_fragment.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_transparent.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\transparent.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_button_transparent_pressed.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\button_transparent_pressed.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_view_pager_page.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\view_pager_page.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_imagedisplay_region_fragment.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\imagedisplay_region_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_play.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\play.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_reset.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\reset.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_view_pager.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\view_pager.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_next.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\next.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_animation_activity.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\animation_activity.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_extension_pin_fragment.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\extension_pin_fragment.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_view_pager_page.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\view_pager_page.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_pages_activity.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\pages_activity.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_previous.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\previous.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_buttonstate_standout.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\buttonstate_standout.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_extension_freehand_fragment.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\extension_freehand_fragment.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_button_standout_inactive.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\button_standout_inactive.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_rotate.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\rotate.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_next.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\next.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_imagedisplay_rotate_fragment.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\imagedisplay_rotate_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_animation_activity.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\animation_activity.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_extension_pin_fragment.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\extension_pin_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_button_standout_pressed.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\button_standout_pressed.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_imagedisplay_large_fragment.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\imagedisplay_large_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_buttonstate_transparent.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\buttonstate_transparent.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\main.xml"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_imagedisplay_large_fragment.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\imagedisplay_large_fragment.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_rotate.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-xhdpi\\rotate.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_imagedisplay_rotate_fragment.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\imagedisplay_rotate_fragment.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_pushpin_blue.png.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\pushpin_blue.png"
     },
     {
-        "merged": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\layout_view_pager.xml.flat",
-        "source": "C:\\Users\\dpdms\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\layout\\view_pager.xml"
+        "merged": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi_buttonstate_transparent.xml.flat",
+        "source": "C:\\Users\\Hwangjaehwan\\Documents\\UntactShop\\SubsamplingScaleImageView\\src\\main\\res\\drawable-nodpi\\buttonstate_transparent.xml"
     }
 ]
