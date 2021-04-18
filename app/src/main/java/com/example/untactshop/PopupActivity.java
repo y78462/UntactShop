@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class PopupActivity extends Activity {
 
     TextView txtText;
+    String search_text;
 
 
     @Override
@@ -25,21 +26,21 @@ public class PopupActivity extends Activity {
 
         //데이터 가져오기
         Intent intent = getIntent();
-        String data = intent.getStringExtra("점포명");
-        txtText.setText(data);
+        search_text = intent.getStringExtra("점포명");
+        txtText.setText(search_text);
     }
 
     //위치정보 버튼 클릭
     public void location_info(View v) {
         Intent intent = new Intent(getApplicationContext(), LocationInfoActivity.class);
-//        intent.putExtra("검색데이터", search_text);
+//        intent.putExtra("점포명", search_text);
         startActivity(intent);
     }
 
     //매장정보 버튼 클릭
     public void shop_info(View v) {
         Intent intent = new Intent(getApplicationContext(), ShopInfoActivity.class);
-//        intent.putExtra("검색데이터", search_text);
+        intent.putExtra("점포명", search_text);
         startActivity(intent);
     }
 
