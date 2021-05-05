@@ -1,5 +1,6 @@
 package com.example.untactshop;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.graphics.PointF;
@@ -26,8 +27,9 @@ public class Map extends AppCompatActivity {
     FrameLayout frame;
     DisplayMetrics dm;
     float density;
-    String map = "Myeongdong";
     int scale = 0;
+    Intent map_name = getIntent();
+    String map = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +80,113 @@ public class Map extends AppCompatActivity {
 //        Log.i("DB", result);
 
         SubsamplingScaleImageView imageView = findViewById(R.id.imageView);
-        imageView.setImage(ImageSource.resource(R.drawable.myeongdong));
+        switch(map_name.getStringExtra("name")){
+            case "명동":
+                imageView.setImage(ImageSource.resource(R.drawable.map_myeongdong));
+                map = "Myeongdong";
+                break;
+            case "명동역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_myeongdongstation));
+                map = "MyeongdongStation";
+                break;
+            case "소공":
+                imageView.setImage(ImageSource.resource(R.drawable.map_sogong));
+                map = "Sogong";
+                break;
+            case "회현":
+                imageView.setImage(ImageSource.resource(R.drawable.map_hoehyeon));
+                map = "Hoehyeon";
+                break;
+            case "남대문":
+                imageView.setImage(ImageSource.resource(R.drawable.map_namdaemun));
+                map = "Namdaemun";
+                break;
+            case "을지로2구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljiro2zone));
+                map = "Euljiro2zone";
+                break;
+            case "을지로3구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljiro3zone));
+                map = "Euljiro3zone";
+                break;
+            case "을지로4구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljiro4zone));
+                map = "Euljiro4zone";
+                break;
+            case "시청광장":
+                imageView.setImage(ImageSource.resource(R.drawable.map_cityhall));
+                map = "CityHall";
+                break;
+            case "을지입구":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljientrance));
+                map = "EuljiEntrance";
+                break;
+            case "인현":
+                imageView.setImage(ImageSource.resource(R.drawable.map_inhyeon));
+                map = "Inhyeon";
+                break;
+            case "신당":
+                imageView.setImage(ImageSource.resource(R.drawable.map_sindang));
+                map = "Sindang";
+                break;
+            case "종각":
+                imageView.setImage(ImageSource.resource(R.drawable.map_jonggak));
+                map = "Jonggak";
+                break;
+            case "종로4가":
+                imageView.setImage(ImageSource.resource(R.drawable.map_jongno4ga));
+                map = "Jongno4ga";
+                break;
+            case "청계5가":
+                imageView.setImage(ImageSource.resource(R.drawable.map_chonggye5));
+                map = "ChongGye5";
+                break;
+            case "청계6가":
+                imageView.setImage(ImageSource.resource(R.drawable.map_chonggye6));
+                map = "ChongGye6";
+                break;
+            case "마전교":
+                imageView.setImage(ImageSource.resource(R.drawable.map_majeongyo));
+                map = "MaJeonGyo";
+                break;
+            case "동대문":
+                imageView.setImage(ImageSource.resource(R.drawable.map_dongdaemun));
+                map = "DongDaeMun";
+                break;
+            case "강남역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamstation));
+                map = "GangnamStation";
+                break;
+            case "잠실역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_jamsilstation));
+                map = "JamSilStation";
+                break;
+            case "터미널1구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamterminalpart1));
+                map = "GangNamTerminalPart1";
+                break;
+            case "터미널2구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamterminalpart2));
+                map = "GangNamTerminalPart2";
+                break;
+            case "터미널3구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamterminalpart3));
+                map = "GangNamTerminalPart3";
+                break;
+            case "영등포역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_yeongdeungpostation));
+                map = "YeongDeungPoStation";
+                break;
+            case "영등포로터리":
+                imageView.setImage(ImageSource.resource(R.drawable.map_yeongdeungporotary));
+                map = "YeongDeungPoRotary";
+                break;
+            case "영등포시장":
+                imageView.setImage(ImageSource.resource(R.drawable.map_yeongdeungpomarket));
+                map = "YeongDeungPoMarket";
+                break;
+        }
+
         makeText();
         //Refer to ID value.
         gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
