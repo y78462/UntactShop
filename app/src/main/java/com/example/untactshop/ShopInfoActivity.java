@@ -3,18 +3,10 @@ package com.example.untactshop;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.SQLException;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
@@ -23,6 +15,7 @@ import androidx.annotation.Nullable;
 import java.io.IOException;
 import java.io.InputStream;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
@@ -31,6 +24,7 @@ public class ShopInfoActivity extends Activity {
 
     TextView name, category, location;
     String shop_name, shop_location, shop_category;
+    CircleImageView circleImageView;
     Cursor c = null;
 
     @Override
@@ -41,12 +35,44 @@ public class ShopInfoActivity extends Activity {
         name = (TextView) findViewById(R.id.text_name);
         category = (TextView) findViewById(R.id.text_category);
         location = (TextView) findViewById(R.id.text_locaton);
+        circleImageView = findViewById(R.id.img_category);
 
         Intent intent = getIntent();
         shop_name = intent.getStringExtra("점포명");
         name.setText(shop_name);
 
-        readExcel();
+        if(intent.getStringExtra("category")!=null){
+            shop_location = intent.getStringExtra("location");
+            shop_category = intent.getStringExtra("category");
+            location.setText(shop_location);
+            category.setText(shop_category);
+        }
+        else
+            readExcel();
+
+        switch(shop_category){
+            case "음식점":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_restaurant));
+                break;
+            case "패션의류":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_fashion));
+                break;
+            case "쇼핑미용":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_beauty));
+                break;
+            case "디지털 가전":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_digital));
+                break;
+            case "편의시설":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_convenient));
+                break;
+            case "기타매장":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_etc));
+                break;
+            case "공방":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_craft));
+                break;
+        }
     }
 
     public void chat_btn(View view) {
@@ -85,7 +111,7 @@ public class ShopInfoActivity extends Activity {
                             Log.d("가게정보", location1 + ", " + location2 + ", " + location3 + ", " + category);
 
                             shop_location = location1 + "권 " + location2 + " " + location3;
-                            Log.d("가게정보", shop_location);
+                            Log.d("가게정보", shop_location + " " + shop_category);
 
                             location.setText(shop_location);
                             category.setText(shop_category);
