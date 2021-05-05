@@ -28,7 +28,6 @@ public class Map extends AppCompatActivity {
     DisplayMetrics dm;
     float density;
     int scale = 0;
-    Intent map_name = getIntent();
     String map = "";
 
     @Override
@@ -39,6 +38,8 @@ public class Map extends AppCompatActivity {
         dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         density = dm.density;
+
+        Intent map_name = getIntent();
 
         MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
         try {
@@ -79,8 +80,10 @@ public class Map extends AppCompatActivity {
 //        }
 //        Log.i("DB", result);
 
+        String st_name = map_name.getStringExtra("name");
+        Log.e("intent log ",st_name);
         SubsamplingScaleImageView imageView = findViewById(R.id.imageView);
-        switch(map_name.getStringExtra("name")){
+        switch(st_name){
             case "명동":
                 imageView.setImage(ImageSource.resource(R.drawable.map_myeongdong));
                 map = "Myeongdong";
