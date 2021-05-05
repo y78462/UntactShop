@@ -6,8 +6,14 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="14"
+<<<<<<< Updated upstream
 8-->/Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->/Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
+=======
+8-->C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml
+>>>>>>> Stashed changes
 10
 11</manifest>

@@ -18,7 +18,7 @@ import java.io.OutputStream;
 public class MapDatabaseHelper extends SQLiteOpenHelper {
 
     String DB_PATH = null;
-    private static String DB_NAME = "map_shop.db"; // SQLLite 파일명 이름
+    private static String DB_NAME = "shop.db"; // SQLLite 파일명 이름
     private SQLiteDatabase myDataBase;
     private final Context myContext;
 
@@ -102,6 +102,12 @@ public class MapDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
-        return myDataBase.query("Myeongdong", null, null, null, null, null, null);
+        return myDataBase.query("Shop", null, null, null, null, null, null);
     }
+
+//    @Override
+//    public void onConfigure(SQLiteDatabase db) {
+//        super.onConfigure(db);
+//        db.disableWriteAheadLogging();
+//    }
 }

@@ -2,18 +2,14 @@ package com.example.untactshop;
 
 import android.database.Cursor;
 import android.database.SQLException;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.DragEvent;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +26,8 @@ public class Map extends AppCompatActivity {
     FrameLayout frame;
     DisplayMetrics dm;
     float density;
-
+    String map = "Myeongdong";
+    int scale = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,26 +49,31 @@ public class Map extends AppCompatActivity {
         } catch (SQLException sqle) {
             throw sqle;
         }
-        c = myDbHelper.query("Myeongdong", null, null, null, null, null, null); // SQLDataRead
+        c = myDbHelper.query("Shop", null, null, null, null, null, null); // SQLDataRead
 
 
-//        DB 쿼리 확인
+//        //DB 쿼리 확인
 //        String result = "";
 //        while (c.moveToNext()) {
-//            result += c.getString(0)
-//                    + " | "
-//                    + c.getString(1)
-//                    + " | "
-//                    + c.getInt(2)
-//                    + "| "
-//                    + c.getInt(3)
-//                    + "| "
-//                    + c.getInt(4)
-//                    + "| "
-//                    + c.getInt(5)
-//                    + "| "
-//                    + c.getString(6)
-//                    + "\n";
+//            if (c.getString(0).equals(map)) {
+//                break;
+//                result += c.getString(0)
+//                        + " | "
+//                        + c.getString(1)
+//                        + " | "
+//                        + c.getString(2)
+//                        + " | "
+//                        + c.getInt(3)
+//                        + "| "
+//                        + c.getInt(4)
+//                        + "| "
+//                        + c.getInt(5)
+//                        + "| "
+//                        + c.getInt(6)
+//                        + "| "
+//                        + c.getString(7)
+//                        + "\n";
+//            }
 //        }
 //        Log.i("DB", result);
 
@@ -82,129 +84,94 @@ public class Map extends AppCompatActivity {
         gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
 
             @Override
-            public boolean onDown(MotionEvent ev){
+            public boolean onDown(MotionEvent ev) {
+                Log.d("Down","!!");
                 return false;
             }
 
             @Override
-            public void onLongPress(MotionEvent ev){
+            public void onLongPress(MotionEvent ev) {
                 if (imageView.isReady()) {
                     PointF sCoord = imageView.viewToSourceCoord(ev.getX(), ev.getY());
                     float x = sCoord.x;
                     float y = sCoord.y;
 
-                    /*density 구하기*/
-
                     /*비율에 맞는 px 구하기*/
-                    int x_cor = (int)(x/density);
-                    int y_cor = (int)(y/density);
-
+                    int x_cor = (int) (x / density);
+                    int y_cor = (int) (y / density);
 
                     // Loop for finding the station.
                     if (c.moveToFirst()) {
 
                         do {
-                            if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
-                                String target = c.getString(1); // 유저가 클릭한 가게
-                                String num = c.getString(0);
-                                Log.d("확인","가게번호 "+num+"가게 이름 "+target);
-                            } // send Station Name (column 1)
-
+                            if (c.getString(0).equals(map)) {
+                                if ((x_cor > c.getInt(3)) && (x_cor < c.getInt(5)) && (y_cor > c.getInt(4)) && (y_cor < c.getInt(6))) {
+                                    String target = c.getString(2); // 유저가 클릭한 가게이름
+                                    String num = c.getString(1); //가게 번호
+                                    Log.d("확인", "가게번호 " + num + "가게 이름 " + target);
+                                } // send Station Name (column 1)
+                            }
                         } while (c.moveToNext());
                     }
-
-
+                    Log.d("tag","onlongpass");
                 }
             }
 
-//            @Override
-//            public boolean onDoubleTap(MotionEvent ev){
-//                Log.d("스케일", "scale" + imageView.getScale());
-//                if(imageView.getScale() == imageView.getMaxScale()) {
-//                    Log.d("탭탭", "in1");
-//                    textInVisible();
-//                }
-//                else {
-//                    Log.d("탭탭", "in2");
-//                    setShopMax(imageView);
-//                    textVisible();
-//                }
-//                return super.onDoubleTap(ev);
-//            }
+            @Override
+            public boolean onDoubleTapEvent(MotionEvent ev) {
+                Log.d("더블 탭 스케일", "scale" + imageView.getScale());
+                int action = ev.getAction();
+
+                if(action==MotionEvent.ACTION_UP) {
+                    if (imageView.getScale() == imageView.getMaxScale()) { //더블 탭 해서 축소됨
+                        Log.d("탭탭", "in1");
+                        scale = 1;
+                    } else { //더블탭해서 확대됨
+                        Log.d("탭탭", "in2");
+                        //setShopMax(imageView);
+                        scale = 2;
+                    }
+                }
+                Log.d("더블 탭", "scale" + scale);
+                return super.onDoubleTapEvent(ev);
+            }
 
             @Override
-            public boolean onSingleTapConfirmed(MotionEvent ev){
+            public boolean onSingleTapConfirmed(MotionEvent ev) {
                 Log.d("함수", "호출성공");
                 if (imageView.isReady()) {
                     PointF sCoord = imageView.viewToSourceCoord(ev.getX(), ev.getY());
                     float x = sCoord.x;
                     float y = sCoord.y;
 
-                    /*density 구하기*/
-
                     /*비율에 맞는 px 구하기*/
-                    int x_cor = (int)(x/density);
-                    int y_cor = (int)(y/density);
+                    int x_cor = (int) (x / density);
+                    int y_cor = (int) (y / density);
 
                     Log.d("좌표", "new x" + x_cor);
-                    Log.d("좌표", "new y" + y_cor + "denstisty" + density);
+                    Log.d("좌표", "new y" + y_cor + "density" + density);
 
                     // Loop for finding the station.
                     if (c.moveToFirst()) {
-
                         do {
-                            if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
-                                String target = c.getString(1); // 유저가 클릭한 가게
-                                String num = c.getString(0);
-                                Log.d("확인","가게번호 "+num+"가게 이름 "+target);
-                            } // send Station Name (column 1)
-
+                            if (c.getString(0).equals(map)) {
+                                if ((x_cor > c.getInt(3)) && (x_cor < c.getInt(5)) && (y_cor > c.getInt(4)) && (y_cor < c.getInt(6))) {
+                                    String target = c.getString(2); // 유저가 클릭한 가게
+                                    String num = c.getString(1);
+                                    Log.d("확인", "가게번호 " + num + "가게 이름 " + target);
+                                } // send Station Name (column 1)
+                            }
                         } while (c.moveToNext());
                     }
-
-
                 }
-
+                Log.d("onsingletapconfirmed","dd");
                 return super.onSingleTapConfirmed(ev);
             }
 
             @Override
             public boolean onSingleTapUp(MotionEvent ev) {
-
-//                Log.d("함수", "호출성공");
-//                if (imageView.isReady()) {
-//                    PointF sCoord = imageView.viewToSourceCoord(ev.getX(), ev.getY());
-//                    float x = sCoord.x;
-//                    float y = sCoord.y;
-//
-//                    /*density 구하기*/
-//
-//                    /*비율에 맞는 px 구하기*/
-//                    int x_cor = (int)(x/density);
-//                    int y_cor = (int)(y/density);
-//
-//                    Log.d("좌표", "new x" + x_cor);
-//                    Log.d("좌표", "new y" + y_cor + "denstisty" + density);
-//
-//                    // Loop for finding the station.
-//                    if (c.moveToFirst()) {
-//
-//                        do {
-//                            if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
-//                                String target = c.getString(1); // 유저가 클릭한 가게
-//                                String num = c.getString(0);
-//                                Log.d("확인","가게번호 "+num+"가게 이름 "+target);
-//                            } // send Station Name (column 1)
-//
-//                        } while (c.moveToNext());
-//                    }
-//
-//
-//                }
-//
+                Log.d("onsingletapup","dd");
                 return super.onSingleTapUp(ev);
-
-
             }
         }
         );
@@ -212,128 +179,82 @@ public class Map extends AppCompatActivity {
         imageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
+ //               scale = 0; //scale 초기화
                 gestureDetector.onTouchEvent(motionEvent);
                 setShop(imageView);
+                Log.d("imageview222", "scale"+imageView.getScale());
+                Log.d("scale","!!"+scale);
 
-                if(imageView.getScale() > 2) {
+                if (imageView.getScale() >= 2 && scale == 0) { //더블탭 안하고 확대
                     textVisible();
                 }
-                else
+                else if(imageView.getScale() < 2 && scale == 0){ //더블탭 안하고 축소
                     textInVisible();
-
+                }
+                else if(scale == 1){ //더블탭해서 축소
+                    textInVisible();
+                    scale=0;
+                }
+                else if(scale == 2){ //더블탭해서 확대
+                    //textVisible();
+                    scale=0;
+                }
+                Log.d("scale","!!"+scale);
                 return false;
             }
-
         });
-}
-
-
-//    /**
-//     * Pixel을 DP로 변경해주는 메서드
-//     * @param dp
-//     * @return
-//     */
-//    public static int getPxFromDp(float dp) {
-//        int px = 0;
-//        Context appContext = WLBApplication.getApplication();
-//        px = (int) (dp * appContext.getResources().getDisplayMetrics().density);
-//        return px;
-//    }
-
-    private void initLoadDB() {
-
-        DataAdapter mDbHelper = new DataAdapter(getApplicationContext());
-        mDbHelper.createDatabase();
-        mDbHelper.open();
-
-        // db에 있는 값들을 model을 적용해서 넣는다.
-//        shopList = mDbHelper.getTableData();
-
-        // db 닫기
-        mDbHelper.close();
-
-        Cursor c = null;
-        MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
-        try {
-            myDbHelper.createDataBase();
-        } catch (IOException ioe) {
-            throw new Error("Unable to create database");
-        }
-        try {
-            myDbHelper.openDataBase();
-        } catch (SQLException sqle) {
-            throw sqle;
-        }
     }
 
-    private void makeText(){
+    private void makeText() {
         TextView shop;
-        while (c.moveToNext()) {
-            //PointF sCoord = imageView.sourceToViewCoord(c.getFloat(2)*density, c.getFloat(3)*density);
-            shop = new TextView(getApplicationContext());
-            shop.setText(c.getString(1));
-            shop.setTextSize(10);
-            //shop.setX(sCoord.x);
-            //shop.setY(sCoord.y);
-            //shop.setMaxHeight(c.getInt(4)-c.getInt(2));
-            //shop.setMaxWidth(c.getInt(5)-c.getInt(3));
-            shop.setTag(c.getString(0));
-            shop.setVisibility(View.INVISIBLE);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,FrameLayout.LayoutParams.WRAP_CONTENT);
-            shop.setLayoutParams(params);
-            frame.addView(shop);
-            Log.d("Text", c.getString(1));
-        }
-    }
-
-    private void textVisible(){
-
         if (c.moveToFirst()) {
-
             do {
-                frame.findViewWithTag(c.getString(0)).setVisibility(View.VISIBLE);
 
+                if (c.getString(0).equals(map)) {
+
+                    shop = new TextView(getApplicationContext());
+                    shop.setText(c.getString(2)); //가게이름 보이게
+                    shop.setTextSize(10);
+                    shop.setTag(c.getString(1)); //가게번호
+                    shop.setVisibility(View.INVISIBLE);
+                    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+                    shop.setLayoutParams(params);
+                    frame.addView(shop);
+                    Log.d("Text", c.getString(2));
+                }
             } while (c.moveToNext());
         }
-
     }
 
-    private void textInVisible(){
-
+    private void textVisible() {
         if (c.moveToFirst()) {
-
             do {
-                frame.findViewWithTag(c.getString(0)).setVisibility(View.INVISIBLE);
-
+                if (c.getString(0).equals(map)) {
+                    frame.findViewWithTag(c.getString(1)).setVisibility(View.VISIBLE);
+                }
             } while (c.moveToNext());
         }
-
     }
 
-    private void setShop(SubsamplingScaleImageView imageView){
+    private void textInVisible() {
         if (c.moveToFirst()) {
-
             do {
-                PointF sCoord = imageView.sourceToViewCoord(c.getFloat(2)*density, c.getFloat(3)*density);
-                frame.findViewWithTag(c.getString(0)).setX(sCoord.x);
-                frame.findViewWithTag(c.getString(0)).setY(sCoord.y);
-
+                if (c.getString(0).equals(map)) {
+                    frame.findViewWithTag(c.getString(1)).setVisibility(View.INVISIBLE);
+                }
             } while (c.moveToNext());
         }
-
     }
-//    private void setShopMax(SubsamplingScaleImageView imageView){
-//        Log.d("탭탭", "in3");
-//        if (c.moveToFirst()) {
-//
-//            do {
-//                PointF sCoord = imageView.sourceToViewCoord(c.getFloat(2)*density*imageView.getMaxScale()/imageView.getScale(), c.getFloat(3)*density*imageView.getMaxScale()/imageView.getScale());
-//                linear.findViewWithTag(c.getString(0)).setX(sCoord.x);
-//                linear.findViewWithTag(c.getString(0)).setY(sCoord.y);
-//
-//            } while (c.moveToNext());
-//        }
-//
-//    }
 
+    private void setShop(SubsamplingScaleImageView imageView) {
+        if (c.moveToFirst()) {
+            do {
+                if (c.getString(0).equals(map)) {
+                    PointF sCoord = imageView.sourceToViewCoord(c.getFloat(3) * density, c.getFloat(4) * density);
+                    frame.findViewWithTag(c.getString(1)).setX(sCoord.x);
+                    frame.findViewWithTag(c.getString(1)).setY(sCoord.y);
+                }
+            } while (c.moveToNext());
+        }
+    }
 }
