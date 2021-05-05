@@ -78,6 +78,37 @@ public class LoginActivity extends AppCompatActivity {
 
         int C = password.length();
         int E = email.length();
+        //admin lpgin
+        if(email.equals("admin@admin.com"))
+        {
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d(TAG, "signInWithEmail:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                //성공시
+                                Toast.makeText(LoginActivity.this, "관리자 로그인 성공!",
+                                        Toast.LENGTH_SHORT).show();
+                                Intent admin_intent = new Intent(LoginActivity.this, Home_admin.class);
+                                admin_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(admin_intent);
+                                
+                                //finish();
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                                //실패시
+                            }
+                        }
+                    });
+
+
+        }
         if(C>0 && E>0)
         {
             mAuth.signInWithEmailAndPassword(email, password)

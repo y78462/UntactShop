@@ -89,4 +89,11 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+    implementation 'com.google.firebase:firebase-storage'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
 }

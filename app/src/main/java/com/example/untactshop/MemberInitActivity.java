@@ -49,7 +49,6 @@ public class MemberInitActivity extends AppCompatActivity {
                 Log.d(TAG, "success");
                 signIn(id,pw);
 
-
             }
         });
 

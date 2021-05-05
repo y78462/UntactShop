@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">UntactShop</string>
     <string name="shop_home">쇼핑홈</string>
+
+
+
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+    <string name="please_grant_permission">권한을 허용해 주세요.</string>
 </resources>
