@@ -1,42 +1,5 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< Updated upstream
-ADDED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:1-5:48
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:1-5:48
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:1-5:48
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:1-5:48
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:1-5:48
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:1-5:48
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:1-5:48
-	package
-		ADDED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:3:11-56
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-	android:versionName
-		ADDED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:5:11-36
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:2:11-69
-	android:versionCode
-		ADDED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml:4:11-34
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-uses-sdk
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-	android:targetSdkVersion
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-		ADDED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-		INJECTED from /Users/yoonalee/UntactShop/library/src/main/AndroidManifest.xml
-=======
 ADDED from C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml:2:1-5:48
 INJECTED from C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml:2:1-5:48
 INJECTED from C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml:2:1-5:48
@@ -72,4 +35,3 @@ INJECTED from C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml
 		ADDED from C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dpdms\UntactShop\library\src\main\AndroidManifest.xml
->>>>>>> Stashed changes
