@@ -104,10 +104,4 @@ public class MapDatabaseHelper extends SQLiteOpenHelper {
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
         return myDataBase.query("Shop", null, null, null, null, null, null);
     }
-
-//    @Override
-//    public void onConfigure(SQLiteDatabase db) {
-//        super.onConfigure(db);
-//        db.disableWriteAheadLogging();
-//    }
 }
