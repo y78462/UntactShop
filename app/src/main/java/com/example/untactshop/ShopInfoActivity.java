@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -46,6 +47,11 @@ public class ShopInfoActivity extends Activity {
         name.setText(shop_name);
 
         readExcel();
+    }
+
+    public void chat_btn(View view) {
+        Intent intent = new Intent(ShopInfoActivity.this, ChatActivity.class);
+        startActivity(intent);
     }
 
 

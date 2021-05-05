@@ -40,6 +40,7 @@
         <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".LocationInfoActivity"/>
         <activity android:name=".PasswordResetActivity"/>
+        <activity android:name=".ChatActivity"/>
         <activity android:name=".ShopInfoActivity"/>
         <activity android:name=".MemberInitActivity"/>
         <activity android:name=".Home_login"/>
