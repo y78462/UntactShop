@@ -133,13 +133,13 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.터미널권:
                 ListItems = new ArrayList<>();
-                ListItems.add("고속터미널역");
+                ListItems.add("터미널1구역");
+                ListItems.add("터미널2구역");
+                ListItems.add("터미널3구역");
                 items = ListItems.toArray(new String[ListItems.size()]);
 
                 builder = new AlertDialog.Builder(this);
-                builder.setTitle("터미널1구역");
-                builder.setTitle("터미널2구역");
-                builder.setTitle("터미널3구역");
+                builder.setTitle("터미널권");
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
