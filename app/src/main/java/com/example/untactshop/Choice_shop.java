@@ -70,7 +70,9 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.을지로권:
                 ListItems = new ArrayList<>();
-                ListItems.add("을지로");
+                ListItems.add("을지로2구역");
+                ListItems.add("을지로3구역");
+                ListItems.add("을지로4구역");
                 ListItems.add("시청광장");
                 ListItems.add("을지입구");
                 ListItems.add("인현");
@@ -115,7 +117,6 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 ListItems = new ArrayList<>();
                 ListItems.add("강남역");
                 ListItems.add("잠실역");
-                ListItems.add("잠실 지하 광장");
                 items = ListItems.toArray(new String[ListItems.size()]);
 
                 builder = new AlertDialog.Builder(this);
@@ -136,7 +137,9 @@ public class Choice_shop extends AppCompatActivity implements View.OnClickListen
                 items = ListItems.toArray(new String[ListItems.size()]);
 
                 builder = new AlertDialog.Builder(this);
-                builder.setTitle("터미널권");
+                builder.setTitle("터미널1구역");
+                builder.setTitle("터미널2구역");
+                builder.setTitle("터미널3구역");
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         String selectedText = items[pos].toString();
