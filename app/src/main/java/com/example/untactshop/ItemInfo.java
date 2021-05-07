@@ -1,11 +1,24 @@
 package com.example.untactshop;
 
-public class ItemInfo {
+import java.io.Serializable;
+
+public class ItemInfo implements Serializable {
     String title;
     String shop_name;
     String category;
     String price;
     String photoUrl;
+
+    @Override
+    public String toString() {
+        return "ItemInfo{" +
+                "title='" + title + '\'' +
+                ", shop_name='" + shop_name + '\'' +
+                ", category='" + category + '\'' +
+                ", price='" + price + '\'' +
+                ", photoUrl='" + photoUrl + '\'' +
+                '}';
+    }
 
     public void setTitle(String title) {
         this.title = title;

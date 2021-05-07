@@ -32,14 +32,14 @@ import java.nio.ByteBuffer;
 
 public class CameraActivity extends AppCompatActivity {
 
-    private  Camera2BasicFragment camera2BasicFragment;
+    private Camera2BasicFragment camera2BasicFragment;
     private final ImageReader.OnImageAvailableListener mOnImageAvailableListener
             = new ImageReader.OnImageAvailableListener() {
 
         @Override
         public void onImageAvailable(ImageReader reader) {
-           // mBackgroundHandler.post(new Camera2BasicFragment.ImageUpLoader(reader.acquireNextImage()));
-            Log.e("로그 : ","켑쳐");
+            // mBackgroundHandler.post(new Camera2BasicFragment.ImageUpLoader(reader.acquireNextImage()));
+            Log.e("로그 : ", "켑쳐");
 
             Image mImage = reader.acquireNextImage();
             //앱경로. 앱 삭제시 같이 삭제
@@ -66,7 +66,7 @@ public class CameraActivity extends AppCompatActivity {
             }
             Intent resultintent = new Intent();
             resultintent.putExtra("picpath", mFile.toString());
-            setResult(Activity.RESULT_OK,resultintent);
+            setResult(Activity.RESULT_OK, resultintent);
             camera2BasicFragment.closeCamera();
             finish();
         }

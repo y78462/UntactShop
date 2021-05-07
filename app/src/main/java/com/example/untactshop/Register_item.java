@@ -24,6 +24,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -180,12 +182,12 @@ public class Register_item extends AppCompatActivity {
                         if (C > 0 && T > 0 && P > 0 && S > 0 ) {
                             // 등록
                             final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                            FirebaseFirestore db = FirebaseFirestore.getInstance();
+                            DatabaseReference db = FirebaseDatabase.getInstance().getReference();
 
                             ItemInfo itemInfo = new ItemInfo( title,shop_name,category,price,photoUrl);
                             if (user != null) {
                                 //document 에 원래 user.getUid() 였는데 중복되면 하나로 바껴서 상품이름으로 등록
-                                db.collection("items").document(title).set(itemInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                db.child("items").child(title).setValue(itemInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         Log.d(TAG, "DocumentSnapshot successfully written!");

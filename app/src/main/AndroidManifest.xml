@@ -48,6 +48,7 @@
         <activity android:name=".Register_item"/>
         <activity android:name=".GalleryActivity"/>
         <activity android:name=".CameraActivity"/>
+        <activity android:name=".showItem"/>
         <activity android:name=".SignUpActivity">
         </activity>
     </application>

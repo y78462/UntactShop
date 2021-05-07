@@ -1,63 +1,57 @@
 package com.example.untactshop;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
-import io.realm.RealmResults;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Shopping extends AppCompatActivity {
 
+    FirebaseDatabase db = FirebaseDatabase.getInstance();
 
-    Realm realm;
+    public shopInfo test1 = new shopInfo("강남역", "비프루브 강남역점", "A-1,2", "쇼핑미용");
+    private ItemInfo itemInfo;
 
-    public shopInfo test1 = new shopInfo("강남역","비프루브 강남역점","A-1,2","쇼핑미용");
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_layout);
-        Realm.init(this);
-        RealmConfiguration config = new RealmConfiguration.Builder()
-                .name("ShopInfo.realm") //생성할 realm파일 이름 지정
-                .schemaVersion(0)
-                .build();
-        //Realm에 셋팅한 정보 값을 지정
-        Realm.setDefaultConfiguration(config);
+        setContentView(R.layout.test2);
 
-
-        //transaction
-        realm = Realm.getDefaultInstance();
-        addData();
-//        realm.commitTransaction();
-
-        //select
-        shopInfo shop = realm.where(shopInfo.class).equalTo("category", "쇼핑미용").findFirst(); //특정 id가진 데이터불러오기
-
-        TextView t1 = findViewById(R.id.textbox);
-        t1.setText(shop.getShop_name());
-
-    }
-
-    private void addData(){
-        realm.executeTransaction(new Realm.Transaction() {
+        Button button1 = (Button) findViewById(R.id.button);
+        button1.setOnClickListener(new Button.OnClickListener() {
             @Override
-            public void execute(Realm realm) {
-                //Realm에 생성한 test를 저장하는 코드
-                realm.copyToRealm(test1);
+            public void onClick(View view) {
+//                db.getReference().child("items").child("가게_상품").addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {  //변화된 값이 DataSnapshot 으로 넘어온다.
+//                        //데이터가 쌓이기 때문에  clear()
+//
+//                        for (DataSnapshot ds : dataSnapshot.getChildren())           //여러 값을 불러와 하나씩
+//                        {
+//                            itemInfo = ds.getValue(ItemInfo.class);
+//                            Intent intent = new Intent(getApplicationContext(), showItem.class);
+//                            intent.putExtra("item", itemInfo);
+//                            startActivity(intent);
+//
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                    }
+//                });
+
+                itemInfo = new ItemInfo("아이패드", "황재환", "디지털가전", "10000", "https://lh3.googleusercontent.com/proxy/XNSdArCecu4efq2bsondvI0huTpaMOAYY0WoHR1F6ihkChvu07iifNPvbJ7FFgkDs2aivKbQjbepQrWZnuGk-F25zIoqZE07GioJ9gi2rqlLNOwlq0t8HwI");
+                Intent intent = new Intent(getApplicationContext(), showItem.class);
+                intent.putExtra("item", itemInfo);
+                startActivity(intent);
             }
         });
     }
-
-    private RealmResults getDiaryList(){
-        //Realm에 저장된 Diary들을 모두 찾아달라고 Realm에 요청해서 받아오는 코드입니다
-        RealmResults diaryRealmResults = realm.where(shopInfo.class).findAll();
-
-        return diaryRealmResults;
-    }
-
-
 }
