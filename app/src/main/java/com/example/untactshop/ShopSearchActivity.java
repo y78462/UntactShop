@@ -2,10 +2,12 @@ package com.example.untactshop;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -32,6 +34,10 @@ public class ShopSearchActivity extends AppCompatActivity {
         Intent searchIntent = getIntent();
         search_text = searchIntent.getStringExtra("검색데이터");
         Log.i("검색데이터", String.valueOf(search_text));
+
+        EditText editText = (EditText) findViewById(R.id.shop_search_text);
+        editText.setText(search_text);
+
         readExcel();
     }
 
@@ -59,6 +65,10 @@ public class ShopSearchActivity extends AppCompatActivity {
                         String keyword = sheet.getCell(2, row).getContents();
 
                         //테이블 생성
+                        DisplayMetrics dm = getResources().getDisplayMetrics();
+                        int size = Math.round(20 * dm.density);
+                        tableRow.setPadding(0, size, 0, 0);
+
                         if (keyword.contains(search_text)) {
                             Log.i("점포명", keyword.toString());
 
@@ -100,5 +110,19 @@ public class ShopSearchActivity extends AppCompatActivity {
             Log.i("실행흐름", "exception 2");
             e.printStackTrace();
         }
+    }
+
+    public void search_btn(View view) {
+        String search_text;
+
+        EditText editText = (EditText) findViewById(R.id.shop_search_text);
+        search_text = "" + editText.getText(); //SpannableString -> String : Type conversion
+//        Log.i("검색데이터", String.valueOf(search_text));
+
+        Intent intent = new Intent(getApplicationContext(), ShopSearchActivity.class);
+        intent.putExtra("검색데이터", search_text);
+        startActivity(intent);
+
+
     }
 }
