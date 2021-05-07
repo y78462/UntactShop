@@ -1,5 +1,6 @@
 package com.example.untactshop;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.graphics.PointF;
@@ -26,8 +27,9 @@ public class Map extends AppCompatActivity {
     FrameLayout frame;
     DisplayMetrics dm;
     float density;
-    String map = "Myeongdong";
     int scale = 0;
+    String map = "";
+    String area = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class Map extends AppCompatActivity {
         dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         density = dm.density;
+
+        Intent map_name = getIntent();
 
         MapDatabaseHelper myDbHelper = new MapDatabaseHelper(Map.this); // Reading SQLite database.
         try {
@@ -77,8 +81,141 @@ public class Map extends AppCompatActivity {
 //        }
 //        Log.i("DB", result);
 
+        String st_name = map_name.getStringExtra("name");
         SubsamplingScaleImageView imageView = findViewById(R.id.imageView);
-        imageView.setImage(ImageSource.resource(R.drawable.myeongdong));
+        switch(st_name){
+            case "명동":
+                imageView.setImage(ImageSource.resource(R.drawable.map_myeongdong));
+                map = "Myeongdong";
+                area = "명동권";
+                break;
+            case "명동역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_myeongdongstation));
+                map = "MyeongdongStation";
+                area = "명동권";
+                break;
+            case "소공":
+                imageView.setImage(ImageSource.resource(R.drawable.map_sogong));
+                map = "Sogong";
+                area = "명동권";
+                break;
+            case "회현":
+                imageView.setImage(ImageSource.resource(R.drawable.map_hoehyeon));
+                map = "Hoehyeon";
+                area = "명동권";
+                break;
+            case "남대문":
+                imageView.setImage(ImageSource.resource(R.drawable.map_namdaemun));
+                map = "Namdaemun";
+                area = "명동권";
+                break;
+            case "을지로2구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljiro2zone));
+                map = "Euljiro2zone";
+                area = "을지로권";
+                break;
+            case "을지로3구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljiro3zone));
+                map = "Euljiro3zone";
+                area = "을지로권";
+                break;
+            case "을지로4구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljiro4zone));
+                map = "Euljiro4zone";
+                area = "을지로권";
+                break;
+            case "시청광장":
+                imageView.setImage(ImageSource.resource(R.drawable.map_cityhall));
+                map = "CityHall";
+                area = "을지로권";
+                break;
+            case "을지입구":
+                imageView.setImage(ImageSource.resource(R.drawable.map_euljientrance));
+                map = "EuljiEntrance";
+                area = "을지로권";
+                break;
+            case "인현":
+                imageView.setImage(ImageSource.resource(R.drawable.map_inhyeon));
+                map = "Inhyeon";
+                area = "을지로권";
+                break;
+            case "신당":
+                imageView.setImage(ImageSource.resource(R.drawable.map_sindang));
+                map = "Sindang";
+                area = "을지로권";
+                break;
+            case "종각":
+                imageView.setImage(ImageSource.resource(R.drawable.map_jonggak));
+                map = "Jonggak";
+                area = "종로권";
+                break;
+            case "종로4가":
+                imageView.setImage(ImageSource.resource(R.drawable.map_jongno4ga));
+                map = "Jongno4ga";
+                area = "종로권";
+                break;
+            case "청계5가":
+                imageView.setImage(ImageSource.resource(R.drawable.map_chonggye5));
+                map = "ChongGye5";
+                area = "종로권";
+                break;
+            case "청계6가":
+                imageView.setImage(ImageSource.resource(R.drawable.map_chonggye6));
+                map = "ChongGye6";
+                area = "종로권";
+                break;
+            case "마전교":
+                imageView.setImage(ImageSource.resource(R.drawable.map_majeongyo));
+                map = "MaJeonGyo";
+                area = "종로권";
+                break;
+            case "동대문":
+                imageView.setImage(ImageSource.resource(R.drawable.map_dongdaemun));
+                map = "DongDaeMun";
+                area = "종로권";
+                break;
+            case "강남역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamstation));
+                map = "GangnamStation";
+                area = "강남권";
+                break;
+            case "잠실역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_jamsilstation));
+                map = "JamSilStation";
+                area = "강남권";
+                break;
+            case "터미널1구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamterminalpart1));
+                map = "GangNamTerminalPart1";
+                area = "터미널권";
+                break;
+            case "터미널2구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamterminalpart2));
+                map = "GangNamTerminalPart2";
+                area = "터미널권";
+                break;
+            case "터미널3구역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_gangnamterminalpart3));
+                map = "GangNamTerminalPart3";
+                area = "터미널권";
+                break;
+            case "영등포역":
+                imageView.setImage(ImageSource.resource(R.drawable.map_yeongdeungpostation));
+                map = "YeongDeungPoStation";
+                area = "영등포권";
+                break;
+            case "영등포로터리":
+                imageView.setImage(ImageSource.resource(R.drawable.map_yeongdeungporotary));
+                map = "YeongDeungPoRotary";
+                area = "영등포권";
+                break;
+            case "영등포시장":
+                imageView.setImage(ImageSource.resource(R.drawable.map_yeongdeungpomarket));
+                map = "YeongDeungPoMarket";
+                area = "영등포권";
+                break;
+        }
+
         makeText();
         //Refer to ID value.
         gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
@@ -102,13 +239,19 @@ public class Map extends AppCompatActivity {
 
                     // Loop for finding the station.
                     if (c.moveToFirst()) {
-
                         do {
                             if (c.getString(0).equals(map)) {
                                 if ((x_cor > c.getInt(3)) && (x_cor < c.getInt(5)) && (y_cor > c.getInt(4)) && (y_cor < c.getInt(6))) {
-                                    String target = c.getString(2); // 유저가 클릭한 가게이름
+                                    String target_name = c.getString(2); // 유저가 클릭한 가게이름
                                     String num = c.getString(1); //가게 번호
-                                    Log.d("확인", "가게번호 " + num + "가게 이름 " + target);
+                                    String category = c.getString(7); //가게 카테고리
+                                    String location = area + " " + st_name + " " + num;
+                                    Log.d("확인", "가게번호 " + num + "가게 이름 " + target_name + "카테고리" + category + "위치" + location);
+                                    Intent intent = new Intent(Map.this, ShopInfoActivity.class);
+                                    intent.putExtra("점포명", target_name); //가게 이름
+                                    intent.putExtra("category", category);  //카테고리
+                                    intent.putExtra("location", location); //위치
+                                    startActivity(intent);
                                 } // send Station Name (column 1)
                             }
                         } while (c.moveToNext());
@@ -128,11 +271,9 @@ public class Map extends AppCompatActivity {
                         scale = 1;
                     } else { //더블탭해서 확대됨
                         Log.d("탭탭", "in2");
-                        //setShopMax(imageView);
                         scale = 2;
                     }
                 }
-                Log.d("더블 탭", "scale" + scale);
                 return super.onDoubleTapEvent(ev);
             }
 
@@ -156,9 +297,16 @@ public class Map extends AppCompatActivity {
                         do {
                             if (c.getString(0).equals(map)) {
                                 if ((x_cor > c.getInt(3)) && (x_cor < c.getInt(5)) && (y_cor > c.getInt(4)) && (y_cor < c.getInt(6))) {
-                                    String target = c.getString(2); // 유저가 클릭한 가게
-                                    String num = c.getString(1);
-                                    Log.d("확인", "가게번호 " + num + "가게 이름 " + target);
+                                    String target_name = c.getString(2); // 유저가 클릭한 가게이름
+                                    String num = c.getString(1); //가게 번호
+                                    String category = c.getString(7); //가게 카테고리
+                                    String location = area + " " + st_name + " " + num;
+                                    Log.d("확인", "가게번호 " + num + "가게 이름 " + target_name + "카테고리" + category + "위치" + location);
+                                    Intent intent = new Intent(Map.this, ShopInfoActivity.class);
+                                    intent.putExtra("점포명", target_name); //가게 이름
+                                    intent.putExtra("category", category);  //카테고리
+                                    intent.putExtra("location", location); //위치
+                                    startActivity(intent);
                                 } // send Station Name (column 1)
                             }
                         } while (c.moveToNext());
@@ -182,9 +330,7 @@ public class Map extends AppCompatActivity {
  //               scale = 0; //scale 초기화
                 gestureDetector.onTouchEvent(motionEvent);
                 setShop(imageView);
-                Log.d("imageview222", "scale"+imageView.getScale());
-                Log.d("scale","!!"+scale);
-
+ //               Log.d("imageview222", "scale"+imageView.getScale());
                 if (imageView.getScale() >= 2 && scale == 0) { //더블탭 안하고 확대
                     textVisible();
                 }
@@ -199,7 +345,6 @@ public class Map extends AppCompatActivity {
                     //textVisible();
                     scale=0;
                 }
-                Log.d("scale","!!"+scale);
                 return false;
             }
         });
@@ -209,9 +354,7 @@ public class Map extends AppCompatActivity {
         TextView shop;
         if (c.moveToFirst()) {
             do {
-
                 if (c.getString(0).equals(map)) {
-
                     shop = new TextView(getApplicationContext());
                     shop.setText(c.getString(2)); //가게이름 보이게
                     shop.setTextSize(10);
