@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "801012935125",
-    "project_id": "untactshop-project",
-    "storage_bucket": "untactshop-project.appspot.com"
+    "project_number": "249641323836",
+    "project_id": "untactshop-8f0be",
+    "storage_bucket": "untactshop-8f0be.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:801012935125:android:980424e6db5a0a7fb1755c",
+        "mobilesdk_app_id": "1:249641323836:android:53ab265d23b1f51135a239",
         "android_client_info": {
           "package_name": "com.example.untactshop"
         }
       },
       "oauth_client": [
         {
-          "client_id": "801012935125-c8olh4a552s1i0vr5shongvhkosqfq2n.apps.googleusercontent.com",
+          "client_id": "249641323836-re8c609ogftsmq7t0tc29c3f2b2dpmi1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD1SbOHlcycPr9V3ExsdGIIJCcJUs3HrkQ"
+          "current_key": "AIzaSyAZ-GiHufmyDZ8J0Eb-gpKmFYFZ5XpAErQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "801012935125-c8olh4a552s1i0vr5shongvhkosqfq2n.apps.googleusercontent.com",
+              "client_id": "249641323836-re8c609ogftsmq7t0tc29c3f2b2dpmi1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
