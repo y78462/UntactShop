@@ -39,7 +39,7 @@ public class showItem extends AppCompatActivity {
         Intent intent = getIntent();
         itemInfo = (ItemInfo) intent.getSerializableExtra("item");
         Log.d("객체", itemInfo.toString());
-        showImage();
+        showItem();
     }
 
     private void upLoadOrder(ItemInfo item) {
@@ -56,7 +56,7 @@ public class showItem extends AppCompatActivity {
 
     }
 
-    private void showImage() {
+    private void showItem() {
         Log.d("객체", itemInfo.toString());
 
         item_price.setText(itemInfo.getPrice()+"원");
