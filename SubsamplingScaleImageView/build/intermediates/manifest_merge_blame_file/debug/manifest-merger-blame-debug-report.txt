@@ -1,0 +1,70 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.davemorrissey.labs.subscaleview.test"
+4    android:hardwareAccelerated="true"
+5    android:versionCode="4"
+6    android:versionName="3.1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="17"
+9-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="27" />
+10-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml
+11
+12    <application
+12-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:1-27:15
+13        android:allowBackup="false"
+13-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:117-144
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.3.0] C:\Users\dpdms\.gradle\caches\transforms-2\files-2.1\8c95e4bee40e4b31a4eda44008f4ca65\core-1.3.0\AndroidManifest.xml:24:18-86
+15        android:debuggable="true"
+16        android:icon="@mipmap/ic_launcher"
+16-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:82-116
+17        android:label="@string/app.name"
+17-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:14-46
+18        android:theme="@style/sampleTheme" >
+18-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:12:47-81
+19        <activity
+19-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:13:5-18:16
+20            android:name="com.davemorrissey.labs.subscaleview.test.MainActivity"
+20-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:13:15-43
+21            android:label="@string/app.name" >
+21-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:13:44-76
+22            <intent-filter>
+22-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:14:9-17:25
+23                <action android:name="android.intent.action.MAIN" />
+23-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:15:13-64
+23-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:15:21-62
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:16:13-72
+25-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:16:23-70
+26            </intent-filter>
+27        </activity>
+28        <activity android:name="com.davemorrissey.labs.subscaleview.test.basicfeatures.BasicFeaturesActivity" />
+28-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:19:5-68
+28-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:19:15-66
+29        <activity android:name="com.davemorrissey.labs.subscaleview.test.imagedisplay.ImageDisplayActivity" />
+29-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:20:5-66
+29-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:20:15-64
+30        <activity android:name="com.davemorrissey.labs.subscaleview.test.eventhandling.EventHandlingActivity" />
+30-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:21:5-68
+30-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:21:15-66
+31        <activity android:name="com.davemorrissey.labs.subscaleview.test.eventhandlingadvanced.AdvancedEventHandlingActivity" />
+31-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:22:5-84
+31-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:22:15-82
+32        <activity android:name="com.davemorrissey.labs.subscaleview.test.viewpager.ViewPagerActivity" />
+32-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:23:5-60
+32-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:23:15-58
+33        <activity android:name="com.davemorrissey.labs.subscaleview.test.animation.AnimationActivity" />
+33-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:24:5-60
+33-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:24:15-58
+34        <activity android:name="com.davemorrissey.labs.subscaleview.test.extension.ExtensionActivity" />
+34-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:25:5-60
+34-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:25:15-58
+35        <activity android:name="com.davemorrissey.labs.subscaleview.test.configuration.ConfigurationActivity" />
+35-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:26:5-68
+35-->C:\Users\dpdms\UntactShop\SubsamplingScaleImageView\src\main\AndroidManifest.xml:26:15-66
+36    </application>
+37
+38</manifest>

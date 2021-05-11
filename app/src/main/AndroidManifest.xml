@@ -52,5 +52,6 @@
         <activity android:name=".Show_orders"/>
         <activity android:name=".SignUpActivity">
         </activity>
+        <activity android:name=".ItemInfo" />
     </application>
 </manifest>
