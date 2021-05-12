@@ -1,11 +1,11 @@
 package com.example.untactshop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +27,7 @@ public class ItemFragment extends AppCompatActivity {
     private TextView shop_name;
     private View view;
     private ArrayList<ItemInfo> items;
+    private ItemInfo itemInfo;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -42,7 +43,9 @@ public class ItemFragment extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         reference = database.getReference();
         gridView = (GridView)findViewById(R.id.gridView);
-        shop = "shop1";
+
+        Intent intent = getIntent();
+        String shop = intent.getStringExtra("shop");
         shop_name.setText(shop);
 
         reference.child(shop).addValueEventListener(new ValueEventListener() {
@@ -69,10 +72,9 @@ public class ItemFragment extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ItemInfo selectitem = (ItemInfo)adapter.getItem(i);
-                Toast.makeText(getApplicationContext(), selectitem.getShop_name(), Toast.LENGTH_LONG).show();
-                Toast.makeText(getApplicationContext(),selectitem.getTitle(), Toast.LENGTH_LONG).show();
-                Toast.makeText(getApplicationContext(), selectitem.getPrice(), Toast.LENGTH_LONG).show();
-                Toast.makeText(getApplicationContext(),selectitem.getPhotoUrl(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ItemFragment.this, Show_Item.class);
+                intent.putExtra("item", selectitem); //가게 이름
+                startActivity(intent);
             }
         });
     }

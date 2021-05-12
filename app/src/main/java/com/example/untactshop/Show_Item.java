@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 
-public class showItem extends AppCompatActivity {
+public class Show_Item extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseStorage storage;

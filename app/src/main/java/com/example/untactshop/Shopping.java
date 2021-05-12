@@ -50,7 +50,7 @@ public class Shopping extends AppCompatActivity {
 //                });
 
                 itemInfo = new ItemInfo("아이패드", "황재환", "디지털가전", "10000", "https://lh3.googleusercontent.com/proxy/XNSdArCecu4efq2bsondvI0huTpaMOAYY0WoHR1F6ihkChvu07iifNPvbJ7FFgkDs2aivKbQjbepQrWZnuGk-F25zIoqZE07GioJ9gi2rqlLNOwlq0t8HwI");
-                Intent intent = new Intent(getApplicationContext(), showItem.class);
+                Intent intent = new Intent(getApplicationContext(), Show_Item.class);
                 intent.putExtra("item", itemInfo);
                 startActivity(intent);
             }
@@ -87,22 +87,8 @@ public class Shopping extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ItemFragment.class);
+                intent.putExtra("shop", "나나");
                 startActivity(intent);
-            }
-        });
-
-        Button button5 = (Button) findViewById(R.id.button5);
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i("하이","i : " + i);
-                ItemInfo item= new ItemInfo();
-                item.setTitle("상품"+i);
-                item.setPrice("가격");
-                item.setShop_name("가게이름"+i);
-                item.setPhotoUrl("https://www.mpps.co.kr/kfcs_api_img/KFCS/goods/DL_2174430_20210203113535665.png");
-                db.getReference().child("shop1").push().setValue(item);
-                i++;
             }
         });
     }
