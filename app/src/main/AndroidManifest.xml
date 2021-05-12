@@ -50,6 +50,7 @@
         <activity android:name=".CameraActivity"/>
         <activity android:name=".showItem"/>
         <activity android:name=".Show_orders"/>
+        <activity android:name=".ItemFragment"/>
         <activity android:name=".SignUpActivity">
         </activity>
         <activity android:name=".ItemInfo" />

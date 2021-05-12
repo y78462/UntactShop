@@ -82,5 +82,28 @@ public class Shopping extends AppCompatActivity {
             }
         });
 
+        Button button4 = (Button) findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ItemFragment.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("하이","i : " + i);
+                ItemInfo item= new ItemInfo();
+                item.setTitle("상품"+i);
+                item.setPrice("가격");
+                item.setShop_name("가게이름"+i);
+                item.setPhotoUrl("https://www.mpps.co.kr/kfcs_api_img/KFCS/goods/DL_2174430_20210203113535665.png");
+                db.getReference().child("shop1").push().setValue(item);
+                i++;
+            }
+        });
     }
 }
