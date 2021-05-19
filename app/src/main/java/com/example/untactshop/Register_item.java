@@ -186,7 +186,7 @@ public class Register_item extends AppCompatActivity {
                             ItemInfo itemInfo = new ItemInfo( title,shop_name,category,price,photoUrl);
                             if (user != null) {
                                 //document 에 원래 user.getUid() 였는데 중복되면 하나로 바껴서 상품이름으로 등록
-                                db.child(shop_name).child(title).setValue(itemInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                db.child("Items").child(title).setValue(itemInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         Log.d(TAG, "DocumentSnapshot successfully written!");
