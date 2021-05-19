@@ -31,16 +31,21 @@
         <activity android:name=".Infor_modify"/>
         <activity android:name=".Choice_shop"/>
         <activity android:name=".Map" android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity android:name=".ShopSearchActivity"/>
         <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".LocationInfoActivity"/>
         <activity android:name=".PasswordResetActivity"/>
-        <activity android:name=".ChatActivity"/>
+        <activity android:name=".ChatActivity">
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN" />-->
+<!--            <category android:name="android.intent.category.LAUNCHER" />-->
+<!--        </intent-filter>-->
+        </activity>
         <activity android:name=".ShopInfoActivity"/>
         <activity android:name=".MemberInitActivity"/>
         <activity android:name=".Home_login"/>
@@ -53,6 +58,6 @@
         <activity android:name=".ItemFragment"/>
         <activity android:name=".SignUpActivity">
         </activity>
-        <activity android:name=".ItemInfo" />
+        <activity android:name=".ItemInfo"/>
     </application>
 </manifest>

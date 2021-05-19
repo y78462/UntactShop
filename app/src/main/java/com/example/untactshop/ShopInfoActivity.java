@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,16 +42,15 @@ public class ShopInfoActivity extends Activity {
         shop_name = intent.getStringExtra("점포명");
         name.setText(shop_name);
 
-        if(intent.getStringExtra("category")!=null){
+        if (intent.getStringExtra("category") != null) {
             shop_location = intent.getStringExtra("location");
             shop_category = intent.getStringExtra("category");
             location.setText(shop_location);
             category.setText(shop_category);
-        }
-        else
+        } else
             readExcel();
 
-        switch(shop_category){
+        switch (shop_category) {
             case "음식점":
                 circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_restaurant));
                 break;
@@ -77,6 +77,9 @@ public class ShopInfoActivity extends Activity {
 
     public void chat_btn(View view) {
         Intent intent = new Intent(ShopInfoActivity.this, ChatActivity.class);
+        intent.putExtra("name", shop_name);
+        intent.putExtra("category", shop_category);
+        intent.putExtra("location", shop_location);
         startActivity(intent);
     }
 

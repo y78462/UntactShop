@@ -7,12 +7,60 @@
     android:weightSum="1">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_img_category"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/chat_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/title"
+                android:text="name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/chat_text_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
+                android:text="category"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/chat_text_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
+                android:text="location"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:scrollbars="vertical" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
