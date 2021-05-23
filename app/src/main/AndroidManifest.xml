@@ -56,7 +56,10 @@
         <activity android:name=".Show_Item"/>
         <activity android:name=".Show_orders"/>
         <activity android:name=".ItemFragment"/>
-        <activity android:name=".SignUpActivity">
+        <activity android:name=".Shop_menu"/>
+        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".Shop_random_items">
+
         </activity>
         <activity android:name=".ItemInfo"/>
     </application>

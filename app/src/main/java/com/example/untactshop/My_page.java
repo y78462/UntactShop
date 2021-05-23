@@ -2,14 +2,17 @@ package com.example.untactshop;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -18,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class My_page extends AppCompatActivity {
 
+    private BottomNavigationView mBottomNV;
 
     private static final String TAG = "Mypage";
     @Override
@@ -28,9 +32,6 @@ public class My_page extends AppCompatActivity {
 
         //데이터 가져와서 이름,폰번,생년월일,주소 넣기
         set_user_info();
-
-
-
 
 
         Button order_search = (Button)findViewById(R.id.order_search); //주문조회 버튼
@@ -50,6 +51,35 @@ public class My_page extends AppCompatActivity {
                 startActivity(infor_intent);
             }
         });
+
+        mBottomNV = findViewById(R.id.bottom_navigation_view);
+        mBottomNV.setSelectedItemId(R.id.nav_my);
+        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(),Shopping.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.nav_shop:
+                        startActivity(new Intent(getApplicationContext(),Shop_random_items.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.nav_cart:
+                        startActivity(new Intent(getApplicationContext(),Show_orders.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.nav_my:
+                        return true;
+                }
+                return false;
+            }
+        });
+
 
 
     }
