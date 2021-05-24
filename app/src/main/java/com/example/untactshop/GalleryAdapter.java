@@ -2,6 +2,7 @@ package com.example.untactshop;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,13 +49,17 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
             public void onClick(View v) {
 
                 Intent resultintent = new Intent();
-                resultintent.putExtra("picpath", md.get(holder. getBindingAdapterPosition()));
+                resultintent.putExtra("picpath", md.get(md.size()-1-holder.getBindingAdapterPosition()));
+
                 activity.setResult(Activity.RESULT_OK,resultintent);
                 activity.finish();
             }
         });
         ImageView imageView = cardView.findViewById(R.id.imageView);
-        Glide.with(activity).load(md.get(position)).centerCrop().override(400).into(imageView);
+        Log.d("dd",md.get(position));
+        Log.d("size", "dd"+md.size()+"posititon"+position);
+        //md.get(md.size());
+        Glide.with(activity).load(md.get(md.size()-1-position)).centerCrop().override(400).into(imageView);
     }
 
     @Override

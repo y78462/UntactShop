@@ -29,7 +29,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="shop name"
-                    android:textSize="24sp"
+                    android:fontFamily="@font/title"
+                    android:textSize="25dp"
                     android:textStyle="bold"/>
 
                 <TextView

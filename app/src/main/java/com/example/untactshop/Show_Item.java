@@ -42,19 +42,19 @@ public class Show_Item extends AppCompatActivity {
         showItem();
     }
 
-    private void upLoadOrder(ItemInfo item) {
-
-
-        Order order = new Order();
-        order.setuId(mAuth.getUid());
-        order.setItemName(item.getTitle());
-        order.setItemPrice(item.getPrice());
-        order.setShopName(item.getShop_name());
-        order.setImageUrl(item.getPhotoUrl());
-
-        database.getReference().child("Orders"+order.getuId()).push().setValue(order);
-
-    }
+//    private void upLoadOrder(ItemInfo item) {
+//
+//
+//        Order order = new Order();
+//        order.setuId(mAuth.getUid());
+//        order.setItemName(item.getTitle());
+//        order.setItemPrice(item.getPrice());
+//        order.setShopName(item.getShop_name());
+//        order.setImageUrl(item.getPhotoUrl());
+//
+//        database.getReference().child("Orders"+order.getuId()).push().setValue(order);
+//
+//    }
 
     private void showItem() {
         Log.d("객체", itemInfo.toString());

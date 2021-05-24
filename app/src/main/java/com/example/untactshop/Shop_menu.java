@@ -27,7 +27,7 @@ public class Shop_menu extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_shop:
-                        startActivity(new Intent(getApplicationContext(),Shop_random_items.class));
+                        startActivity(new Intent(getApplicationContext(), Shopping_shop.class));
                         overridePendingTransition(0,0);
                         return true;
 

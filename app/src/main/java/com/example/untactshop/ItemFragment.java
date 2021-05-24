@@ -19,25 +19,32 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class ItemFragment extends AppCompatActivity {
 
     private GridView gridView;
     private ItemAdapter adapter;
     private TextView shop_name;
-    private View view;
+    private TextView category;
+    private TextView location;
+    private CircleImageView circleImageView;
+    private Shop shop;
     private ArrayList<ItemInfo> items;
-    private ItemInfo itemInfo;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference reference;
-    private String shop;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_fragment);
 
-        shop_name = (TextView) findViewById(R.id.shop_name);
+        shop_name = findViewById(R.id.shop_name);
+        circleImageView = findViewById(R.id.img_category);
+        category = findViewById(R.id.category);
+        location = findViewById(R.id.location);
+        shop_name = findViewById(R.id.shop_name);
         items = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -45,16 +52,19 @@ public class ItemFragment extends AppCompatActivity {
         gridView = (GridView)findViewById(R.id.gridView);
 
         Intent intent = getIntent();
-        String shop = intent.getStringExtra("shop");
-        shop_name.setText(shop);
+        shop = (Shop) intent.getSerializableExtra("shop");
+        String shop_name = shop.getShopname();
+        set_shopinfo();
 
-        reference.child(shop).addValueEventListener(new ValueEventListener() {
+        reference.child("Items").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 items.clear();
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     ItemInfo item = dataSnapshot.getValue(ItemInfo.class);
-                    items.add(item);
+
+                    if(item.getShop_name().equals(shop_name))
+                        items.add(item);
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -73,12 +83,27 @@ public class ItemFragment extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ItemInfo selectitem = (ItemInfo)adapter.getItem(i);
                 Intent intent = new Intent(ItemFragment.this, Show_Item.class);
-                intent.putExtra("item", selectitem); //가게 이름
+                intent.putExtra("item", selectitem);
                 startActivity(intent);
             }
         });
     }
 
-
-
+    private void set_shopinfo() {
+        shop_name.setText(shop.getShopname());
+        category.setText(shop.getCategory());
+        location.setText(shop.getLocation());
+        String shop_category = shop.getCategory();
+        switch (shop_category) {
+            case "패션의류":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_fashion));
+                break;
+            case "쇼핑미용":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_beauty));
+                break;
+            case "디지털 가전":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_digital));
+                break;
+        }
+    }
 }

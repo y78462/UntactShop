@@ -4,12 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,83 +19,74 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
-
-public class Shopping extends AppCompatActivity {
-
-    int i = 0;
-
-    private BottomNavigationView mBottomNV;
-    private GridView gridView;
-    private ItemAdapter adapter;
-    private ArrayList<ItemInfo> items;
+public class Shopping_shop extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<Shop> shops;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference reference;
+    private BottomNavigationView mBottomNV;
 
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shopping_home);
+        setContentView(R.layout.shopping_shop);
 
-        items = new ArrayList<>();
+        shops = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference();
-        gridView = (GridView)findViewById(R.id.gridView);
 
-        //상품 랜덤
-        reference.child("Items").addValueEventListener(new ValueEventListener() {
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        reference.child("Shop").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                items.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    ItemInfo item = dataSnapshot.getValue(ItemInfo.class);
-                    items.add(item);
-                }
+                shops.clear();
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Log.d("shop", "shop" + dataSnapshot.getKey());
+                    Shop shop = dataSnapshot.getValue(Shop.class);
+                    shop.setShopname(dataSnapshot.getKey());
 
-                Collections.shuffle(items);
-
-                for(int j=items.size(); j>30; j--){
-                    items.remove(0);
+                    shops.add(shop);
                 }
-                Log.d("size", "d"+items.size());
                 adapter.notifyDataSetChanged();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
 
-        adapter = new ItemAdapter(items, this);
-        gridView.setAdapter(adapter);
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ItemInfo selectitem = (ItemInfo) adapter.getItem(i);
-                Intent intent = new Intent(Shopping.this, Show_Item.class);
-                intent.putExtra("item", selectitem);
-                startActivity(intent);
-            }
-        });
+        adapter = new ShopAdapter(shops, this);
+        recyclerView.setAdapter(adapter);
+
+//        adapter.setOnClickListener(new AdapterView.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                int pos1 = getBindingAdapterPosition();
+//                int pos2 = getAbsoluteAdapterPosition();
+//                Log.d("pos" , "1" + pos1 + "2" + pos2);
+//            }
+//        });
         
 
-        //네비게이션 바
         mBottomNV = findViewById(R.id.bottom_navigation_view);
-        mBottomNV.setSelectedItemId(R.id.nav_home);
-        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), Shopping.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_shop:
-                        startActivity(new Intent(getApplicationContext(), Shopping_shop.class));
-                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_cart:
@@ -112,7 +102,8 @@ public class Shopping extends AppCompatActivity {
                 return false;
             }
         });
-
-        mBottomNV.setSelectedItemId(R.id.nav_home);
+        mBottomNV.setSelectedItemId(R.id.nav_shop);
     }
+
+
 }
