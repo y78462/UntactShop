@@ -33,7 +33,7 @@ public class PopupActivity extends Activity {
     //위치정보 버튼 클릭
     public void location_info(View v) {
         Intent intent = new Intent(getApplicationContext(), LocationInfoActivity.class);
-//        intent.putExtra("점포명", search_text);
+        intent.putExtra("점포명", search_text);
         startActivity(intent);
     }
 
