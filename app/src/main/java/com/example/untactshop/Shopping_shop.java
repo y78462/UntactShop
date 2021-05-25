@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +33,7 @@ public class Shopping_shop extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference reference;
     private BottomNavigationView mBottomNV;
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +79,70 @@ public class Shopping_shop extends AppCompatActivity {
 //                Log.d("pos" , "1" + pos1 + "2" + pos2);
 //            }
 //        });
-        
+
+
+        //shop_search_btn
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        ImageButton shop_search_btn = (ImageButton) findViewById(R.id.shop_search_btn); //쇼핑하기 버튼
+        shop_search_btn.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View view) {
+                TextView shop_search_text = (TextView) findViewById(R.id.shop_search_text);
+                String search_title = shop_search_text.getText().toString();
+                Log.d("shop search_title", "search_title"+ search_title);
+
+                if(search_title == null)
+                {
+                    reference.child("Shop").addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            shops.clear();
+                            for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                Shop shop = dataSnapshot.getValue(Shop.class);
+                                shop.setShopname(dataSnapshot.getKey());
+                                shops.add(shop);
+                            }
+                            adapter.notifyDataSetChanged();
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                    return;
+                }
+                reference.child("Shop").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        shops.clear();
+                        for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            Log.d("shopkey", "shopkey" + dataSnapshot.getKey());
+                            Log.d("shopvalue", "shopvalue" + dataSnapshot.getKey());
+
+                            if(dataSnapshot.getKey().equals(search_title))
+                            {
+                                Shop shop = dataSnapshot.getValue(Shop.class);
+                                shop.setShopname(dataSnapshot.getKey());
+                                shops.add(shop);
+                            }
+//                            shop.setShopname(dataSnapshot.getKey());
+//                            shops.add(shop);
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+                imm.hideSoftInputFromWindow(shop_search_text.getWindowToken(), 0);
+            }
+        });
+
+
 
         mBottomNV = findViewById(R.id.bottom_navigation_view);
         mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
