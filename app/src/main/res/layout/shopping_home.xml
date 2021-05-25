@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,12 +14,41 @@
         android:paddingTop="3dp"
         android:drawableLeft="@drawable/small_main_logo"/>
 
-    <ViewFlipper
-        android:id="@+id/imageSlide"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_below="@+id/logo"
+        android:id="@+id/slider"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:src="@drawable/shop_main_image"
-        android:layout_below="@+id/logo"/>
+        android:layout_height="wrap_content">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/sliderViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewFadingEdge"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_fading_edge"
+        app:layout_constraintBottom_toBottomOf="@id/sliderViewPager" />
+
+    <LinearLayout
+        android:id="@+id/layoutIndicators"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewFadingEdge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <GridView
         android:id="@+id/gridView"
@@ -26,7 +56,7 @@
         android:layout_height="match_parent"
         android:numColumns="3"
         android:layout_marginBottom="55dp"
-        android:layout_below="@+id/imageSlide"/>
+        android:layout_below="@+id/slider"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"

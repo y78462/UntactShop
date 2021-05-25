@@ -5,11 +5,16 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,10 +40,39 @@ public class Shopping extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference reference;
 
+    private ViewPager2 sliderViewPager;
+    private LinearLayout layoutIndicator;
+
+    private String[] images = new String[] {
+            "https://cdn.pixabay.com/photo/2017/08/01/11/48/woman-2564660_960_720.jpg",
+            "https://cdn.pixabay.com/photo/2016/11/19/20/17/catwalk-1840941_960_720.jpg",
+            "https://cdn.pixabay.com/photo/2017/08/05/00/12/girl-2581913_960_720.jpg",
+            "https://cdn.pixabay.com/photo/2020/09/02/18/03/girl-5539094_1280.jpg",
+            "https://cdn.pixabay.com/photo/2017/04/06/11/24/fashion-2208045_960_720.jpg"
+    };
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_home);
+
+        sliderViewPager = findViewById(R.id.sliderViewPager);
+        layoutIndicator = findViewById(R.id.layoutIndicators);
+
+        sliderViewPager.setOffscreenPageLimit(1);
+        sliderViewPager.setAdapter(new ItemSliderAdapter(this, images));
+
+        sliderViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                setCurrentIndicator(position);
+            }
+        });
+
+        setupIndicators(images.length);
 
         items = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
@@ -114,5 +148,39 @@ public class Shopping extends AppCompatActivity {
         });
 
         mBottomNV.setSelectedItemId(R.id.nav_home);
+    }
+    private void setupIndicators(int count) {
+        ImageView[] indicators = new ImageView[count];
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        params.setMargins(16, 8, 16, 8);
+
+        for (int i = 0; i < indicators.length; i++) {
+            indicators[i] = new ImageView(this);
+            indicators[i].setImageDrawable(ContextCompat.getDrawable(this,
+                    R.drawable.bg_indicator_inactive));
+            indicators[i].setLayoutParams(params);
+            layoutIndicator.addView(indicators[i]);
+        }
+        setCurrentIndicator(0);
+    }
+
+    private void setCurrentIndicator(int position) {
+        int childCount = layoutIndicator.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            ImageView imageView = (ImageView) layoutIndicator.getChildAt(i);
+            if (i == position) {
+                imageView.setImageDrawable(ContextCompat.getDrawable(
+                        this,
+                        R.drawable.bg_indicator_active
+                ));
+            } else {
+                imageView.setImageDrawable(ContextCompat.getDrawable(
+                        this,
+                        R.drawable.bg_indicator_inactive
+                ));
+            }
+        }
     }
 }
