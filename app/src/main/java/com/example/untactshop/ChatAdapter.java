@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,7 +48,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     @Override
     public ChatAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
-        LinearLayout v = (LinearLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.row_chat, parent, false);
+        RelativeLayout v = (RelativeLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.row_chat, parent, false);
 
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
@@ -94,9 +95,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     }
 
     public void addChat(ChatData chat) {
+
         Log.d("DEBUG", "addChat 메소드 호출");
         mDataset.add(chat);
-//        notifyItemInserted(mDataset.size()-1); //갱신
-        notifyDataSetChanged();
+        notifyItemInserted(mDataset.size()-1); //갱신
+//        notifyDataSetChanged();
     }
 }

@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_corner">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/chat_img_category"
+        <ImageView
+            android:id="@+id/chat_item_img"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:padding="8dp" />
@@ -26,7 +26,7 @@
             android:paddingLeft="20dp">
 
             <TextView
-                android:id="@+id/chat_text_name"
+                android:id="@+id/chat_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -35,19 +35,11 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/chat_text_category"
+                android:id="@+id/chat_item_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font"
-                android:text="category"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/chat_text_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/font"
-                android:text="location"
+                android:text="price"
                 android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>

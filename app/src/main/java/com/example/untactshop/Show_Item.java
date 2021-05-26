@@ -3,6 +3,7 @@ package com.example.untactshop;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class Show_Item extends AppCompatActivity {
     private TextView shop_name;
     private TextView item_name;
     private TextView item_price;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +61,7 @@ public class Show_Item extends AppCompatActivity {
     private void showItem() {
         Log.d("객체", itemInfo.toString());
 
-        item_price.setText(itemInfo.getPrice()+"원");
+        item_price.setText(itemInfo.getPrice() + "원");
         shop_name.setText(itemInfo.getShop_name());
         item_name.setText(itemInfo.getTitle());
 
@@ -69,4 +71,17 @@ public class Show_Item extends AppCompatActivity {
 
     }
 
+
+    public void item_chat_btn(View view) {
+        Log.d("로그인 여부", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) { //로그인 안됐으면 로그인 페이지로 이동시킴
+            //로그인된 유저 확인
+            Intent intent = new Intent(Show_Item.this, LoginActivity.class);
+            startActivity(intent);
+        }
+
+        Intent intent = new Intent(Show_Item.this, ItemChatActivity.class);
+        intent.putExtra("item", itemInfo);
+        startActivity(intent);
+    }
 }
