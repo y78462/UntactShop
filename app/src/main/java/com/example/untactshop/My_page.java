@@ -1,7 +1,9 @@
 package com.example.untactshop;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +26,7 @@ public class My_page extends AppCompatActivity {
     private BottomNavigationView mBottomNV;
 
     private static final String TAG = "Mypage";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,7 @@ public class My_page extends AppCompatActivity {
         set_user_info();
 
 
-        Button order_search = (Button)findViewById(R.id.order_search); //주문조회 버튼
+        Button order_search = (Button) findViewById(R.id.order_search); //주문조회 버튼
         order_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +46,7 @@ public class My_page extends AppCompatActivity {
             }
         });
 
-        Button infor_modify = (Button)findViewById(R.id.infor_modify); //개인정보수정 버튼
+        Button infor_modify = (Button) findViewById(R.id.infor_modify); //개인정보수정 버튼
         infor_modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,18 +62,18 @@ public class My_page extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
-                        startActivity(new Intent(getApplicationContext(),Shopping.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), Shopping.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_shop:
                         startActivity(new Intent(getApplicationContext(), Shopping_shop.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_cart:
-                        startActivity(new Intent(getApplicationContext(),Show_orders.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), Show_orders.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_my:
@@ -81,11 +84,9 @@ public class My_page extends AppCompatActivity {
         });
 
 
-
     }
 
-    private void set_user_info()
-    {
+    private void set_user_info() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference docRef = db.collection("users").document(user.getUid());
@@ -94,8 +95,7 @@ public class My_page extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 MemberInfo memberInfo = documentSnapshot.toObject(MemberInfo.class);
                 //startToast(memberInfo.getName());
-                if (memberInfo != null)
-                {
+                if (memberInfo != null) {
                     TextView name = (TextView) findViewById(R.id.nameTextView);
                     TextView phone = (TextView) findViewById(R.id.phoneNumberTextView);
                     TextView bday = (TextView) findViewById(R.id.birthDayTextView);
@@ -105,15 +105,13 @@ public class My_page extends AppCompatActivity {
                     phone.setText(memberInfo.getPhone());
                     bday.setText(memberInfo.getBday());
                     address.setText(memberInfo.getAddress());
-
                 }
-
             }
         });
 
     }
-    private void startToast(String msg)
-    {
+
+    private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
