@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,6 +43,28 @@ public class Show_Item extends AppCompatActivity {
         itemInfo = (ItemInfo) intent.getSerializableExtra("item");
         Log.d("객체", itemInfo.toString());
         showItem();
+
+        Button item_chat_btn = (Button)findViewById(R.id.chatting);
+        item_chat_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("로그인 여부1", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
+                if (FirebaseAuth.getInstance().getCurrentUser() == null) { //로그인 안됐으면 로그인 페이지로 이동시킴
+                    //로그인된 유저 확인
+                    Log.d("로그인 여부2", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
+                    Intent intent = new Intent(Show_Item.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else{
+                    Intent intent = new Intent(Show_Item.this, ItemChatActivity.class);
+                    intent.putExtra("item", itemInfo);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
+
     }
 
 //    private void upLoadOrder(ItemInfo item) {
@@ -72,16 +95,16 @@ public class Show_Item extends AppCompatActivity {
     }
 
 
-    public void item_chat_btn(View view) {
-        Log.d("로그인 여부", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
-        if (FirebaseAuth.getInstance().getCurrentUser() == null) { //로그인 안됐으면 로그인 페이지로 이동시킴
-            //로그인된 유저 확인
-            Intent intent = new Intent(Show_Item.this, LoginActivity.class);
-            startActivity(intent);
-        }
-
-        Intent intent = new Intent(Show_Item.this, ItemChatActivity.class);
-        intent.putExtra("item", itemInfo);
-        startActivity(intent);
-    }
+//    public void item_chat_btn(View view) {
+//        Log.d("로그인 여부1", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
+//        if (FirebaseAuth.getInstance().getCurrentUser() == null) { //로그인 안됐으면 로그인 페이지로 이동시킴
+//            //로그인된 유저 확인
+//            Log.d("로그인 여부2", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
+//            Intent intent = new Intent(Show_Item.this, LoginActivity.class);
+//            startActivity(intent);
+//        }
+//        Intent intent = new Intent(Show_Item.this, ItemChatActivity.class);
+//        intent.putExtra("item", itemInfo);
+//        startActivity(intent);
+//    }
 }

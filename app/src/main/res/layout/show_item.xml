@@ -70,7 +70,6 @@
             android:layout_weight="0.2"
             android:background="@color/black"
             android:fontFamily="@font/font"
-            android:onClick="item_chat_btn"
             android:text="채팅하기"
             android:textSize="20dp"
             android:textStyle="bold" />
