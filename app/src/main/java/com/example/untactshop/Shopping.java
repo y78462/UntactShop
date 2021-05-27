@@ -161,6 +161,7 @@ public class Shopping extends AppCompatActivity {
                         }
                         else{
                             startToast("로그인을 하세요");
+                            mBottomNV.setSelectedItemId(R.id.nav_home);
                             return true;
                         }
                 }

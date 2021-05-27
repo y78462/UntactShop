@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -36,6 +37,12 @@ public class Shopping_shop extends AppCompatActivity {
     private BottomNavigationView mBottomNV;
 
     private boolean LogIn = false;
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+    }
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_shop);
@@ -182,6 +189,7 @@ public class Shopping_shop extends AppCompatActivity {
                         }
                         else{
                             startToast("로그인을 하세요");
+                            mBottomNV.setSelectedItemId(R.id.nav_shop);
                             return true;
                         }
                 }

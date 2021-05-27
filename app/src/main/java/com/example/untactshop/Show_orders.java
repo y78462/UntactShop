@@ -110,6 +110,7 @@ public class Show_orders extends AppCompatActivity {
                         }
                         else{
                             startToast("로그인을 하세요");
+                            mBottomNV.setSelectedItemId(R.id.nav_cart);
                             return true;
                         }
                 }
