@@ -163,6 +163,7 @@ public class Shopping_shop extends AppCompatActivity {
 
 
         mBottomNV = findViewById(R.id.bottom_navigation_view);
+        mBottomNV.setSelectedItemId(R.id.nav_shop);
         mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -176,9 +177,17 @@ public class Shopping_shop extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_cart:
-                        startActivity(new Intent(getApplicationContext(), Show_orders.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+                        if (LogIn)
+                        {
+                            startActivity(new Intent(getApplicationContext(), Show_orders.class));
+                            overridePendingTransition(0, 0);
+                            return true;
+                        }
+                        else{
+                            startToast("로그인을 하세요");
+                            mBottomNV.setSelectedItemId(R.id.nav_home);
+                            return true;
+                        }
 
                     case R.id.nav_my:
                         if (LogIn)
@@ -189,14 +198,14 @@ public class Shopping_shop extends AppCompatActivity {
                         }
                         else{
                             startToast("로그인을 하세요");
-                            mBottomNV.setSelectedItemId(R.id.nav_shop);
+                            mBottomNV.setSelectedItemId(R.id.nav_home);
                             return true;
                         }
                 }
                 return false;
             }
         });
-        mBottomNV.setSelectedItemId(R.id.nav_shop);
+
     }
     private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();

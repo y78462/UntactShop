@@ -46,14 +46,7 @@ public class Home_login extends AppCompatActivity {
             }
         });
 
-        Button mypage_button = (Button) findViewById(R.id.mypage_button); //마이페이지 버튼
-        mypage_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent mypage_intent = new Intent(Home_login.this, My_page.class);
-                startActivity(mypage_intent);
-            }
-        });
+
         Button logout_button = (Button) findViewById(R.id.logout_button); //로그아웃 버튼
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override

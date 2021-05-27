@@ -150,9 +150,17 @@ public class Shopping extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_cart:
-                        startActivity(new Intent(getApplicationContext(), Show_orders.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+                        if (LogIn)
+                        {
+                            startActivity(new Intent(getApplicationContext(), Show_orders.class));
+                            overridePendingTransition(0, 0);
+                            return true;
+                        }
+                        else{
+                            startToast("로그인을 하세요");
+                            mBottomNV.setSelectedItemId(R.id.nav_home);
+                            return true;
+                        }
 
                     case R.id.nav_my:
                         if (LogIn)
@@ -171,7 +179,7 @@ public class Shopping extends AppCompatActivity {
             }
         });
 
-        mBottomNV.setSelectedItemId(R.id.nav_home);
+
     }
     private void setupIndicators(int count) {
         ImageView[] indicators = new ImageView[count];
