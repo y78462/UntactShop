@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,7 +52,7 @@ public class Shopping extends AppCompatActivity {
             "https://cdn.pixabay.com/photo/2020/09/02/18/03/girl-5539094_1280.jpg",
             "https://cdn.pixabay.com/photo/2017/04/06/11/24/fashion-2208045_960_720.jpg"
     };
-
+    private boolean LogIn = false;
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -73,6 +75,18 @@ public class Shopping extends AppCompatActivity {
         });
 
         setupIndicators(images.length);
+
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
+            //로그인된 유저 확인
+            Log.d("로그인 여부", "true");
+            LogIn = true;
+        }
+        else
+        {
+            Log.d("로그인 여부", "fail");
+            LogIn = false;
+        }
+
 
         items = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
@@ -139,9 +153,16 @@ public class Shopping extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_my:
-                        startActivity(new Intent(getApplicationContext(), My_page.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+                        if (LogIn)
+                        {
+                            startActivity(new Intent(getApplicationContext(), My_page.class));
+                            overridePendingTransition(0, 0);
+                            return true;
+                        }
+                        else{
+                            startToast("로그인을 하세요");
+                            return true;
+                        }
                 }
                 return false;
             }
@@ -182,5 +203,8 @@ public class Shopping extends AppCompatActivity {
                 ));
             }
         }
+    }
+    private void startToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +35,7 @@ public class Shopping_shop extends AppCompatActivity {
     private DatabaseReference reference;
     private BottomNavigationView mBottomNV;
 
-
+    private boolean LogIn = false;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_shop);
@@ -92,6 +93,16 @@ public class Shopping_shop extends AppCompatActivity {
                 TextView shop_search_text = (TextView) findViewById(R.id.shop_search_text);
                 String search_title = shop_search_text.getText().toString();
                 Log.d("shop search_title", "search_title"+ search_title);
+                if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
+                    //로그인된 유저 확인
+                    Log.d("로그인 여부", "true");
+                    LogIn = true;
+                }
+                else
+                {
+                    Log.d("로그인 여부", "fail");
+                    LogIn = false;
+                }
 
                 if(search_title == null)
                 {
@@ -163,14 +174,24 @@ public class Shopping_shop extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_my:
-                        startActivity(new Intent(getApplicationContext(), My_page.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+                        if (LogIn)
+                        {
+                            startActivity(new Intent(getApplicationContext(), My_page.class));
+                            overridePendingTransition(0, 0);
+                            return true;
+                        }
+                        else{
+                            startToast("로그인을 하세요");
+                            return true;
+                        }
                 }
                 return false;
             }
         });
         mBottomNV.setSelectedItemId(R.id.nav_shop);
+    }
+    private void startToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
 

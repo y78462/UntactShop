@@ -2,7 +2,9 @@ package com.example.untactshop;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,11 +33,23 @@ public class Show_orders extends AppCompatActivity {
 
 
     private BottomNavigationView mBottomNV;
+    private boolean LogIn = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_orders);
 
+
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
+            //로그인된 유저 확인
+            Log.d("로그인 여부", "true");
+            LogIn = true;
+        }
+        else
+        {
+            Log.d("로그인 여부", "fail");
+            LogIn = false;
+        }
 
         orders = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
@@ -88,9 +102,16 @@ public class Show_orders extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_my:
-                        startActivity(new Intent(getApplicationContext(),My_page.class));
-                        overridePendingTransition(0,0);
-                        return true;
+                        if (LogIn)
+                        {
+                            startActivity(new Intent(getApplicationContext(), My_page.class));
+                            overridePendingTransition(0, 0);
+                            return true;
+                        }
+                        else{
+                            startToast("로그인을 하세요");
+                            return true;
+                        }
                 }
                 return false;
             }
@@ -98,5 +119,8 @@ public class Show_orders extends AppCompatActivity {
 
         });
 
+    }
+    private void startToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
