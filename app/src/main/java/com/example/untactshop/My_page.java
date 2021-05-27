@@ -1,9 +1,7 @@
 package com.example.untactshop;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -36,16 +34,7 @@ public class My_page extends AppCompatActivity {
         //데이터 가져와서 이름,폰번,생년월일,주소 넣기
         set_user_info();
 
-
-        Button order_search = (Button) findViewById(R.id.order_search); //주문조회 버튼
-        order_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent order_intent = new Intent(My_page.this, Order_search.class);
-                startActivity(order_intent);
-            }
-        });
-
+        
         Button infor_modify = (Button) findViewById(R.id.infor_modify); //개인정보수정 버튼
         infor_modify.setOnClickListener(new View.OnClickListener() {
             @Override
