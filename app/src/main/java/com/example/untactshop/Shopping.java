@@ -127,7 +127,9 @@ public class Shopping extends AppCompatActivity {
                 ItemInfo selectitem = (ItemInfo) adapter.getItem(i);
                 Intent intent = new Intent(Shopping.this, Show_Item.class);
                 intent.putExtra("item", selectitem);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                //finish();
             }
         });
         
@@ -204,8 +206,27 @@ public class Shopping extends AppCompatActivity {
                 ));
             }
         }
+
     }
     private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed(){
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) { //로그인 안됐으면 홈메인
+            //로그인된 유저 확인
+            Log.d("로그인 여부", "fail");
+            Intent intent = new Intent(Shopping.this, Home_main.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+        }
+        else{
+            Intent intent = new Intent(getApplicationContext(), Home_login.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+        }
     }
 }

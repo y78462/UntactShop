@@ -84,7 +84,9 @@ public class ItemFragment extends AppCompatActivity {
                 ItemInfo selectitem = (ItemInfo)adapter.getItem(i);
                 Intent intent = new Intent(ItemFragment.this, Show_Item.class);
                 intent.putExtra("item", selectitem);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                //finish();
             }
         });
     }

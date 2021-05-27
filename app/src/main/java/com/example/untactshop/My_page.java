@@ -100,6 +100,11 @@ public class My_page extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed(){
+        mBottomNV.setSelectedItemId(R.id.nav_home);
+    }
+
     private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }

@@ -60,7 +60,6 @@ public class Show_Item extends AppCompatActivity {
                     Intent intent = new Intent(Show_Item.this, ItemChatActivity.class);
                     intent.putExtra("item", itemInfo);
                     startActivity(intent);
-                    finish();
                 }
             }
         });

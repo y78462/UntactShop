@@ -83,6 +83,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
                     position = getBindingAdapterPosition();
                     Intent intent = new Intent(view.getContext() , ItemFragment.class);
                     intent.putExtra("shop", shops.get(position));
+                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     view.getContext().startActivity(intent);
                 }
             });

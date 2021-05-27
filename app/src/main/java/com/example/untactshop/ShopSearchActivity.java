@@ -121,8 +121,11 @@ public class ShopSearchActivity extends AppCompatActivity {
 
         Intent intent = new Intent(getApplicationContext(), ShopSearchActivity.class);
         intent.putExtra("검색데이터", search_text);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-
+        finish();
 
     }
+
+
 }

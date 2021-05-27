@@ -203,4 +203,8 @@ public class Shopping_shop extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed(){
+        mBottomNV.setSelectedItemId(R.id.nav_home);
+    }
 }
