@@ -8,9 +8,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -42,6 +44,9 @@ public class Register_item extends AppCompatActivity {
     String category;
     String price;
     String photoUrl;
+    public String Key1;
+    public String Key2;
+    public String Key3;
 
     private FirebaseAuth mAuth;
     private static final String TAG = "Register Item Activity";
@@ -61,7 +66,7 @@ public class Register_item extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "item registersuccess");
+                Log.d(TAG, "item register success");
                 register_item();
             }
         });
@@ -84,6 +89,7 @@ public class Register_item extends AppCompatActivity {
             }
         });
 
+
         //사진찍기
         item_view = findViewById(R.id.img_item);
         item_view.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +102,44 @@ public class Register_item extends AppCompatActivity {
                 }else{
                     cardview.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        Spinner spinner1 = (Spinner)findViewById(R.id.spinner1);
+        Spinner spinner2 = (Spinner)findViewById(R.id.spinner2);
+        Spinner spinner3 = (Spinner)findViewById(R.id.spinner3);
+
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Key1 = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Key2 = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Key3 = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
     }
@@ -178,12 +222,12 @@ public class Register_item extends AppCompatActivity {
                         Log.e("이미지업로드성공", downloadUri.toString());
 
                         //정보등록
-                        if (C > 0 && T > 0 && P > 0 && S > 0 ) {
+                        if (C > 0 && T > 0 && P > 0 && S > 0 &&(Key1!=null)&&(Key2!=null)&&(Key3!=null)) {
                             // 등록
                             final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                             DatabaseReference db = FirebaseDatabase.getInstance().getReference();
 
-                            ItemInfo itemInfo = new ItemInfo( title,shop_name,category,price,photoUrl);
+                            ItemInfo itemInfo = new ItemInfo( title,shop_name,category,price,photoUrl,Key1,Key2,Key3);
                             if (user != null) {
                                 //document 에 원래 user.getUid() 였는데 중복되면 하나로 바껴서 상품이름으로 등록
                                 db.child("Items").child(title).setValue(itemInfo).addOnSuccessListener(new OnSuccessListener<Void>() {

@@ -8,6 +8,10 @@ public class ItemInfo implements Serializable {
     String category;
     String price;
     String photoUrl;
+    String Key1;
+    String Key2;
+    String Key3;
+
 
     @Override
     public String toString() {
@@ -17,7 +21,34 @@ public class ItemInfo implements Serializable {
                 ", category='" + category + '\'' +
                 ", price='" + price + '\'' +
                 ", photoUrl='" + photoUrl + '\'' +
+                ", Key1='" + Key1 + '\'' +
+                ", Key2='" + Key2 + '\'' +
+                ", Key3='" + Key3 + '\'' +
                 '}';
+    }
+
+    public String getKey1() {
+        return Key1;
+    }
+
+    public void setKey1(String key1) {
+        Key1 = key1;
+    }
+
+    public String getKey2() {
+        return Key2;
+    }
+
+    public void setKey2(String key2) {
+        Key2 = key2;
+    }
+
+    public String getKey3() {
+        return Key3;
+    }
+
+    public void setKey3(String key3) {
+        Key3 = key3;
     }
 
     public void setTitle(String title) {
@@ -60,12 +91,15 @@ public class ItemInfo implements Serializable {
         return photoUrl;
     }
 
-    public ItemInfo(String title, String shop_name, String category, String price, String photoUrl) {
+    public ItemInfo(String title, String shop_name, String category, String price, String photoUrl,String Key1,String Key2,String Key3) {
         this.title = title;
         this.shop_name = shop_name;
         this.category = category;
         this.price = price;
         this.photoUrl = photoUrl;
+        this.Key1 = Key1;
+        this.Key2 = Key2;
+        this.Key3 = Key3;
     }
     public ItemInfo(){}
 }

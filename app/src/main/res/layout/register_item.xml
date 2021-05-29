@@ -84,6 +84,28 @@
                 android:ems="10"
                 android:hint="상품 가격"
                 android:inputType="text" />
+            <Spinner
+                android:id="@+id/spinner1"
+                android:entries="@array/key1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner2"
+                android:entries="@array/key2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinner3"
+                android:entries="@array/key3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"/>
+
 
             <Button
                 android:id="@+id/register_btn"
