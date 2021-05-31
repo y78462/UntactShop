@@ -1,12 +1,13 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+
+import com.example.untactshop.R;
 
 public class PopupActivity extends Activity {
 

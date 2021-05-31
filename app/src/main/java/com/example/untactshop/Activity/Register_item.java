@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,8 +19,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.untactshop.Activity.CameraActivity;
-import com.example.untactshop.Activity.GalleryActivity;
+import com.example.untactshop.ItemInfo;
+import com.example.untactshop.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;

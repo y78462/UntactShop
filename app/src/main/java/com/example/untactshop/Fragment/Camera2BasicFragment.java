@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.untactshop;
+package com.example.untactshop.Fragment;
 
 import android.Manifest;
 import android.app.Activity;
@@ -60,6 +60,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import com.example.untactshop.R;
 import com.example.untactshop.View.AutoFitTextureView;
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.untactshop.R;
 
 import java.util.ArrayList;
 import java.util.List;

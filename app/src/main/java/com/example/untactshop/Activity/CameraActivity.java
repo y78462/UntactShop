@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -24,6 +24,9 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.untactshop.Fragment.Camera2BasicFragment;
+import com.example.untactshop.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

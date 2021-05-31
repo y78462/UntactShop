@@ -1,15 +1,17 @@
-package com.example.untactshop;
+package com.example.untactshop.Adapter;
 
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.untactshop.ChatData;
+import com.example.untactshop.R;
 
 import java.util.List;
 

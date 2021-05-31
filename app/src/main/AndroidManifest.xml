@@ -15,51 +15,51 @@
         android:roundIcon="@drawable/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.UntactShop">
-        <activity android:name=".Intro">
+        <activity android:name=".Activity.Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Home_main">
+        <activity android:name=".Activity.Home_main">
         </activity>
-        <activity android:name=".Shopping"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".My_page"/>
-        <activity android:name=".Order_search"/>
-        <activity android:name=".Infor_modify"/>
-        <activity android:name=".Choice_shop"/>
-        <activity android:name=".Map" android:screenOrientation="landscape">
+        <activity android:name=".Activity.Shopping"/>
+        <activity android:name=".Activity.LoginActivity"/>
+        <activity android:name=".Activity.My_page"/>
+        <activity android:name=".Activity.Order_search"/>
+        <activity android:name=".Activity.Infor_modify"/>
+        <activity android:name=".Activity.Choice_shop"/>
+        <activity android:name=".Activity.Map" android:screenOrientation="landscape">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
         </activity>
-        <activity android:name=".ShopSearchActivity"/>
-        <activity android:name=".PopupActivity" android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".LocationInfoActivity" android:screenOrientation="landscape" />
-        <activity android:name=".PasswordResetActivity"/>
-        <activity android:name=".ChatActivity">
+        <activity android:name=".Activity.ShopSearchActivity"/>
+        <activity android:name=".Activity.PopupActivity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".Activity.LocationInfoActivity" android:screenOrientation="landscape" />
+        <activity android:name=".Activity.PasswordResetActivity"/>
+        <activity android:name=".Activity.ChatActivity">
 <!--        <intent-filter>-->
 <!--            <action android:name="android.intent.action.MAIN" />-->
 <!--            <category android:name="android.intent.category.LAUNCHER" />-->
 <!--        </intent-filter>-->
         </activity>
-        <activity android:name=".ShopInfoActivity"/>
-        <activity android:name=".MemberInitActivity"/>
-        <activity android:name=".Home_login"/>
-        <activity android:name=".Home_admin"/>
-        <activity android:name=".Register_item"/>
-        <activity android:name=".GalleryActivity"/>
-        <activity android:name=".CameraActivity"/>
-        <activity android:name=".Show_Item"/>
-        <activity android:name=".Show_orders"/>
-        <activity android:name=".ItemFragment"/>
+        <activity android:name=".Activity.ShopInfoActivity"/>
+        <activity android:name=".Activity.MemberInitActivity"/>
+        <activity android:name=".Activity.Home_login"/>
+        <activity android:name=".Activity.Home_admin"/>
+        <activity android:name=".Activity.Register_item"/>
+        <activity android:name=".Activity.GalleryActivity"/>
+        <activity android:name=".Activity.CameraActivity"/>
+        <activity android:name=".Activity.Show_Item"/>
+        <activity android:name=".Activity.Show_orders"/>
+        <activity android:name=".Fragment.ItemFragment"/>
         <activity android:name=".Shop_menu"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".Shopping_shop"/>
-        <activity android:name=".ItemChatActivity"/>
+        <activity android:name=".Activity.SignUpActivity"/>
+        <activity android:name=".Activity.Shopping_shop"/>
+        <activity android:name=".Activity.ItemChatActivity"/>
         <activity android:name=".ItemInfo"/>
     </application>
 </manifest>

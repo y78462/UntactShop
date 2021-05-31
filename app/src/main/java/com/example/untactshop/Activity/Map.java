@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -17,7 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
-import com.example.untactshop.Activity.ShopInfoActivity;
+import com.example.untactshop.MapDatabaseHelper;
+import com.example.untactshop.R;
 
 import java.io.IOException;
 

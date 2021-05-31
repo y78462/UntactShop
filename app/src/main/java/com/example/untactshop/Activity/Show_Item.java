@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.untactshop.Activity.LoginActivity;
+import com.example.untactshop.ItemInfo;
+import com.example.untactshop.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;

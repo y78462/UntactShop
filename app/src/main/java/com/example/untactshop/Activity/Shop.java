@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.Manifest;
 import android.app.Activity;
@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.untactshop.Adapter.GalleryAdapter;
+import com.example.untactshop.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.untactshop.Fragment.ItemFragment;
+import com.example.untactshop.R;
+import com.example.untactshop.Activity.Shop;
 
 import java.util.ArrayList;
 

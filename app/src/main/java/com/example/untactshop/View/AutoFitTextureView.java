@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.untactshop;
+package com.example.untactshop.View;
 
 import android.content.Context;
 import android.util.AttributeSet;

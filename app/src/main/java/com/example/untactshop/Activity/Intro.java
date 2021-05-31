@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.untactshop.Activity.Home_login;
-import com.example.untactshop.Activity.Home_main;
+import com.example.untactshop.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Intro  extends AppCompatActivity {

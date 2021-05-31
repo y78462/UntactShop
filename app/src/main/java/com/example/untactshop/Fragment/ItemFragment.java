@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.untactshop.Activity.Shop;
 import com.example.untactshop.Activity.Show_Item;
 import com.example.untactshop.Adapter.ItemAdapter;
+import com.example.untactshop.ItemInfo;
+import com.example.untactshop.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

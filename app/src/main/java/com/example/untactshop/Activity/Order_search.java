@@ -1,11 +1,10 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import com.example.untactshop.R;
 
 public class Order_search extends AppCompatActivity {
     @Override

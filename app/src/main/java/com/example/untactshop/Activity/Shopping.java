@@ -1,4 +1,4 @@
-package com.example.untactshop;
+package com.example.untactshop.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,10 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.untactshop.Activity.Home_login;
-import com.example.untactshop.Activity.Home_main;
 import com.example.untactshop.Adapter.ItemAdapter;
 import com.example.untactshop.Adapter.ItemSliderAdapter;
+import com.example.untactshop.ItemInfo;
+import com.example.untactshop.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
