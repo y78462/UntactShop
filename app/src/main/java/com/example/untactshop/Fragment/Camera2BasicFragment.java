@@ -60,6 +60,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import com.example.untactshop.View.AutoFitTextureView;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;

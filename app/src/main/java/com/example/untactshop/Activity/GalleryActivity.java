@@ -16,6 +16,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.untactshop.Adapter.GalleryAdapter;
+
 import java.util.ArrayList;
 
 public class GalleryActivity extends AppCompatActivity {

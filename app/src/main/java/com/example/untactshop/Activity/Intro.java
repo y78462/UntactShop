@@ -7,6 +7,8 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.untactshop.Activity.Home_login;
+import com.example.untactshop.Activity.Home_main;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Intro  extends AppCompatActivity {

@@ -19,6 +19,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.untactshop.Activity.CameraActivity;
+import com.example.untactshop.Activity.GalleryActivity;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -75,7 +77,7 @@ public class Register_item extends AppCompatActivity {
         cam_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent camintent = new Intent(Register_item.this,CameraActivity.class);
+                Intent camintent = new Intent(Register_item.this, CameraActivity.class);
                 startActivityForResult(camintent,0);
             }
         });
@@ -83,7 +85,7 @@ public class Register_item extends AppCompatActivity {
         gal_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent galintent = new Intent(Register_item.this,GalleryActivity.class);
+                Intent galintent = new Intent(Register_item.this, GalleryActivity.class);
                 startActivityForResult(galintent,0);
 
             }

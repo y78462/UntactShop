@@ -1,19 +1,22 @@
 package com.example.untactshop;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.example.untactshop.Adapter.ChatAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -31,19 +34,18 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ChatActivity extends AppCompatActivity {
-
-    TextView name, category, location;
-    String shop_name, shop_location, shop_category;
-    CircleImageView circleImageView;
+public class ItemChatActivity extends AppCompatActivity {
+    private ItemInfo itemInfo;
+    ImageView item_img;
+    TextView item_name, item_price;
+    String shop_name;
 
     private RecyclerView mRecyclerView;
     public RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<ChatData> chatList;
-    private String nick;
+    private String nick = "me";
 
     private EditText EditText_chat;
     private Button Button_send;
@@ -52,50 +54,25 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.chat);
+        setContentView(R.layout.item_chat);
 
-        name = (TextView) findViewById(R.id.chat_text_name);
-        category = (TextView) findViewById(R.id.chat_text_category);
-        location = (TextView) findViewById(R.id.chat_text_location);
-        circleImageView = findViewById(R.id.chat_img_category);
+        item_name = (TextView) findViewById(R.id.chat_item_name);
+        item_price = (TextView) findViewById(R.id.chat_item_price);
+        item_img = findViewById(R.id.chat_item_img);
 
         Intent intent = getIntent();
-        shop_name = intent.getStringExtra("name");
-        name.setText(shop_name);
+        itemInfo = (ItemInfo) intent.getSerializableExtra("item");
+        Log.d("CHATCHAT객체", itemInfo.toString());
 
-        shop_category = intent.getStringExtra("category");
-        category.setText(shop_category);
+        item_price.setText(itemInfo.getPrice() + "원");
+        item_name.setText(itemInfo.getTitle());
 
-        shop_location = intent.getStringExtra("location");
-        location.setText(shop_location);
+        shop_name = itemInfo.getShop_name();
 
-//        Log.d("intent", shop_name);
-//        Log.d("intent", shop_category);
-//        Log.d("intent", shop_location);
+        Glide.with(getApplicationContext())
+                .load(itemInfo.getPhotoUrl())
+                .into(item_img);
 
-        switch (shop_category) {
-            case "음식점":
-                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_restaurant));
-                break;
-            case "패션의류":
-                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_fashion));
-                break;
-            case "쇼핑미용":
-                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_beauty));
-                break;
-            case "디지털 가전":
-                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_digital));
-                break;
-            case "편의시설":
-                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_convenient));
-                break;
-            case "기타매장":
-                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_etc));
-                break;
-            case "공방":
-                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_craft));
-                break;
-        }
 
         Button_send = findViewById(R.id.Button_send);
         EditText_chat = findViewById(R.id.EditText_chat);
@@ -144,7 +121,7 @@ public class ChatActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         chatList = new ArrayList<>();
-        mAdapter = new ChatAdapter(chatList, ChatActivity.this, nick);
+        mAdapter = new ChatAdapter(chatList, ItemChatActivity.this, nick);
 
         mRecyclerView.setAdapter(mAdapter);
 
