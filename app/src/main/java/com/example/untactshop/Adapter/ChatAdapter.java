@@ -12,12 +12,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.untactshop.ChatData;
 import com.example.untactshop.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> {
-    private List<ChatData> mDataset;
-    private String myNickName;
+    private List<ChatData> Dataset;
+    private String Email;
+    private String Chat_Email;
+    private FirebaseUser user;
+    private FirebaseFirestore db;
+    private DocumentReference docRef;
+    private int left;
+    private int right;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -40,20 +50,28 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ChatAdapter(List<ChatData> myDataset, Context context, String myNickName) {
+    public ChatAdapter(List<ChatData> Dataset, Context context, String Email) {
         //{"1","2"}
-        mDataset = myDataset;
-        this.myNickName = myNickName;
+        this.Dataset = Dataset;
+        this.Email = Email;
     }
 
     // Create new views (invoked vy the layout manager)
     @Override
     public ChatAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
-        RelativeLayout v = (RelativeLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.row_chat, parent, false);
 
-        MyViewHolder vh = new MyViewHolder(v);
-        return vh;
+        if (left == 1) {
+            Log.d("case", "왼쪽에 출력");
+            RelativeLayout v = (RelativeLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.other_msgbox, parent, false);
+            MyViewHolder vh = new MyViewHolder(v);
+            return vh;
+        } else {
+            Log.d("case", "오른쪽에 출력");
+            RelativeLayout v = (RelativeLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.my_msgbox, parent, false);
+            MyViewHolder vh = new MyViewHolder(v);
+            return vh;
+        }
     }
 
     // Replace the contents of a view (invoked by the layout manager)
@@ -61,27 +79,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     public void onBindViewHolder(MyViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        ChatData chat = mDataset.get(position);
+        ChatData chat = Dataset.get(position);
 
         holder.TextView_nickname.setText(chat.getNickname());
         holder.TextView_msg.setText(chat.getMsg());
         holder.TextView_time.setText(chat.getTime()); //DTO
-
-        String before_nickname = holder.TextView_nickname.getText().toString();
-
-//        Log.d("current_nickname", this.myNickName);
-//        Log.d("before_nickname", before_nickname);
-
-        if (before_nickname.equals(this.myNickName)) {
-            holder.TextView_msg.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
-            holder.TextView_nickname.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
-            holder.TextView_time.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
-        } else {
-            holder.TextView_msg.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
-            holder.TextView_nickname.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
-            holder.TextView_time.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
-        }
-
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -89,18 +91,46 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     public int getItemCount() {
 
         //삼항 연산자
-        return mDataset == null ? 0 : mDataset.size();
+        return Dataset == null ? 0 : Dataset.size();
     }
 
     public ChatData getChat(int position) {
-        return mDataset != null ? mDataset.get(position) : null;
+        return Dataset != null ? Dataset.get(position) : null;
     }
 
     public void addChat(ChatData chat) {
 
         Log.d("DEBUG", "addChat 메소드 호출");
-        mDataset.add(chat);
-        notifyItemInserted(mDataset.size()-1); //갱신
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        db = FirebaseFirestore.getInstance();
+        docRef = db.collection("users").document(user.getUid());
+        Email = user.getEmail();
+        Log.d("Email", Email);
+
+        Chat_Email = chat.getIdentify();
+        Log.d("Chat_Email", Chat_Email);
+
+        if (Email.contains("admin")) { //관리자 계정
+            if (Chat_Email.equals("admin")) { //관리자 메세지
+                Log.d("case", "1, right");
+                right = 1;
+            } else { //사용자 메세지
+                Log.d("case", "2, left");
+                left = 1;
+            }
+        } else { //사용자 계정
+            if (Chat_Email.equals("admin")) { //관리자 메세지
+                Log.d("case", "3, left");
+                left = 1;
+            } else { //사용자 메세지
+                Log.d("case", "4, right");
+                right = 1;
+            }
+        }
+
+        Dataset.add(chat);
+        notifyItemInserted(Dataset.size() - 1); //갱신
 //        notifyDataSetChanged();
     }
 }

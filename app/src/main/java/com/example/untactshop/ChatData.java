@@ -7,6 +7,7 @@ public class ChatData {
     private String nickname;
     private String time;
     private String shop_name;
+    private String identify;
 
     public String getMsg() {
         return msg;
@@ -36,6 +37,16 @@ public class ChatData {
         return shop_name;
     }
 
-    public void setShop_name(String shop_name) { this.shop_name = shop_name; }
+    public void setShop_name(String shop_name) {
+        this.shop_name = shop_name;
+    }
+
+    public String getIdentify() {
+        return identify;
+    }
+
+    public void setIdentify(String identify) {
+        this.identify = identify;
+    }
 
 }

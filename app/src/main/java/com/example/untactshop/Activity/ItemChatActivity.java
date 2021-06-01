@@ -49,11 +49,12 @@ public class ItemChatActivity extends AppCompatActivity {
     public RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<ChatData> chatList;
-    private String nick = "me";
+    private String nick;
 
     private EditText EditText_chat;
     private Button Button_send;
     private DatabaseReference myRef;
+    private String Email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +86,7 @@ public class ItemChatActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference docRef = db.collection("users").document(user.getUid());
+        Email = user.getEmail();
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -112,7 +114,15 @@ public class ItemChatActivity extends AppCompatActivity {
                     chat.setMsg(msg);
                     chat.setTime(time);
                     chat.setShop_name(shop_name);
-                    myRef.push().setValue(chat);
+
+                    if (Email.contains("admin")) {
+                        chat.setIdentify("admin");
+                    } else {
+                        chat.setIdentify("user");
+                    }
+
+//                    myRef.push().setValue(chat);
+                    myRef.child("Chat").child(shop_name).push().setValue(chat);
                 }
 
                 EditText_chat.setText(null); //텍스트 입력 창 비우기
@@ -139,7 +149,7 @@ public class ItemChatActivity extends AppCompatActivity {
 //        myRef.setValue(chat);
         //caution!!!
 
-        myRef.addChildEventListener(new ChildEventListener() { //새로운 밸류가 추가되면 호출되는 메소드
+        myRef.child("Chat").child(shop_name).addChildEventListener(new ChildEventListener() { //새로운 밸류가 추가되면 호출되는 메소드
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 Log.d("CHATCHAT", dataSnapshot.getValue().toString());
