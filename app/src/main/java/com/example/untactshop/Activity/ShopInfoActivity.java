@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 import com.example.untactshop.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -74,16 +76,29 @@ public class ShopInfoActivity extends Activity {
                 circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_craft));
                 break;
         }
-    }
 
-    public void chat_btn(View view) {
-        Intent intent = new Intent(ShopInfoActivity.this, ChatActivity.class);
-        intent.putExtra("name", shop_name);
-        intent.putExtra("category", shop_category);
-        intent.putExtra("location", shop_location);
-        startActivity(intent);
+        Button chat_btn = (Button) findViewById(R.id.chat_button);
+        chat_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Log.d("로그인 여부1", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
+                if (FirebaseAuth.getInstance().getCurrentUser() == null) { //로그인 안됐으면 로그인 페이지로 이동시킴
+                    //로그인된 유저 확인
+//                    Log.d("로그인 여부2", String.valueOf(FirebaseAuth.getInstance().getCurrentUser()));
+                    Intent intent = new Intent(ShopInfoActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(ShopInfoActivity.this, ChatActivity.class);
+                    intent.putExtra("name", shop_name);
+                    intent.putExtra("category", shop_category);
+                    intent.putExtra("location", shop_location);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
     }
-
 
     public void readExcel() {
         Log.i("실행흐름", "readExcel 함수 실행");

@@ -45,6 +45,7 @@ public class Shopping_shop extends AppCompatActivity {
         super.onResume();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
     }
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_shop);
@@ -74,7 +75,7 @@ public class Shopping_shop extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 shops.clear();
-                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Log.d("shop", "shop" + dataSnapshot.getKey());
                     Shop shop = dataSnapshot.getValue(Shop.class);
                     shop.setShopname(dataSnapshot.getKey());
@@ -83,6 +84,7 @@ public class Shopping_shop extends AppCompatActivity {
                 }
                 adapter.notifyDataSetChanged();
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -124,19 +126,19 @@ public class Shopping_shop extends AppCompatActivity {
 //                    LogIn = false;
 //                }
 
-                if(search_title == null)
-                {
+                if (search_title == null) {
                     reference.child("Shop").addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             shops.clear();
-                            for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                 Shop shop = dataSnapshot.getValue(Shop.class);
                                 shop.setShopname(dataSnapshot.getKey());
                                 shops.add(shop);
                             }
                             adapter.notifyDataSetChanged();
                         }
+
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 
@@ -148,12 +150,11 @@ public class Shopping_shop extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         shops.clear();
-                        for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                             Log.d("shopkey", "shopkey" + dataSnapshot.getKey());
                             Log.d("shopvalue", "shopvalue" + dataSnapshot.getKey());
 
-                            if(dataSnapshot.getKey().equals(search_title))
-                            {
+                            if (dataSnapshot.getKey().equals(search_title)) {
                                 Shop shop = dataSnapshot.getValue(Shop.class);
                                 shop.setShopname(dataSnapshot.getKey());
                                 shops.add(shop);
@@ -163,6 +164,7 @@ public class Shopping_shop extends AppCompatActivity {
                         }
                         adapter.notifyDataSetChanged();
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 
@@ -172,7 +174,6 @@ public class Shopping_shop extends AppCompatActivity {
                 imm.hideSoftInputFromWindow(shop_search_text.getWindowToken(), 0);
             }
         });
-
 
 
         mBottomNV = findViewById(R.id.bottom_navigation_view);
@@ -196,8 +197,7 @@ public class Shopping_shop extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), Show_orders.class));
                             overridePendingTransition(0, 0);
                             return true;
-                        }
-                        else{
+                        } else {
                             startToast("로그인을 하세요");
                             mBottomNV.setSelectedItemId(R.id.nav_home);
                             return true;
@@ -210,8 +210,7 @@ public class Shopping_shop extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), My_page.class));
                             overridePendingTransition(0, 0);
                             return true;
-                        }
-                        else{
+                        } else {
                             startToast("로그인을 하세요");
                             mBottomNV.setSelectedItemId(R.id.nav_home);
                             return true;
@@ -222,13 +221,14 @@ public class Shopping_shop extends AppCompatActivity {
         });
 
     }
+
     private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         mBottomNV.setSelectedItemId(R.id.nav_home);
     }
 }
