@@ -46,9 +46,9 @@ public class Register_item extends AppCompatActivity {
     String category;
     String price;
     String photoUrl;
-    public String Key1;
-    public String Key2;
-    public String Key3;
+    public String Key1 = "";
+    public String Key2 = "";
+    public String Key3 = "";
 
     private FirebaseAuth mAuth;
     private static final String TAG = "Register Item Activity";

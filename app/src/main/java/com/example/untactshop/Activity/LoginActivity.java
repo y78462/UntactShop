@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         int C = password.length();
         int E = email.length();
         //admin lpgin
-        if(email.equals("admin@admin.com"))
+        if(email.matches("(.*)@admin.com"))
         {
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

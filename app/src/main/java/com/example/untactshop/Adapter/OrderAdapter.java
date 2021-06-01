@@ -12,17 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.untactshop.Activity.Order;
+import com.example.untactshop.ItemInfo;
 import com.example.untactshop.R;
 
 import java.util.ArrayList;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder> {
 
-    private ArrayList<Order> orders;
+    private ArrayList<ItemInfo> items;
     private Context context;
 
-    public OrderAdapter(ArrayList<Order> orders, Context context) {
-        this.orders = orders;
+    public OrderAdapter(ArrayList<ItemInfo> items, Context context) {
+        this.items = items;
         this.context = context;
     }
 
@@ -38,16 +39,16 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
 
         Glide.with(holder.itemView)
-                .load(orders.get(position).getImageUrl())
+                .load(items.get(position).getPhotoUrl())
                 .into(holder.item_image);
-        holder.item_name.setText(orders.get(position).getItemName());
-        holder.shop_name.setText(orders.get(position).getShopName());
-        holder.item_price.setText(orders.get(position).getItemPrice());
+        holder.item_name.setText(items.get(position).getTitle());
+        holder.shop_name.setText(items.get(position).getShop_name());
+        holder.item_price.setText(items.get(position).getPrice());
     }
 
     @Override
     public int getItemCount() {
-        return (orders != null ? orders.size() : 0);
+        return (items != null ? items.size() : 0);
     }
 
     public class OrderViewHolder extends RecyclerView.ViewHolder {

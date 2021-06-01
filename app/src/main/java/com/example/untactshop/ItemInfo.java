@@ -1,16 +1,21 @@
 package com.example.untactshop;
 
+import android.content.ClipData;
+
 import java.io.Serializable;
 
-public class ItemInfo implements Serializable {
-    String title;
-    String shop_name;
-    String category;
-    String price;
-    String photoUrl;
-    String Key1;
-    String Key2;
-    String Key3;
+public class ItemInfo implements Serializable, Comparable<ItemInfo> {
+
+    private String title;
+    private String shop_name;
+    private String category;
+    private String price;
+    private String photoUrl;
+    private String Key1;
+    private String Key2;
+    private String Key3;
+
+    public ItemInfo(){}
 
 
     @Override
@@ -101,5 +106,16 @@ public class ItemInfo implements Serializable {
         this.Key2 = Key2;
         this.Key3 = Key3;
     }
-    public ItemInfo(){}
+
+
+    @Override
+    public int compareTo(ItemInfo itemInfo) {
+        int targetPrice = Integer.parseInt(itemInfo.getPrice());
+
+        if (Integer.parseInt(this.price) == targetPrice) return 0;
+        else if (Integer.parseInt(this.price)>targetPrice) return 1;
+        else
+            return -1;
+    }
+
 }

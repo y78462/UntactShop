@@ -66,36 +66,41 @@ public class SignUpActivity extends AppCompatActivity {
         int E = email.length();
         if(C>0 && E>0 && Ch>0)
         {
+
             if (C < 6) {
                 Toast.makeText(this, "비밀번호는 여섯자리 이상을 입력 해 주십시오", Toast.LENGTH_SHORT).show();
             }
             if (password.equals(passwordCheck)) {
                 //String email = ((EditText)findViewById(R.id.emailEditText)).getText().toString();
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    //성공시 유아이
-                                    Log.d(TAG, "createUserWithEmail:success");
-                                    startToast("회원가입 성공하였습니다.");
+//                if(email.matches("(.*)@admin.com")) {
+//                    Toast.makeText(this, "@admin.com 형식은 관리자 형식입니다.", Toast.LENGTH_SHORT).show();
+//                }
+//            else {
+                    mAuth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        // Sign in success, update UI with the signed-in user's information
+                                        //성공시 유아이
+                                        Log.d(TAG, "createUserWithEmail:success");
+                                        startToast("회원가입 성공하였습니다.");
 
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    go_setinfo(email,password);
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        go_setinfo(email, password);
 
-                                } else {
-                                    // If sign in fails, display a message to the user.
-                                    Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                    if(task.getException() != null)
-                                    {
-                                        startToast(task.getException().toString());
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+                                        Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                        if (task.getException() != null) {
+                                            startToast(task.getException().toString());
+                                        }
+
+                                        //실패시 유아이 로
                                     }
-
-                                    //실패시 유아이 로
                                 }
-                            }
-                        });
+                            });
+//                }
             } else {
                 Toast.makeText(this, "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show();
             }

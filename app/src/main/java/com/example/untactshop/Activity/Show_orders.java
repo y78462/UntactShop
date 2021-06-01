@@ -28,7 +28,7 @@ public class Show_orders extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<Order> orders;
+    private ArrayList<ItemInfo> items;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -53,7 +53,7 @@ public class Show_orders extends AppCompatActivity {
             LogIn = false;
         }
 
-        orders = new ArrayList<>();
+        items = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference();
@@ -66,10 +66,10 @@ public class Show_orders extends AppCompatActivity {
         reference.child("Orders_"+auth.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                orders.clear();
+                items.clear();
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    Order order = dataSnapshot.getValue(Order.class);
-                    orders.add(order);
+                    ItemInfo item = dataSnapshot.getValue(ItemInfo.class);
+                    items.add(item);
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -80,7 +80,7 @@ public class Show_orders extends AppCompatActivity {
             }
         });
 
-        adapter = new OrderAdapter(orders, this);
+        adapter = new OrderAdapter(items, this);
         recyclerView.setAdapter(adapter);
 
 
