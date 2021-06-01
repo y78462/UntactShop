@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.untactshop.Activity.ItemChatActivity;
+import com.example.untactshop.Activity.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -122,13 +124,12 @@ public class Show_Item extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    public List<ItemInfo> RecommendedList() {
+    public void RecommendedList() {
 
         List<ItemInfo> recommendList = new ArrayList<>();
         List<ItemInfo> allItem = new ArrayList<>();
         List<ItemInfo> first = new ArrayList<>();
         List<ItemInfo> second = new ArrayList<>();
-        List<ItemInfo> third = new ArrayList<>();
 
 
 
@@ -143,38 +144,24 @@ public class Show_Item extends AppCompatActivity {
                         allItem.add(item);
                 }
 
-                Collections.sort(allItem);
 
-                for (ItemInfo info : allItem) {
-                    Log.i("정렬", info.getPrice());
-                }
-
-                if(itemInfo.getKey1().equals("")&&itemInfo.getKey2().equals("")&&itemInfo.getKey3().equals("")){
-
-                }
-                else {
-                    for (ItemInfo item : allItem) {
-                        if (itemInfo.getKey1().equals(item.getKey1()) && itemInfo.getKey2().equals(item.getKey2()) && itemInfo.getKey3().equals(item.getKey3())) {
-                            first.add(item);
-                        } else if ((itemInfo.getKey1().equals(item.getKey1()) && itemInfo.getKey2().equals(item.getKey2())) && (!(itemInfo.getKey1().equals("")) && !(itemInfo.getKey2().equals("")))) {
-                            second.add(item);
-                        } else if ((itemInfo.getKey1().equals(item.getKey1()) && itemInfo.getKey3().equals(item.getKey3())) && (!(itemInfo.getKey1().equals("")) && !(itemInfo.getKey3().equals("")))) {
-                            second.add(item);
-                        } else if ((itemInfo.getKey2().equals(item.getKey2()) && itemInfo.getKey3().equals(item.getKey3())) && (!(itemInfo.getKey2().equals("")) && !(itemInfo.getKey3().equals("")))) {
-                            second.add(item);
-                        } else if (itemInfo.getKey1().equals(item.getKey1()) && !(itemInfo.getKey1().equals(""))) {
-                            third.add(item);
-                        } else if (itemInfo.getKey2().equals(item.getKey2()) && !(itemInfo.getKey2().equals(""))) {
-                            third.add(item);
-                        } else if (itemInfo.getKey3().equals(item.getKey3()) && !(itemInfo.getKey3().equals(""))) {
-                            third.add(item);
-                        }
-
+                for (ItemInfo item : allItem) {
+                    if (itemInfo.getKey1().equals(item.getKey1()) && itemInfo.getKey2().equals(item.getKey2()) && itemInfo.getKey3().equals(item.getKey3())) {
+                        first.add(item);
+                    } else if (itemInfo.getKey1().equals(item.getKey1()) && itemInfo.getKey2().equals(item.getKey2())) {
+                        second.add(item);
+                    } else if (itemInfo.getKey1().equals(item.getKey1()) && itemInfo.getKey3().equals(item.getKey3())) {
+                        second.add(item);
+                    } else if (itemInfo.getKey2().equals(item.getKey2()) && itemInfo.getKey3().equals(item.getKey3())) {
+                        second.add(item);
                     }
-                    Collections.sort(first);
-                    Collections.sort(second);
-                    Collections.sort(third);
                 }
+                Collections.sort(first);
+                Collections.sort(second);
+
+                recommendList.addAll(first);
+                recommendList.addAll(second);
+
             }
 
             @Override
@@ -183,6 +170,5 @@ public class Show_Item extends AppCompatActivity {
             }
         });
 
-        return recommendList;
     }
 }
