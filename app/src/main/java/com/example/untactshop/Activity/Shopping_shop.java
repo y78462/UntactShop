@@ -38,7 +38,7 @@ public class Shopping_shop extends AppCompatActivity {
     private DatabaseReference reference;
     private BottomNavigationView mBottomNV;
 
-    private boolean LogIn = false;
+    boolean LogIn = false;
     @Override
     protected void onResume() {
 
@@ -58,6 +58,17 @@ public class Shopping_shop extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
+            //로그인된 유저 확인
+            Log.d("로그인 여부", "true");
+            LogIn = true;
+        }
+        else
+        {
+            Log.d("로그인 여부", "fail");
+            LogIn = false;
+        }
 
         reference.child("Shop").addValueEventListener(new ValueEventListener() {
             @Override
@@ -102,16 +113,16 @@ public class Shopping_shop extends AppCompatActivity {
                 TextView shop_search_text = (TextView) findViewById(R.id.shop_search_text);
                 String search_title = shop_search_text.getText().toString();
                 Log.d("shop search_title", "search_title"+ search_title);
-                if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
-                    //로그인된 유저 확인
-                    Log.d("로그인 여부", "true");
-                    LogIn = true;
-                }
-                else
-                {
-                    Log.d("로그인 여부", "fail");
-                    LogIn = false;
-                }
+//                if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
+//                    //로그인된 유저 확인
+//                    Log.d("로그인 여부", "true");
+//                    LogIn = true;
+//                }
+//                else
+//                {
+//                    Log.d("로그인 여부", "fail");
+//                    LogIn = false;
+//                }
 
                 if(search_title == null)
                 {
@@ -179,6 +190,7 @@ public class Shopping_shop extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_cart:
+                        startToast("로그인변수 "+LogIn);
                         if (LogIn)
                         {
                             startActivity(new Intent(getApplicationContext(), Show_orders.class));
@@ -192,6 +204,7 @@ public class Shopping_shop extends AppCompatActivity {
                         }
 
                     case R.id.nav_my:
+                        startToast("로그인변수 "+LogIn);
                         if (LogIn)
                         {
                             startActivity(new Intent(getApplicationContext(), My_page.class));

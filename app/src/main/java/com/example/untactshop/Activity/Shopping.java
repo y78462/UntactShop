@@ -82,12 +82,12 @@ public class Shopping extends AppCompatActivity {
 
         if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
             //로그인된 유저 확인
-            Log.d("로그인 여부", "true");
+            Log.d("쇼핑 로그인 여부", "true");
             LogIn = true;
         }
         else
         {
-            Log.d("로그인 여부", "fail");
+            Log.d("쇼핑 로그인 여부", "fail");
             LogIn = false;
         }
 
@@ -167,6 +167,7 @@ public class Shopping extends AppCompatActivity {
                         }
 
                     case R.id.nav_my:
+                        startToast("로그인변수 "+LogIn);
                         if (LogIn)
                         {
                             startActivity(new Intent(getApplicationContext(), My_page.class));
