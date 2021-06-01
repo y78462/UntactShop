@@ -1,11 +1,5 @@
 package com.example.untactshop.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.untactshop.Adapter.ChatAdapter;
 import com.example.untactshop.ChatData;
@@ -137,6 +137,7 @@ public class ChatActivity extends AppCompatActivity {
                     chat.setMsg(msg);
                     chat.setTime(time);
                     chat.setShop_name(shop_name);
+                    chat.setViewType(0);
 
                     if (Email.contains("admin")) {
                         chat.setIdentify("admin");
@@ -173,6 +174,7 @@ public class ChatActivity extends AppCompatActivity {
         //caution!!!
 
         myRef.child("Chat").child(shop_name).addChildEventListener(new ChildEventListener() { //새로운 밸류가 추가되면 호출되는 메소드
+
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 Log.d("CHATCHAT", dataSnapshot.getValue().toString());
@@ -189,6 +191,7 @@ public class ChatActivity extends AppCompatActivity {
 
                     mRecyclerView.smoothScrollToPosition(mAdapter.getItemCount() - 1);
                 }
+
             }
 
             @Override

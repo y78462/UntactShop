@@ -8,6 +8,7 @@ public class ChatData {
     private String time;
     private String shop_name;
     private String identify;
+    private int viewType;
 
     public String getMsg() {
         return msg;
@@ -49,4 +50,18 @@ public class ChatData {
         this.identify = identify;
     }
 
+    public void setViewType(int viewType){this.viewType = viewType;}
+
+    public int getViewType(){return viewType;}
+
+    public ChatData(String msg, String nickname, String time, String shop_name, String identify, int viewType){
+        this.msg = msg;
+        this.nickname = nickname;
+        this.time = time;
+        this.shop_name = shop_name;
+        this.identify = identify;
+        this.viewType = viewType;
+    }
+
+    public ChatData(){};
 }

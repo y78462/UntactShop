@@ -1,5 +1,7 @@
 com/davemorrissey/labs/subscaleview/decoder/ImageDecoder.java
  com.davemorrissey.labs.subscaleview.decoder.ImageDecoder
+com/davemorrissey/labs/subscaleview/decoder/CompatDecoderFactory.java
+ com.davemorrissey.labs.subscaleview.decoder.CompatDecoderFactory
 com/davemorrissey/labs/subscaleview/SubsamplingScaleImageView.java
  com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
  com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView$1
@@ -18,8 +20,6 @@ com/davemorrissey/labs/subscaleview/SubsamplingScaleImageView.java
  com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView$Tile
  com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView$TileLoadTask
  com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView$TilesInitTask
-com/davemorrissey/labs/subscaleview/decoder/CompatDecoderFactory.java
- com.davemorrissey.labs.subscaleview.decoder.CompatDecoderFactory
 com/davemorrissey/labs/subscaleview/decoder/ImageRegionDecoder.java
  com.davemorrissey.labs.subscaleview.decoder.ImageRegionDecoder
 com/davemorrissey/labs/subscaleview/decoder/SkiaImageDecoder.java
