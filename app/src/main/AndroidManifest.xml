@@ -56,10 +56,8 @@
         <activity android:name=".Activity.Show_Item"/>
         <activity android:name=".Activity.Show_orders"/>
         <activity android:name=".Fragment.ItemFragment"/>
-        <activity android:name=".Shop_menu"/>
         <activity android:name=".Activity.SignUpActivity"/>
         <activity android:name=".Activity.Shopping_shop"/>
         <activity android:name=".Activity.ItemChatActivity"/>
-        <activity android:name=".ItemInfo"/>
     </application>
 </manifest>

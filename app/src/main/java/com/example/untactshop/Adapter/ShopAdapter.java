@@ -57,7 +57,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
             case "쇼핑미용":
                 holder.circleImageView.setImageDrawable(context.getDrawable(R.drawable.img_beauty));
                 break;
-            case "디지털 가전":
+            case "디지털가전":
                 holder.circleImageView.setImageDrawable(context.getDrawable(R.drawable.img_digital));
                 break;
         }
