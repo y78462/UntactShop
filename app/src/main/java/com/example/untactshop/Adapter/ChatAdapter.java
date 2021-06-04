@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.untactshop.Activity.Show_orders;
 import com.example.untactshop.ChatData;
 import com.example.untactshop.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,6 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -27,6 +29,10 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private FirebaseUser user;
     private FirebaseFirestore db;
     private DocumentReference docRef;
+
+    public ChatAdapter(ArrayList<ChatData> chatlist, Show_orders show_orders) {
+
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and

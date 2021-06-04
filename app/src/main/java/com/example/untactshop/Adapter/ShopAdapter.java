@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.untactshop.Fragment.ItemFragment;
 import com.example.untactshop.R;
 import com.example.untactshop.Activity.Shop;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 

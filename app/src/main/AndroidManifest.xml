@@ -59,5 +59,6 @@
         <activity android:name=".Activity.SignUpActivity"/>
         <activity android:name=".Activity.Shopping_shop"/>
         <activity android:name=".Activity.ItemChatActivity"/>
+        <activity android:name=".Activity.ShopChatActivity"/>
     </application>
 </manifest>

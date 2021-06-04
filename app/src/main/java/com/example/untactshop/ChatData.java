@@ -10,6 +10,18 @@ public class ChatData {
     private String identify;
     private int viewType;
 
+    @Override
+    public String toString() {
+        return "ChatData{" +
+                "msg='" + msg + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", time='" + time + '\'' +
+                ", shop_name='" + shop_name + '\'' +
+                ", identify='" + identify + '\'' +
+                ", viewType='" + viewType + '\'' +
+                '}';
+    }
+
     public String getMsg() {
         return msg;
     }

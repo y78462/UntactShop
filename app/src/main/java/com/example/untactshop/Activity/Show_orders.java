@@ -11,8 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.untactshop.Adapter.OrderAdapter;
-import com.example.untactshop.ItemInfo;
+import com.example.untactshop.Adapter.ChatListAdapter;
 import com.example.untactshop.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,7 +28,7 @@ public class Show_orders extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<ItemInfo> items;
+    private ArrayList<Shop> chat_list;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -37,24 +36,22 @@ public class Show_orders extends AppCompatActivity {
 
     private BottomNavigationView mBottomNV;
     private boolean LogIn = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_orders);
 
-
         if (FirebaseAuth.getInstance().getCurrentUser() != null) { //로그인 안됐으면 회원가입 페이지로 이동시킴.\
             //로그인된 유저 확인
             Log.d("로그인 여부", "true");
             LogIn = true;
-        }
-        else
-        {
+        } else {
             Log.d("로그인 여부", "fail");
             LogIn = false;
         }
 
-        items = new ArrayList<>();
+        chat_list = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference();
@@ -64,13 +61,18 @@ public class Show_orders extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        reference.child("Orders_"+auth.getUid()).addValueEventListener(new ValueEventListener() {
+
+        reference.child("Chat").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                items.clear();
-                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    ItemInfo item = dataSnapshot.getValue(ItemInfo.class);
-                    items.add(item);
+                chat_list.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Log.d("chat", "chat" + dataSnapshot.getKey());
+                    Shop shop = dataSnapshot.getValue(Shop.class);
+                    Log.d("chat 객체", shop.toString());
+                    shop.setShopname(dataSnapshot.getKey());
+
+                    chat_list.add(shop);
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -81,7 +83,8 @@ public class Show_orders extends AppCompatActivity {
             }
         });
 
-        adapter = new OrderAdapter(items, this);
+
+        adapter = new ChatListAdapter(chat_list, this);
         recyclerView.setAdapter(adapter);
 
 
@@ -93,25 +96,23 @@ public class Show_orders extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
                         startActivity(new Intent(getApplicationContext(), Shopping.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_shop:
                         startActivity(new Intent(getApplicationContext(), Shopping_shop.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_cart:
                         return true;
 
                     case R.id.nav_my:
-                        if (LogIn)
-                        {
+                        if (LogIn) {
                             startActivity(new Intent(getApplicationContext(), My_page.class));
                             overridePendingTransition(0, 0);
                             return true;
-                        }
-                        else{
+                        } else {
                             startToast("로그인을 하세요");
                             mBottomNV.setSelectedItemId(R.id.nav_cart);
                             return true;
@@ -119,16 +120,15 @@ public class Show_orders extends AppCompatActivity {
                 }
                 return false;
             }
-
-
         });
+    }
 
-    }  private void startToast(String msg) {
+    private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         mBottomNV.setSelectedItemId(R.id.nav_home);
     }
 }

@@ -176,18 +176,19 @@ public class Shopping_shop extends AppCompatActivity {
         });
 
 
+        //네비게이션 바
         mBottomNV = findViewById(R.id.bottom_navigation_view);
-        mBottomNV.setSelectedItemId(R.id.nav_shop);
-        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
+        mBottomNV.setSelectedItemId(R.id.nav_home);
+        mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
-                        startActivity(new Intent(getApplicationContext(), Shopping.class));
-                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_shop:
+                        startActivity(new Intent(getApplicationContext(), Shopping_shop.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_cart:
@@ -197,7 +198,8 @@ public class Shopping_shop extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), Show_orders.class));
                             overridePendingTransition(0, 0);
                             return true;
-                        } else {
+                        }
+                        else{
                             startToast("로그인을 하세요");
                             mBottomNV.setSelectedItemId(R.id.nav_home);
                             return true;
@@ -210,7 +212,8 @@ public class Shopping_shop extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), My_page.class));
                             overridePendingTransition(0, 0);
                             return true;
-                        } else {
+                        }
+                        else{
                             startToast("로그인을 하세요");
                             mBottomNV.setSelectedItemId(R.id.nav_home);
                             return true;

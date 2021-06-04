@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,10 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.untactshop.Adapter.ChatAdapter;
 import com.example.untactshop.ChatData;
-import com.example.untactshop.ItemInfo;
 import com.example.untactshop.MemberInfo;
 import com.example.untactshop.R;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -33,17 +32,23 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+import jxl.Sheet;
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
 
-public class ItemChatActivity extends AppCompatActivity {
-    private ItemInfo itemInfo;
-    ImageView item_img;
-    TextView item_name, item_price;
-    String shop_name;
+public class ShopChatActivity extends AppCompatActivity {
+
+    TextView name, category, location;
+    String shop_name, shop_location, shop_category;
+    CircleImageView circleImageView;
 
     private RecyclerView mRecyclerView;
     public RecyclerView.Adapter mAdapter;
@@ -56,28 +61,53 @@ public class ItemChatActivity extends AppCompatActivity {
     private DatabaseReference myRef;
     private String Email;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_chat);
+        setContentView(R.layout.chat);
 
-        item_name = (TextView) findViewById(R.id.chat_item_name);
-        item_price = (TextView) findViewById(R.id.chat_item_price);
-        item_img = findViewById(R.id.chat_item_img);
+        name = (TextView) findViewById(R.id.chat_text_name);
+        category = (TextView) findViewById(R.id.chat_text_category);
+        location = (TextView) findViewById(R.id.chat_text_location);
+        circleImageView = findViewById(R.id.chat_img_category);
 
         Intent intent = getIntent();
-        itemInfo = (ItemInfo) intent.getSerializableExtra("item");
-        Log.d("CHATCHAT객체", itemInfo.toString());
+        shop_name = intent.getStringExtra("name");
+        name.setText(shop_name);
 
-        item_price.setText(itemInfo.getPrice() + "원");
-        item_name.setText(itemInfo.getTitle());
+        readExcel();
+        category.setText(shop_category);
+        location.setText(shop_location);
 
-        shop_name = itemInfo.getShop_name();
+        Log.d("intent", shop_name);
+        Log.d("intent", shop_category);
+        Log.d("intent", shop_location);
 
-        Glide.with(getApplicationContext())
-                .load(itemInfo.getPhotoUrl())
-                .into(item_img);
 
+        switch (shop_category) {
+            case "음식점":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_restaurant));
+                break;
+            case "패션의류":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_fashion));
+                break;
+            case "쇼핑미용":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_beauty));
+                break;
+            case "디지털 가전":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_digital));
+                break;
+            case "편의시설":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_convenient));
+                break;
+            case "기타매장":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_etc));
+                break;
+            case "공방":
+                circleImageView.setImageDrawable(getResources().getDrawable(R.drawable.img_craft));
+                break;
+        }
 
         Button_send = findViewById(R.id.Button_send);
         EditText_chat = findViewById(R.id.EditText_chat);
@@ -136,7 +166,7 @@ public class ItemChatActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         chatList = new ArrayList<>();
-        mAdapter = new ChatAdapter(chatList, ItemChatActivity.this, nick);
+        mAdapter = new ChatAdapter(chatList, ShopChatActivity.this, nick);
 
         mRecyclerView.setAdapter(mAdapter);
 
@@ -199,5 +229,51 @@ public class ItemChatActivity extends AppCompatActivity {
 
         //1-1. recycleview - chat data
         //1. message, nickname, ismine - Data Transfer Object(데이터를 교환하는 객체)
+    }
+
+
+    public void readExcel() {
+        Log.i("실행흐름", "readExcel 함수 실행");
+
+        try {
+            InputStream is = getBaseContext().getResources().getAssets().open("shop_data.xls");
+            Workbook wb = Workbook.getWorkbook(is);
+            Log.i("실행흐름", "try문");
+
+            if (wb != null) {
+                Sheet sheet = wb.getSheet(0);   // 시트 불러오기
+                if (sheet != null) {
+                    int colTotal = sheet.getColumns();    // 전체 컬럼
+                    int rowIndexStart = 1;                  // row 인덱스 시작
+                    int rowTotal = sheet.getColumn(colTotal - 1).length;
+
+                    for (int row = rowIndexStart; row < rowTotal; row++) {
+                        TableRow tableRow = new TableRow(this); //tablerow 생성
+                        tableRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                        String keyword = sheet.getCell(2, row).getContents();
+
+                        if (keyword.equals(shop_name)) {
+                            Log.d("가게정보", shop_name);
+
+                            String location2 = sheet.getCell(1, row).getContents();
+                            String location3 = sheet.getCell(3, row).getContents();
+                            shop_category = sheet.getCell(4, row).getContents();
+                            Log.d("가게정보", location2 + ", " + location3 + ", " + category);
+
+                            shop_location = location2 + " " + location3;
+                            Log.d("가게정보", shop_location + " " + shop_category);
+                        }
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            Log.i("실행흐름", "exception 1");
+            e.printStackTrace();
+
+        } catch (BiffException e) {
+            Log.i("실행흐름", "exception 2");
+            e.printStackTrace();
+        }
     }
 }
