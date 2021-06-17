@@ -149,6 +149,7 @@ public class Shopping extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_shop:
+                       // mBottomNV.setSelectedItemId(R.id.nav_shop);
                         startActivity(new Intent(getApplicationContext(), Shopping_shop.class));
                         overridePendingTransition(0, 0);
                         return true;
@@ -167,7 +168,7 @@ public class Shopping extends AppCompatActivity {
                         }
 
                     case R.id.nav_my:
-                        startToast("로그인변수 "+LogIn);
+                       // startToast("로그인변수 "+LogIn);
                         if (LogIn)
                         {
                             startActivity(new Intent(getApplicationContext(), My_page.class));

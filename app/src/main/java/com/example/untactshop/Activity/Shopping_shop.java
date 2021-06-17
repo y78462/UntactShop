@@ -178,21 +178,22 @@ public class Shopping_shop extends AppCompatActivity {
 
         //네비게이션 바
         mBottomNV = findViewById(R.id.bottom_navigation_view);
-        mBottomNV.setSelectedItemId(R.id.nav_home);
+        mBottomNV.setSelectedItemId(R.id.nav_shop);
         mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
-                        return true;
-
-                    case R.id.nav_shop:
-                        startActivity(new Intent(getApplicationContext(), Shopping_shop.class));
+                        startActivity(new Intent(getApplicationContext(), Shopping.class));
                         overridePendingTransition(0, 0);
                         return true;
 
+                    case R.id.nav_shop:
+                       // mBottomNV.setSelectedItemId(R.id.nav_shop);
+                        return true;
+
                     case R.id.nav_cart:
-                        startToast("로그인변수 "+LogIn);
+                        //startToast("로그인변수 "+LogIn);
                         if (LogIn)
                         {
                             startActivity(new Intent(getApplicationContext(), Show_orders.class));
@@ -201,12 +202,12 @@ public class Shopping_shop extends AppCompatActivity {
                         }
                         else{
                             startToast("로그인을 하세요");
-                            mBottomNV.setSelectedItemId(R.id.nav_home);
+                            mBottomNV.setSelectedItemId(R.id.nav_cart);
                             return true;
                         }
 
                     case R.id.nav_my:
-                        startToast("로그인변수 "+LogIn);
+                       // startToast("로그인변수 "+LogIn);
                         if (LogIn)
                         {
                             startActivity(new Intent(getApplicationContext(), My_page.class));
