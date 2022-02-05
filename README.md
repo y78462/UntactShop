@@ -72,7 +72,7 @@
 ![1 로그인](https://user-images.githubusercontent.com/69866091/152654409-4aedfbb5-07e2-4bf4-9143-7586896d0963.gif)
 
 ### ✨마이페이지
-![2 마이페이지](https://user-images.githubusercontent.com/69866091/152654414-0cce6bfe-19a1-4eab-a84c-7f9b6a1673c0.gif)
+![2 마이페이지](https://user-images.githubusercontent.com/69866091/152655343-91dea02a-0a44-481d-af00-72fa8128de96.png)
 
 ### ✨매장 검색
 ![3 매장 검색](https://user-images.githubusercontent.com/69866091/152654425-91a9c402-1c5a-4c8a-bbf2-948e991a6084.gif)
