@@ -68,44 +68,41 @@
 
 # 🛍️결과 화면
 
-### ✨메인 페이지
-![1 메인 페이지](https://user-images.githubusercontent.com/69866091/152214705-14322e6a-5cdb-44e1-8f3c-c8d13d4aa732.gif)
+### ✨로그인
+![1 로그인](https://user-images.githubusercontent.com/69866091/152654409-4aedfbb5-07e2-4bf4-9143-7586896d0963.gif)
 
-### ✨회원가입
-![2 회원가입](https://user-images.githubusercontent.com/69866091/152214715-b78c6a03-9715-4c2e-8617-3e05bf857f95.gif)
+### ✨마이페이지
+![2 마이페이지](https://user-images.githubusercontent.com/69866091/152654414-0cce6bfe-19a1-4eab-a84c-7f9b6a1673c0.gif)
 
-### ✨사용자 로그인
-![3 사용자 로그인](https://user-images.githubusercontent.com/69866091/152214728-cf68fda2-ddfa-45a8-8a7d-8dc5a050a09e.gif)
+### ✨매장 검색
+![3 매장 검색](https://user-images.githubusercontent.com/69866091/152654425-91a9c402-1c5a-4c8a-bbf2-948e991a6084.gif)
 
-### ✨변호사 로그인
-![4 변호사 로그인](https://user-images.githubusercontent.com/69866091/152216658-ea350084-bae4-4df1-b165-88c22a897fef.gif)
+### ✨매장 정보
+![4 매장 정보](https://user-images.githubusercontent.com/69866091/152654430-b8d07f84-ad0d-4584-9051-afa3725e9270.gif)
 
-### ✨변호사 검색
-![5 변호사 검색](https://user-images.githubusercontent.com/69866091/152214788-69dfe74a-e175-414b-99ae-75e1859b62ac.gif)
+### ✨매장지도
+![5 매장지도](https://user-images.githubusercontent.com/69866091/152654433-36fb29a2-1a1e-46f3-8388-57433669ce40.gif)
 
-### ✨상담 예약 신청
-![6 상담 예약 신청](https://user-images.githubusercontent.com/69866091/152217000-81007e75-9d3c-4ed2-a3ec-9b32ecc3c9cc.gif)
+### ✨카테고리별 매장 분류
+![6 카테고리별 매장 분류](https://user-images.githubusercontent.com/69866091/152654435-97a29f32-a388-444a-80c6-1cda50003286.gif)
 
-### ✨상담 신청 게시판
-![7 상담신청 게시판](https://user-images.githubusercontent.com/69866091/152214836-12ef98ca-91e7-49e6-9bef-a04b5393b090.gif)
+### ✨채팅을 통한 매장 Q&A
+![7 채팅을 통한 매장 Q A](https://user-images.githubusercontent.com/69866091/152654442-7e937729-0030-45e7-9324-b2edf196306e.gif)
 
-### ✨사이버법률상담 신청
-![8 사이버법률상담 신청](https://user-images.githubusercontent.com/69866091/152216723-8e4eec60-5f80-4688-9b40-b74435e55edf.gif)
+### ✨상품목록
+![8 상품목록](https://user-images.githubusercontent.com/69866091/152654445-e244b2ba-ee5b-4f40-bf33-a4f10265e442.gif)
 
-### ✨사이버법률상담 답변
-![9 사이버법률상담 답변](https://user-images.githubusercontent.com/69866091/152214893-ae832fbe-9ed5-4297-b2b0-93dd47b38b35.gif)
+### ✨상점목록
+![9 상점목록](https://user-images.githubusercontent.com/69866091/152654448-5a5ba54b-e87f-4f54-9835-804b2d5322c9.gif)
 
-### ✨사이버법률상담 목록
-![10 사이버법률상담 목록](https://user-images.githubusercontent.com/69866091/152214914-41fc02b1-5fc7-45e6-8a2f-54589a1e6413.gif)
+### ✨상점 검색
+![10 상점 검색](https://user-images.githubusercontent.com/69866091/152654458-19482c65-379a-49de-a685-4262ae1f73c6.gif)
 
-### ✨이용 안내
-![11 이용 안내](https://user-images.githubusercontent.com/69866091/152214934-b2218745-1a2a-4785-8c29-37c9fac8f3da.gif)
+### ✨연관상품 추천
+![11 연관상품 추천](https://user-images.githubusercontent.com/69866091/152654463-73ee27a5-af2d-45e8-8247-66e3f9a5f4a9.gif)
 
-### ✨시민법률사무소 지도
-![12 시민법률사무소 지도](https://user-images.githubusercontent.com/69866091/152214968-4ce09097-0737-4add-881a-4b0b18610eec.gif)
+### ✨채팅을 통한 상품 구매
+![12 채팅을 통한 상품 구매](https://user-images.githubusercontent.com/69866091/152654467-7000a4a5-9534-4dc9-83b6-7632701ec3cb.gif)
 
-### ✨마을변호사 소식
-![13 마을변호사 소식](https://user-images.githubusercontent.com/69866091/152214978-2de3c474-7622-476e-bdcf-9fd85a28f3bf.gif)
-
-### ✨자주 묻는 질문 Q&A
-![14 자주 묻는 질문 Q A](https://user-images.githubusercontent.com/69866091/152215050-5affa814-2389-446f-9267-929c5d898c1c.gif)
+### ✨채팅목록
+![13 채팅목록](https://user-images.githubusercontent.com/69866091/152654481-3ada9097-7951-4577-ad53-abca2b07d26f.gif)
