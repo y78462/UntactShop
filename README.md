@@ -22,9 +22,9 @@
 - 지하도상가 배치도
 
 ## 팀원 및 역할분담
-|[@rlagksql219](https://github.com/rlagksql219)|[lye2i](https://github.com/lye2i)|[@y78462](https://github.com/y78462)|
-|-----|-----|-----|
-|• 메인 페이지 <br> • 상담 신청 게시판 |• 사용자 로그인 </br> • 변호사 검색 </br> • 사이버법률상담 |• 변호사 로그인 </br> • 상담 예약 신청 페이지 </br> • 사이버법률상담
+|[@rlagksql219](https://github.com/rlagksql219)|[lye2i](https://github.com/lye2i)|[@y78462](https://github.com/y78462)|[@HwangJaeHwan](https://github.com/HwangJaeHwan)|
+|-----|-----|-----|-----|
+|• 매장 검색 <br> • 채팅 기능 <br> • 데이터베이스 구축 |• 상품목록, 상점목록, 채팅목록 </br> • 연관상품 추천 기능 </br> • 데이터베이스 구축 |• 로그인, 마이페이지 </br> • 웹서버 구축 |• 카테고리별 매장 분류 지도 </br> • 웹서버 구축
 <br/>
 
 
