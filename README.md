@@ -61,6 +61,11 @@
          - 연관상품 추천
 
 
+# 🛍️Screen 구성
+![final](https://user-images.githubusercontent.com/69866091/152933285-aaad55c9-d8b6-4e8c-88d4-eff9f633b3ef.png)
+
+
+
 # 🛍️결과 화면
 
 ### ✨로그인
