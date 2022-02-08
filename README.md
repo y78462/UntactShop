@@ -62,8 +62,8 @@
 
 
 # 🛍️Screen 구성
-![final](https://user-images.githubusercontent.com/69866091/152933285-aaad55c9-d8b6-4e8c-88d4-eff9f633b3ef.png)
-
+![layout](https://user-images.githubusercontent.com/69866091/152942764-c2f29cde-7a72-4605-9eaa-5a6848459a3c.png)
+![final](https://user-images.githubusercontent.com/69866091/152943277-617b2556-ec44-4d89-a432-08886c4bc3db.jpg)
 
 
 # 🛍️결과 화면
