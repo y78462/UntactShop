@@ -22,7 +22,7 @@
 - 지하도상가 배치도
 
 ## 팀원 및 역할분담
-|[@rlagksql219](https://github.com/rlagksql219)|[lye2i](https://github.com/lye2i)|[@y78462](https://github.com/y78462)|[@HwangJaeHwan](https://github.com/HwangJaeHwan)|
+|[@rlagksql219](https://github.com/rlagksql219)|[@lye2i](https://github.com/lye2i)|[@y78462](https://github.com/y78462)|[@HwangJaeHwan](https://github.com/HwangJaeHwan)|
 |-----|-----|-----|-----|
 |• 매장 검색 <br> • 채팅 기능 <br> • 데이터베이스 구축 |• 상품목록, 상점목록, 채팅목록 </br> • 데이터베이스 구축 |• 로그인, 마이페이지, 연관상품추천기능,  </br> • 웹서버 구축 |• 카테고리별 매장 분류 지도, 가게별 위치 맵핑기능  </br> • 웹서버 구축 및 데이터베이스 구축 
 <br/>
