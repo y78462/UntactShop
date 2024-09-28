@@ -30,6 +30,7 @@
 
 # 🛍️프론트엔드 기능 구현 사항
 >  ✨[demo video](https://youtu.be/QqWv3s2lpOw)<br/>
+>  ✨[기술블로그](https://velog.io/@rlagksql219/series/Untact-Shop)<br/>
 
 ## 주요 기능
 - **백엔드 연결**
